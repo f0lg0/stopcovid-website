@@ -37,12 +37,16 @@ export default {
     },
     methods: {
         setActive(op) {
-            if (op == 1) {
+            if (op == 1 && this.active1 == false) {
                 this.active1 = true;
                 this.active2 = false;
-            } else if (op == 2) {
+
+                this.$emit("switched", op);
+            } else if (op == 2 && this.active2 == false) {
                 this.active1 = false;
                 this.active2 = true;
+
+                this.$emit("switched", op);
             }
         }
     }
