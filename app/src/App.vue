@@ -1,36 +1,28 @@
 <template>
     <div id="app">
-        <Navbar />
         <router-view />
     </div>
 </template>
 
 
 <script>
-import Navbar from "./components/Navbar.vue";
-
-export default {
-    components: {
-        Navbar
-    }
-};
 </script>
 
 <style>
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #473f97;
+}
+
 #app {
     font-family: "Poppins", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid;
-    margin: 70px auto;
-    padding: 0;
-    max-width: 300px;
 }
 
 .abs-center {
@@ -39,5 +31,11 @@ hr {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.flex-col-cent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 </style>

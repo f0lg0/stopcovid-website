@@ -29,12 +29,8 @@ export default {
 
             const parsed = {
                 terapia_intensiva: data.terapia_intensiva,
-                deceduti: data.deceduti,
-                dimessi_guariti: data.dimessi_guariti,
-                isolamento_domiciliare: data.isolamento_domiciliare,
                 nuovi_positivi: data.nuovi_positivi,
                 ricoverati_con_sintomi: data.ricoverati_con_sintomi,
-                tamponi: data.tamponi,
                 ingressi_terapia_intensiva: data.ingressi_terapia_intensiva
             };
 
@@ -64,7 +60,7 @@ export default {
                 final.datasets[0].data.push(parsed[key]);
             });
 
-            this.options = { responsive: true, maintainAspectRatio: false };
+            this.options = { responsive: true, maintainAspectRatio: true };
             this.chartdata = final;
 
             this.loaded = true;
@@ -77,8 +73,8 @@ export default {
 
 <style scoped>
 .container {
-    width: 80%;
-    height: 100%;
     margin: auto;
+    width: 90%;
+    height: 90%;
 }
 </style>
