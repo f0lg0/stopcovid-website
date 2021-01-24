@@ -4,6 +4,10 @@
             <div class="banner-container">
                 <h1>Covid-19</h1>
 
+                <div class="switcher-container">
+                    <Switcher op1="Oggi" op2="Totale" />
+                </div>
+
                 <div class="cards">
                     <div class="card" id="deceduti">
                         <p class="name">Deceduti</p>
@@ -16,7 +20,7 @@
                     </div>
 
                     <div class="card" id="nuovipos">
-                        <p class="name">Nuovi Positivi</p>
+                        <p class="name">Positivi</p>
                         <p class="amt">{{ data.nuovi_positivi }}</p>
                     </div>
 
@@ -42,11 +46,13 @@
 
 <script>
 import Positivi from "../components/Charts/Positivi/Positivi.vue";
+import Switcher from "../components/Switcher.vue";
 
 export default {
     name: "Home",
     components: {
-        Positivi
+        Positivi,
+        Switcher
     },
     data() {
         return {
@@ -68,7 +74,7 @@ export default {
             );
 
             const json = await res.json();
-            const target = [];
+            let target = [];
 
             let days = 0;
             for (let i = json.length - 1; i > 0; i--) {
@@ -95,11 +101,14 @@ export default {
                 ]
             };
 
-            console.log(target);
-            this.data.deceduti = target[0].deceduti;
-            this.data.guariti = target[0].dimessi_guariti;
+            this.data.deceduti = target[0].deceduti - target[1].deceduti;
+            this.data.guariti =
+                target[0].dimessi_guariti - target[1].dimessi_guariti;
             this.data.nuovi_positivi = target[0].nuovi_positivi;
-            this.data.tamponi = target[0].tamponi;
+            this.data.tamponi = target[0].tamponi - target[1].tamponi;
+
+            // reversing for plotting purposes
+            target = target.reverse();
 
             target_list.forEach(day => {
                 final.labels.push(`Gen ${target[day].data.substring(8, 10)}`);
@@ -149,7 +158,7 @@ export default {
 
 .banner {
     width: 100%;
-    height: 80vh;
+    height: 72vh;
 }
 
 .banner-container {
@@ -162,6 +171,11 @@ export default {
     color: #f2f2f2;
     margin-bottom: 50px;
     padding-left: 3%;
+}
+
+.switcher-container {
+    margin-top: 60px;
+    margin-bottom: 50px;
 }
 
 .cards {
@@ -217,9 +231,8 @@ export default {
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    position: absolute;
     border-radius: 40px 40px 0 0;
-    bottom: 0;
+    top: 600px;
 }
 
 .chart p {
