@@ -28,12 +28,14 @@ export default {
             console.log(data);
 
             const parsed = {
+                terapia_intensiva: data.terapia_intensiva,
                 deceduti: data.deceduti,
                 dimessi_guariti: data.dimessi_guariti,
                 isolamento_domiciliare: data.isolamento_domiciliare,
                 nuovi_positivi: data.nuovi_positivi,
                 ricoverati_con_sintomi: data.ricoverati_con_sintomi,
-                terapia_intensiva: data.terapia_intensiva
+                tamponi: data.tamponi,
+                ingressi_terapia_intensiva: data.ingressi_terapia_intensiva
             };
 
             const parsed_keys = Object.keys(parsed);
@@ -44,12 +46,14 @@ export default {
                         label: "Totale",
                         data: [],
                         backgroundColor: [
-                            "#a3c7c9",
-                            "#889d9e",
-                            "#647678",
-                            "f87979",
-                            "#000000",
-                            "#897d3A"
+                            "#264653",
+                            "#2A9D8F",
+                            "#E9C46A",
+                            "#F4A261",
+                            "#E76F51",
+                            "#e63946",
+                            "#e5989b",
+                            "#2d6a4f"
                         ]
                     }
                 ]
