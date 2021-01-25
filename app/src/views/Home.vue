@@ -30,8 +30,8 @@
                     </div>
 
                     <div class="card" id="tamponi">
-                        <p class="name">Tamponi</p>
-                        <p class="amt">{{ data.tamponi }}</p>
+                        <p class="name">% Positivi</p>
+                        <p class="amt">{{ data.vpp }}%</p>
                     </div>
                 </div>
             </div>
@@ -68,7 +68,7 @@ export default {
                 deceduti: 0,
                 guariti: 0,
                 nuovi_positivi: 0,
-                tamponi: 0
+                vpp: 0
             },
             rawData: undefined,
             sample: undefined,
@@ -76,7 +76,7 @@ export default {
         };
     },
     methods: {
-        formatLatestWeek(latestWeek, totPos) {
+        formatLatestWeek(latestWeek, weekBefore, totPos) {
             const len = latestWeek.length;
 
             this.data.deceduti =
@@ -85,8 +85,19 @@ export default {
                 latestWeek[len - 1].dimessi_guariti -
                 latestWeek[0].dimessi_guariti;
             this.data.nuovi_positivi = totPos;
-            this.data.tamponi =
-                latestWeek[len - 1].tamponi - latestWeek[0].tamponi;
+            this.data.vpp = this.calculatePosPerc(latestWeek, weekBefore);
+        },
+        calculatePosPerc(week0, week1) {
+            let pos0 = 0;
+            let pos1 = 0;
+
+            for (let i = 0; i < week0.length; i++) {
+                pos0 += week0[i].nuovi_positivi;
+                pos1 += week1[i].nuovi_positivi;
+            }
+
+            const diff = pos0 - pos1;
+            return Math.round((diff * 100) / pos1);
         },
         formatTotale(rawData) {
             const length = rawData.length;
@@ -101,7 +112,8 @@ export default {
         switched(op) {
             if (op == 1) {
                 this.formatLatestWeek(
-                    this.sample[this.sample.length - 1],
+                    this.sample[this.sample.length - 2],
+                    this.sample[this.sample.length - 3],
                     this.nuovi_pos_per_week[this.nuovi_pos_per_week.length - 1]
                         .positivi
                 );
@@ -155,8 +167,14 @@ export default {
             this.nuovi_pos_per_week = nuovi_pos_per_week;
 
             this.formatLatestWeek(
-                this.sample[this.sample.length - 1],
+                this.sample[this.sample.length - 2],
+                this.sample[this.sample.length - 3],
                 nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
+            );
+
+            this.calculatePosPerc(
+                this.sample[this.sample.length - 1],
+                this.sample[this.sample.length - 2]
             );
 
             const final = {
