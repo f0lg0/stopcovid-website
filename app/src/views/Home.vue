@@ -24,12 +24,20 @@
                         <p class="amt">{{ data.incidenza }}</p>
                     </div>
 
-                    <div class="card" id="nuovipos">
+                    <div
+                        class="card"
+                        id="nuovipos"
+                        @click="changeChart('Nuovi positivi')"
+                    >
                         <p class="name">Positivi</p>
                         <p class="amt">{{ data.nuovi_positivi }}</p>
                     </div>
 
-                    <div class="card" id="varperpos">
+                    <div
+                        class="card"
+                        id="varperpos"
+                        @click="changeChart('Variazione percentuale positivi')"
+                    >
                         <p class="name">% Positivi</p>
                         <p class="amt">{{ data.vpp }}%</p>
                     </div>
@@ -37,12 +45,13 @@
             </div>
         </div>
         <div class="chart">
-            <p>Trend positivi</p>
+            <p>{{ active }}</p>
             <div class="chart-container">
                 <LineChart
                     v-if="loaded"
                     :chartdata="chartdata"
                     :options="options"
+                    :key="change"
                 />
             </div>
         </div>
@@ -73,70 +82,13 @@ export default {
             rawData: undefined,
             sample: undefined,
             nuovi_pos_per_week: undefined,
-            pop_ita: 60234639
+            pop_ita: 60234639,
+            active: "Nuovi positivi",
+            change: 0
         };
     },
     methods: {
-        formatLatestWeek(latestWeek, weekBefore, totPos) {
-            const len = latestWeek.length;
-
-            this.data.deceduti =
-                latestWeek[len - 1].deceduti - latestWeek[0].deceduti;
-            this.data.nuovi_positivi = totPos;
-            this.data.vpp = this.calculatePosPerc(latestWeek, weekBefore);
-            this.data.incidenza = this.calculateIncidenza(totPos);
-        },
-        calculatePosPerc(week0, week1) {
-            let pos0 = 0;
-            let pos1 = 0;
-
-            for (let i = 0; i < week0.length; i++) {
-                pos0 += week0[i].nuovi_positivi;
-                pos1 += week1[i].nuovi_positivi;
-            }
-
-            const diff = pos0 - pos1;
-            return Math.round((diff * 100) / pos1);
-        },
-        calculateIncidenza(pos_latest_week) {
-            return Math.round((pos_latest_week * 100000) / this.pop_ita);
-        },
-        formatTotale(rawData) {
-            console.log(rawData);
-        },
-        switched(op) {
-            if (op == 1) {
-                if (this.sample[this.sample.length - 1].length == 7) {
-                    this.formatLatestWeek(
-                        this.sample[this.sample.length - 1],
-                        this.sample[this.sample.length - 2],
-                        this.nuovi_pos_per_week[
-                            this.nuovi_pos_per_week.length - 1
-                        ].positivi
-                    );
-                } else {
-                    this.formatLatestWeek(
-                        this.sample[this.sample.length - 2],
-                        this.sample[this.sample.length - 3],
-                        this.nuovi_pos_per_week[
-                            this.nuovi_pos_per_week.length - 2
-                        ].positivi
-                    );
-                }
-            } else if (op == 2) {
-                this.formatTotale(this.rawData);
-            }
-        }
-    },
-    async mounted() {
-        try {
-            const res = await fetch(
-                "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale.json"
-            );
-
-            const json = await res.json();
-            this.rawData = json;
-
+        init() {
             // the sample consits of 100 days starting from the latest going backwards
             this.sample = this.rawData.slice(237, this.rawData.length);
             const chunks = 7;
@@ -209,21 +161,12 @@ export default {
                 labels: [],
                 datasets: [
                     {
-                        label: "Positivi",
-                        borderColor: "#ffb259",
-                        pointBackgroundColor: "#ffb259",
                         pointRadius: 5,
                         fill: false,
-
                         data: []
                     }
                 ]
             };
-
-            for (let i = 0; i < nuovi_pos_per_week.length; i++) {
-                final.labels.push(nuovi_pos_per_week[i].week);
-                final.datasets[0].data.push(nuovi_pos_per_week[i].positivi);
-            }
 
             this.options = {
                 responsive: true,
@@ -249,8 +192,123 @@ export default {
                 }
             };
 
+            let tmp_buf = [];
+
+            switch (this.active) {
+                case "Nuovi positivi":
+                    for (let i = 0; i < nuovi_pos_per_week.length - 1; i++) {
+                        final.labels.push(nuovi_pos_per_week[i].week);
+                        final.datasets[0].data.push(
+                            nuovi_pos_per_week[i].positivi
+                        );
+                    }
+
+                    final.datasets[0].borderColor = "#ffb259";
+                    final.datasets[0].pointBackgroundColor = "#ffb259";
+
+                    break;
+                case "Variazione percentuale positivi":
+                    for (let i = 0; i < nuovi_pos_per_week.length - 1; i++) {
+                        final.labels.push(nuovi_pos_per_week[i].week);
+                    }
+
+                    for (let i = sample_len - 1; i > 0; i--) {
+                        let tmp = Math.abs(
+                            this.calculatePosPerc(
+                                this.sample[sample_len - 2],
+                                this.sample[i - 1]
+                            )
+                        );
+                        // console.log(
+                        //     "doing ",
+                        //     i,
+                        //     this.sample[i],
+                        //     " with ",
+                        //     i - 1,
+                        //     this.sample[i - 1]
+                        // );
+                        tmp_buf.push(tmp);
+                    }
+
+                    final.datasets[0].data = tmp_buf.reverse();
+
+                    final.datasets[0].borderColor = "#4cb5ff";
+                    final.datasets[0].pointBackgroundColor = "#4cb5ff";
+                    break;
+                default:
+                    console.log("wrong");
+                    break;
+            }
+
             this.chartdata = final;
             this.loaded = true;
+        },
+        formatLatestWeek(latestWeek, weekBefore, totPos) {
+            const len = latestWeek.length;
+
+            this.data.deceduti =
+                latestWeek[len - 1].deceduti - latestWeek[0].deceduti;
+            this.data.nuovi_positivi = totPos;
+            this.data.vpp = this.calculatePosPerc(latestWeek, weekBefore);
+            this.data.incidenza = this.calculateIncidenza(totPos);
+        },
+        calculatePosPerc(week0, week1) {
+            let pos0 = 0;
+            let pos1 = 0;
+
+            for (let i = 0; i < week0.length; i++) {
+                pos0 += week0[i].nuovi_positivi;
+                pos1 += week1[i].nuovi_positivi;
+            }
+
+            const diff = pos0 - pos1;
+            return Math.round((diff * 100) / pos1);
+        },
+        calculateIncidenza(pos_latest_week) {
+            return Math.round((pos_latest_week * 100000) / this.pop_ita);
+        },
+        formatTotale(rawData) {
+            console.log(rawData);
+        },
+        switched(op) {
+            if (op == 1) {
+                if (this.sample[this.sample.length - 1].length == 7) {
+                    this.formatLatestWeek(
+                        this.sample[this.sample.length - 1],
+                        this.sample[this.sample.length - 2],
+                        this.nuovi_pos_per_week[
+                            this.nuovi_pos_per_week.length - 1
+                        ].positivi
+                    );
+                } else {
+                    this.formatLatestWeek(
+                        this.sample[this.sample.length - 2],
+                        this.sample[this.sample.length - 3],
+                        this.nuovi_pos_per_week[
+                            this.nuovi_pos_per_week.length - 2
+                        ].positivi
+                    );
+                }
+            } else if (op == 2) {
+                this.formatTotale(this.rawData);
+            }
+        },
+        changeChart(c) {
+            this.active = c;
+            this.change += 1;
+            this.init();
+        }
+    },
+    async mounted() {
+        try {
+            const res = await fetch(
+                "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale.json"
+            );
+
+            const json = await res.json();
+            this.rawData = json;
+
+            this.init();
         } catch (err) {
             console.error(err);
         }
@@ -355,7 +413,7 @@ export default {
 
 .chart p {
     padding-left: 30px;
-    margin-top: 100px;
+    margin-top: 115px;
     margin-bottom: 10px;
     font-size: 26px;
     font-weight: 600;
