@@ -3,7 +3,7 @@
         <div class="banner flex-col-cent">
             <div class="banner-container">
                 <h1>Covid-19</h1>
-                <h2>Questa settimana</h2>
+                <h2>Settimanale</h2>
 
                 <div class="switcher-container">
                     <Switcher
@@ -39,7 +39,7 @@
         <div class="chart">
             <p>Trend positivi</p>
             <div class="chart-container">
-                <Positivi
+                <LineChart
                     v-if="loaded"
                     :chartdata="chartdata"
                     :options="options"
@@ -50,13 +50,13 @@
 </template>
 
 <script>
-import Positivi from "../components/Charts/Positivi/Positivi.vue";
+import LineChart from "../components/Charts/Line.vue";
 import Switcher from "../components/Switcher.vue";
 
 export default {
     name: "Home",
     components: {
-        Positivi,
+        LineChart,
         Switcher
     },
     data() {
