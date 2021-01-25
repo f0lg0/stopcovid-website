@@ -165,17 +165,31 @@ export default {
             });
 
             this.nuovi_pos_per_week = nuovi_pos_per_week;
+            const sample_len = this.sample.length;
 
-            this.formatLatestWeek(
-                this.sample[this.sample.length - 2],
-                this.sample[this.sample.length - 3],
-                nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
-            );
+            if (this.sample[sample_len - 1].length == 7) {
+                this.formatLatestWeek(
+                    this.sample[this.sample.length - 1],
+                    this.sample[this.sample.length - 2],
+                    nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
+                );
 
-            this.calculatePosPerc(
-                this.sample[this.sample.length - 1],
-                this.sample[this.sample.length - 2]
-            );
+                this.data.vpp = this.calculatePosPerc(
+                    this.sample[this.sample.length - 1],
+                    this.sample[this.sample.length - 2]
+                );
+            } else {
+                this.formatLatestWeek(
+                    this.sample[this.sample.length - 2],
+                    this.sample[this.sample.length - 3],
+                    nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
+                );
+
+                this.data.vpp = this.calculatePosPerc(
+                    this.sample[this.sample.length - 2],
+                    this.sample[this.sample.length - 3]
+                );
+            }
 
             const final = {
                 labels: [],
@@ -220,8 +234,8 @@ export default {
                     display: false
                 }
             };
-            this.chartdata = final;
 
+            this.chartdata = final;
             this.loaded = true;
         } catch (err) {
             console.error(err);
