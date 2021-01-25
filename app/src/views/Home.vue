@@ -19,9 +19,9 @@
                         <p class="amt">{{ data.deceduti }}</p>
                     </div>
 
-                    <div class="card" id="guariti">
-                        <p class="name">Guariti</p>
-                        <p class="amt">{{ data.guariti }}</p>
+                    <div class="card" id="incidenza">
+                        <p class="name">Incidenza</p>
+                        <p class="amt">{{ data.incidenza }}</p>
                     </div>
 
                     <div class="card" id="nuovipos">
@@ -29,7 +29,7 @@
                         <p class="amt">{{ data.nuovi_positivi }}</p>
                     </div>
 
-                    <div class="card" id="tamponi">
+                    <div class="card" id="varperpos">
                         <p class="name">% Positivi</p>
                         <p class="amt">{{ data.vpp }}%</p>
                     </div>
@@ -66,13 +66,14 @@ export default {
             loaded: false,
             data: {
                 deceduti: 0,
-                guariti: 0,
+                incidenza: 0,
                 nuovi_positivi: 0,
                 vpp: 0
             },
             rawData: undefined,
             sample: undefined,
-            nuovi_pos_per_week: undefined
+            nuovi_pos_per_week: undefined,
+            pop_ita: 60234639
         };
     },
     methods: {
@@ -81,11 +82,9 @@ export default {
 
             this.data.deceduti =
                 latestWeek[len - 1].deceduti - latestWeek[0].deceduti;
-            this.data.guariti =
-                latestWeek[len - 1].dimessi_guariti -
-                latestWeek[0].dimessi_guariti;
             this.data.nuovi_positivi = totPos;
             this.data.vpp = this.calculatePosPerc(latestWeek, weekBefore);
+            this.data.incidenza = this.calculateIncidenza(totPos);
         },
         calculatePosPerc(week0, week1) {
             let pos0 = 0;
@@ -99,24 +98,31 @@ export default {
             const diff = pos0 - pos1;
             return Math.round((diff * 100) / pos1);
         },
+        calculateIncidenza(pos_latest_week) {
+            return Math.round((pos_latest_week * 100000) / this.pop_ita);
+        },
         formatTotale(rawData) {
-            const length = rawData.length;
-            this.data.deceduti = rawData[length - 1].deceduti;
-            this.data.guariti = rawData[length - 1].dimessi_guariti;
-            this.data.tamponi = rawData[length - 1].tamponi;
-
-            rawData.forEach(day => {
-                this.data.nuovi_positivi += day.nuovi_positivi;
-            });
+            console.log(rawData);
         },
         switched(op) {
             if (op == 1) {
-                this.formatLatestWeek(
-                    this.sample[this.sample.length - 2],
-                    this.sample[this.sample.length - 3],
-                    this.nuovi_pos_per_week[this.nuovi_pos_per_week.length - 1]
-                        .positivi
-                );
+                if (this.sample[this.sample.length - 1].length == 7) {
+                    this.formatLatestWeek(
+                        this.sample[this.sample.length - 1],
+                        this.sample[this.sample.length - 2],
+                        this.nuovi_pos_per_week[
+                            this.nuovi_pos_per_week.length - 1
+                        ].positivi
+                    );
+                } else {
+                    this.formatLatestWeek(
+                        this.sample[this.sample.length - 2],
+                        this.sample[this.sample.length - 3],
+                        this.nuovi_pos_per_week[
+                            this.nuovi_pos_per_week.length - 2
+                        ].positivi
+                    );
+                }
             } else if (op == 2) {
                 this.formatTotale(this.rawData);
             }
@@ -169,25 +175,33 @@ export default {
 
             if (this.sample[sample_len - 1].length == 7) {
                 this.formatLatestWeek(
-                    this.sample[this.sample.length - 1],
-                    this.sample[this.sample.length - 2],
+                    this.sample[sample_len - 1],
+                    this.sample[sample_len - 2],
                     nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
                 );
 
                 this.data.vpp = this.calculatePosPerc(
-                    this.sample[this.sample.length - 1],
-                    this.sample[this.sample.length - 2]
+                    this.sample[sample_len - 1],
+                    this.sample[sample_len - 2]
+                );
+
+                this.data.incidenza = this.calculateIncidenza(
+                    nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
                 );
             } else {
                 this.formatLatestWeek(
-                    this.sample[this.sample.length - 2],
-                    this.sample[this.sample.length - 3],
-                    nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
+                    this.sample[sample_len - 2],
+                    this.sample[sample_len - 3],
+                    nuovi_pos_per_week[nuovi_pos_per_week.length - 2].positivi
                 );
 
                 this.data.vpp = this.calculatePosPerc(
-                    this.sample[this.sample.length - 2],
-                    this.sample[this.sample.length - 3]
+                    this.sample[sample_len - 2],
+                    this.sample[sample_len - 3]
+                );
+
+                this.data.incidenza = this.calculateIncidenza(
+                    nuovi_pos_per_week[nuovi_pos_per_week.length - 2].positivi
                 );
             }
 
@@ -319,11 +333,11 @@ export default {
     background-color: #ff5959;
 }
 
-#guariti {
+#incidenza {
     background-color: #4cd97b;
 }
 
-#tamponi {
+#varperpos {
     background-color: #4cb5ff;
 }
 
