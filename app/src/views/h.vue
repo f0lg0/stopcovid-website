@@ -6,8 +6,8 @@
 
                 <div class="switcher-container">
                     <Switcher
-                        op1="Italia"
-                        op2="Lombardia"
+                        op1="Oggi"
+                        op2="Totale"
                         v-on:switched="switched($event)"
                     />
                 </div>
@@ -70,21 +70,7 @@ export default {
                 tamponi: 0
             },
             rawData: undefined,
-            sample: undefined,
-            months: {
-                "1": "Gen",
-                "2": "Feb",
-                "3": "Mar",
-                "4": "Apr",
-                "5": "Mag",
-                "6": "Giu",
-                "7": "Lug",
-                "8": "Ago",
-                "9": "Set",
-                "10": "Ott",
-                "11": "Nov",
-                "12": "Dec"
-            }
+            fiveDays: undefined
         };
     },
     methods: {
@@ -122,35 +108,17 @@ export default {
             const json = await res.json();
             this.rawData = json;
 
-            // the sample consits of 100 days starting from the latest going backwards
-            this.sample = this.rawData.slice(237, this.rawData.length);
-            const chunks = 7;
+            let target = [];
 
-            const result = new Array(Math.ceil(this.sample.length / chunks))
-                .fill()
-                .map(() => this.sample.splice(0, chunks));
+            let days = 0;
+            for (let i = json.length - 1; i > 0; i--) {
+                target.push(json[i]);
+                days += 1;
 
-            this.sample = result;
+                if (days == 5) break;
+            }
 
-            let nuovi_pos_per_week = [];
-            this.sample.forEach(week => {
-                console.log(week);
-                if (week.length == 7) {
-                    let tmp = 0;
-                    for (let i = 0; i < week.length; i++) {
-                        tmp += week[i].nuovi_positivi;
-                    }
-                    nuovi_pos_per_week.push({
-                        week: `${
-                            this.months[week[0].data.substring(5, 6)]
-                        }${week[0].data.substring(
-                            8,
-                            10
-                        )}-${week[6].data.substring(8, 10)}`,
-                        positivi: tmp
-                    });
-                }
-            });
+            const target_list = Object.keys(target);
 
             const final = {
                 labels: [],
@@ -167,10 +135,16 @@ export default {
                 ]
             };
 
-            for (let i = 0; i < nuovi_pos_per_week.length; i++) {
-                final.labels.push(nuovi_pos_per_week[i].week);
-                final.datasets[0].data.push(nuovi_pos_per_week[i].positivi);
-            }
+            this.formatOggi(target[0], target[1]);
+
+            // reversing for plotting purposes
+            target = target.reverse();
+            this.fiveDays = target;
+
+            target_list.forEach(day => {
+                final.labels.push(`Gen ${target[day].data.substring(8, 10)}`);
+                final.datasets[0].data.push(target[day].nuovi_positivi);
+            });
 
             this.options = {
                 responsive: true,
