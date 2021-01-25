@@ -141,12 +141,16 @@ export default {
                         tmp += week[i].nuovi_positivi;
                     }
                     nuovi_pos_per_week.push({
-                        week: `${
-                            this.months[week[0].data.substring(5, 6)]
-                        }${week[0].data.substring(
+                        week: `${week[0].data.substring(
                             8,
                             10
-                        )}-${week[6].data.substring(8, 10)}`,
+                        )}/${week[0].data.substring(
+                            5,
+                            7
+                        )}-${week[6].data.substring(
+                            8,
+                            10
+                        )}/${week[6].data.substring(5, 7)}`,
                         positivi: tmp
                     });
                 }
