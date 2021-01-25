@@ -3,6 +3,7 @@
         <div class="banner flex-col-cent">
             <div class="banner-container">
                 <h1>Covid-19</h1>
+                <h2>Questa settimana</h2>
 
                 <div class="switcher-container">
                     <Switcher
@@ -71,29 +72,21 @@ export default {
             },
             rawData: undefined,
             sample: undefined,
-            months: {
-                "1": "Gen",
-                "2": "Feb",
-                "3": "Mar",
-                "4": "Apr",
-                "5": "Mag",
-                "6": "Giu",
-                "7": "Lug",
-                "8": "Ago",
-                "9": "Set",
-                "10": "Ott",
-                "11": "Nov",
-                "12": "Dec"
-            }
+            nuovi_pos_per_week: undefined
         };
     },
     methods: {
-        formatOggi(latestDay, dayBefore) {
-            this.data.deceduti = latestDay.deceduti - dayBefore.deceduti;
+        formatLatestWeek(latestWeek, totPos) {
+            const len = latestWeek.length;
+
+            this.data.deceduti =
+                latestWeek[len - 1].deceduti - latestWeek[0].deceduti;
             this.data.guariti =
-                latestDay.dimessi_guariti - dayBefore.dimessi_guariti;
-            this.data.nuovi_positivi = latestDay.nuovi_positivi;
-            this.data.tamponi = latestDay.tamponi - dayBefore.tamponi;
+                latestWeek[len - 1].dimessi_guariti -
+                latestWeek[0].dimessi_guariti;
+            this.data.nuovi_positivi = totPos;
+            this.data.tamponi =
+                latestWeek[len - 1].tamponi - latestWeek[0].tamponi;
         },
         formatTotale(rawData) {
             const length = rawData.length;
@@ -107,7 +100,11 @@ export default {
         },
         switched(op) {
             if (op == 1) {
-                this.formatOggi(this.fiveDays[4], this.fiveDays[3]);
+                this.formatLatestWeek(
+                    this.sample[this.sample.length - 1],
+                    this.nuovi_pos_per_week[this.nuovi_pos_per_week.length - 1]
+                        .positivi
+                );
             } else if (op == 2) {
                 this.formatTotale(this.rawData);
             }
@@ -134,7 +131,6 @@ export default {
 
             let nuovi_pos_per_week = [];
             this.sample.forEach(week => {
-                console.log(week);
                 if (week.length == 7) {
                     let tmp = 0;
                     for (let i = 0; i < week.length; i++) {
@@ -155,6 +151,13 @@ export default {
                     });
                 }
             });
+
+            this.nuovi_pos_per_week = nuovi_pos_per_week;
+
+            this.formatLatestWeek(
+                this.sample[this.sample.length - 1],
+                nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
+            );
 
             const final = {
                 labels: [],
@@ -230,8 +233,16 @@ export default {
 
 .banner-container h1 {
     color: #f2f2f2;
-    margin-bottom: 50px;
     padding-left: 3%;
+    font-size: 40px;
+}
+
+.banner-container h2 {
+    color: #f2f2f2;
+    padding-left: 3%;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 200;
 }
 
 .switcher-container {
@@ -292,8 +303,8 @@ export default {
     flex-direction: column;
     justify-content: center;
     margin: auto;
+    margin-top: 50px;
     border-radius: 40px 40px 0 0;
-    top: 600px;
 }
 
 .chart p {
