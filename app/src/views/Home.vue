@@ -56,7 +56,6 @@ export default {
     }
 };
 </script>
-
 <style scoped>
 #home {
     display: flex;
@@ -70,6 +69,12 @@ export default {
     height: 72vh;
     /* hacky */
     margin-top: 200px;
+}
+
+@media screen and (max-width: 280px) {
+    .banner {
+        margin-top: 330px;
+    }
 }
 
 .banner-container {

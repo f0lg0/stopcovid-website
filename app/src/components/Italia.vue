@@ -359,6 +359,26 @@ export default {
     font-weight: 700;
 }
 
+@media screen and (max-width: 365px) {
+    .card {
+        width: 140px;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .card {
+        width: 200px;
+        height: 130px;
+    }
+}
+
+@media screen and (min-width: 590px) {
+    .card {
+        width: 230px;
+        height: 140px;
+    }
+}
+
 #nuovipos {
     background-color: #ffb259;
 }

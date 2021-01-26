@@ -1,0 +1,1248 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+$(EXAMPLES)	app/node_modules/progress/Makefile	/^$(EXAMPLES): ; node $@ && echo$/;"	t
+$(TAPE)	app/node_modules/chrome-trace-event/Makefile	/^all $(TAPE):$/;"	t
+ADDON_REGISTER_FUNCTION_ARGS_TYPE	app/node_modules/nan/nan.h	/^  typedef v8::Handle<v8::Object> ADDON_REGISTER_FUNCTION_ARGS_TYPE;$/;"	t	namespace:Nan	typeref:typename:v8::Handle<v8::Object>
+ASCII	app/node_modules/nan/nan.h	/^enum Encoding {ASCII, UTF8, BASE64, UCS2, BINARY, HEX, BUFFER};$/;"	e	enum:Nan::Encoding
+ATOM_0_21_MODULE_VERSION	app/node_modules/nan/nan.h	/^#define ATOM_0_21_MODULE_VERSION /;"	d
+AddGCEpilogueCallback	app/node_modules/nan/nan.h	/^  inline void AddGCEpilogueCallback($/;"	f	namespace:Nan	typeref:typename:void
+AddGCPrologueCallback	app/node_modules/nan/nan.h	/^  inline void AddGCPrologueCallback($/;"	f	namespace:Nan	typeref:typename:void
+AdjustExternalMemory	app/node_modules/nan/nan.h	/^  inline int AdjustExternalMemory(int bc) {$/;"	f	namespace:Nan	typeref:typename:int
+AsyncBareProgressQueueWorker	app/node_modules/nan/nan.h	/^  explicit AsyncBareProgressQueueWorker($/;"	f	class:Nan::AsyncBareProgressQueueWorker
+AsyncBareProgressQueueWorker	app/node_modules/nan/nan.h	/^class AsyncBareProgressQueueWorker : public AsyncBareProgressWorkerBase {$/;"	c	namespace:Nan
+AsyncBareProgressWorker	app/node_modules/nan/nan.h	/^  explicit AsyncBareProgressWorker($/;"	f	class:Nan::AsyncBareProgressWorker
+AsyncBareProgressWorker	app/node_modules/nan/nan.h	/^class AsyncBareProgressWorker : public AsyncBareProgressWorkerBase {$/;"	c	namespace:Nan
+AsyncBareProgressWorkerBase	app/node_modules/nan/nan.h	/^  explicit AsyncBareProgressWorkerBase($/;"	f	class:Nan::AsyncBareProgressWorkerBase
+AsyncBareProgressWorkerBase	app/node_modules/nan/nan.h	/^\/* abstract *\/ class AsyncBareProgressWorkerBase : public AsyncWorker {$/;"	c	namespace:Nan
+AsyncClose_	app/node_modules/nan/nan.h	/^  inline static void AsyncClose_(uv_handle_t* handle) {$/;"	f	class:Nan::AsyncBareProgressWorkerBase	typeref:typename:void
+AsyncExecute	app/node_modules/nan/nan.h	/^inline void AsyncExecute (uv_work_t* req) {$/;"	f	namespace:Nan	typeref:typename:void
+AsyncExecuteComplete	app/node_modules/nan/nan.h	/^inline void AsyncExecuteComplete (uv_work_t* req, int status) {$/;"	f	namespace:Nan	typeref:typename:void
+AsyncExecuteComplete	app/node_modules/nan/nan.h	/^inline void AsyncExecuteComplete(uv_work_t *req) {$/;"	f	namespace:Nan	typeref:typename:void
+AsyncProgressQueueWorker	app/node_modules/nan/nan.h	/^  explicit AsyncProgressQueueWorker($/;"	f	class:Nan::AsyncProgressQueueWorker
+AsyncProgressQueueWorker	app/node_modules/nan/nan.h	/^class AsyncProgressQueueWorker : public AsyncBareProgressQueueWorker<T> {$/;"	c	namespace:Nan
+AsyncProgressWorker	app/node_modules/nan/nan.h	/^typedef AsyncProgressWorkerBase<char> AsyncProgressWorker;$/;"	t	namespace:Nan	typeref:typename:AsyncProgressWorkerBase<char>
+AsyncProgressWorkerBase	app/node_modules/nan/nan.h	/^  explicit AsyncProgressWorkerBase($/;"	f	class:Nan::AsyncProgressWorkerBase
+AsyncProgressWorkerBase	app/node_modules/nan/nan.h	/^class AsyncProgressWorkerBase : public AsyncBareProgressWorker<T> {$/;"	c	namespace:Nan
+AsyncQueueWorker	app/node_modules/nan/nan.h	/^inline void AsyncQueueWorker (AsyncWorker* worker) {$/;"	f	namespace:Nan	typeref:typename:void
+AsyncResource	app/node_modules/nan/nan.h	/^  AsyncResource($/;"	f	class:Nan::AsyncResource
+AsyncResource	app/node_modules/nan/nan.h	/^class AsyncResource {$/;"	c	namespace:Nan
+AsyncWorker	app/node_modules/nan/nan.h	/^  explicit AsyncWorker(Callback *callback_,$/;"	f	class:Nan::AsyncWorker
+AsyncWorker	app/node_modules/nan/nan.h	/^\/* abstract *\/ class AsyncWorker {$/;"	c	namespace:Nan
+BASE64	app/node_modules/nan/nan.h	/^enum Encoding {ASCII, UTF8, BASE64, UCS2, BINARY, HEX, BUFFER};$/;"	e	enum:Nan::Encoding
+BIN	app/node_modules/body-parser/node_modules/debug/Makefile	/^BIN := $(THIS_DIR)\/node_modules\/.bin$/;"	m
+BIN	app/node_modules/compression/node_modules/debug/Makefile	/^BIN := $(THIS_DIR)\/node_modules\/.bin$/;"	m
+BIN	app/node_modules/expand-brackets/node_modules/debug/Makefile	/^BIN := $(THIS_DIR)\/node_modules\/.bin$/;"	m
+BIN	app/node_modules/express/node_modules/debug/Makefile	/^BIN := $(THIS_DIR)\/node_modules\/.bin$/;"	m
+BIN	app/node_modules/finalhandler/node_modules/debug/Makefile	/^BIN := $(THIS_DIR)\/node_modules\/.bin$/;"	m
+BIN	app/node_modules/send/node_modules/debug/Makefile	/^BIN := $(THIS_DIR)\/node_modules\/.bin$/;"	m
+BIN	app/node_modules/serve-index/node_modules/debug/Makefile	/^BIN := $(THIS_DIR)\/node_modules\/.bin$/;"	m
+BIN	app/node_modules/snapdragon/node_modules/debug/Makefile	/^BIN := $(THIS_DIR)\/node_modules\/.bin$/;"	m
+BINARY	app/node_modules/nan/nan.h	/^enum Encoding {ASCII, UTF8, BASE64, UCS2, BINARY, HEX, BUFFER};$/;"	e	enum:Nan::Encoding
+BROWSERIFY	app/node_modules/body-parser/node_modules/debug/Makefile	/^BROWSERIFY ?= $(NODE) $(BIN)\/browserify$/;"	m
+BROWSERIFY	app/node_modules/compression/node_modules/debug/Makefile	/^BROWSERIFY ?= $(NODE) $(BIN)\/browserify$/;"	m
+BROWSERIFY	app/node_modules/expand-brackets/node_modules/debug/Makefile	/^BROWSERIFY ?= $(NODE) $(BIN)\/browserify$/;"	m
+BROWSERIFY	app/node_modules/express/node_modules/debug/Makefile	/^BROWSERIFY ?= $(NODE) $(BIN)\/browserify$/;"	m
+BROWSERIFY	app/node_modules/finalhandler/node_modules/debug/Makefile	/^BROWSERIFY ?= $(NODE) $(BIN)\/browserify$/;"	m
+BROWSERIFY	app/node_modules/send/node_modules/debug/Makefile	/^BROWSERIFY ?= $(NODE) $(BIN)\/browserify$/;"	m
+BROWSERIFY	app/node_modules/serve-index/node_modules/debug/Makefile	/^BROWSERIFY ?= $(NODE) $(BIN)\/browserify$/;"	m
+BROWSERIFY	app/node_modules/snapdragon/node_modules/debug/Makefile	/^BROWSERIFY ?= $(NODE) $(BIN)\/browserify$/;"	m
+BUFFER	app/node_modules/nan/nan.h	/^enum Encoding {ASCII, UTF8, BASE64, UCS2, BINARY, HEX, BUFFER};$/;"	e	enum:Nan::Encoding
+BoundScript	app/node_modules/nan/nan.h	/^typedef v8::Script             BoundScript;$/;"	t	namespace:Nan	typeref:typename:v8::Script
+CHANGELOG_ERROR	app/node_modules/es-to-primitive/Makefile	/^CHANGELOG_ERROR = $(error No CHANGELOG specified)$/;"	m
+CHANGELOG_ERROR	app/node_modules/is-symbol/Makefile	/^CHANGELOG_ERROR = $(error No CHANGELOG specified)$/;"	m
+Call	app/node_modules/nan/nan.h	/^  Call(int argc, v8::Local<v8::Value> argv[]) const {$/;"	f	class:Nan::Callback	typeref:typename:NAN_DEPRECATED v8::Local<v8::Value>
+Call	app/node_modules/nan/nan.h	/^  Call(int argc, v8::Local<v8::Value> argv[], AsyncResource* resource) const {$/;"	f	class:Nan::Callback	typeref:typename:MaybeLocal<v8::Value>
+Call	app/node_modules/nan/nan.h	/^  Call(v8::Local<v8::Object> target$/;"	f	class:Nan::Callback	typeref:typename:MaybeLocal<v8::Value>
+Call	app/node_modules/nan/nan.h	/^  Call(v8::Local<v8::Object> target$/;"	f	class:Nan::Callback	typeref:typename:NAN_DEPRECATED v8::Local<v8::Value>
+Call	app/node_modules/nan/nan.h	/^inline MaybeLocal<v8::Value> Call($/;"	f	namespace:Nan	typeref:typename:MaybeLocal<v8::Value>
+Call	app/node_modules/nan/nan_maybe_43_inl.h	/^inline MaybeLocal<v8::Value> Call($/;"	f	typeref:typename:MaybeLocal<v8::Value>
+Call	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline MaybeLocal<v8::Value> Call($/;"	f	typeref:typename:MaybeLocal<v8::Value>
+CallAsConstructor	app/node_modules/nan/nan_maybe_43_inl.h	/^inline MaybeLocal<v8::Value> CallAsConstructor($/;"	f	typeref:typename:MaybeLocal<v8::Value>
+CallAsConstructor	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline MaybeLocal<v8::Value> CallAsConstructor($/;"	f	typeref:typename:MaybeLocal<v8::Value>
+CallAsFunction	app/node_modules/nan/nan_maybe_43_inl.h	/^inline MaybeLocal<v8::Value> CallAsFunction($/;"	f	typeref:typename:MaybeLocal<v8::Value>
+CallAsFunction	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline MaybeLocal<v8::Value> CallAsFunction($/;"	f	typeref:typename:MaybeLocal<v8::Value>
+Call_	app/node_modules/nan/nan.h	/^  MaybeLocal<v8::Value> Call_(v8::Isolate *isolate$/;"	f	class:Nan::Callback	typeref:typename:MaybeLocal<v8::Value>
+Call_	app/node_modules/nan/nan.h	/^  v8::Local<v8::Value> Call_(v8::Isolate *isolate$/;"	f	class:Nan::Callback	typeref:typename:v8::Local<v8::Value>
+Call_	app/node_modules/nan/nan.h	/^  v8::Local<v8::Value> Call_(v8::Local<v8::Object> target$/;"	f	class:Nan::Callback	typeref:typename:v8::Local<v8::Value>
+Callback	app/node_modules/nan/nan.h	/^  Callback() {}$/;"	f	class:Nan::Callback
+Callback	app/node_modules/nan/nan.h	/^  explicit Callback(const v8::Local<v8::Function> &fn) : handle_(fn) {}$/;"	f	class:Nan::Callback
+Callback	app/node_modules/nan/nan.h	/^class Callback {$/;"	c	namespace:Nan
+Callback	app/node_modules/nan/nan_weak.h	/^  typedef void (*Callback)(const WeakCallbackInfo<T>& data);$/;"	t	class:WeakCallbackInfo	typeref:typename:void (*)(const WeakCallbackInfo<T> & data)
+Callee	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline v8::Local<v8::Function> Callee() const { return info_.Callee(); }$/;"	f	class:FunctionCallbackInfo	typeref:typename:v8::Local<v8::Function>
+Callee	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline v8::Local<v8::Function> Callee() const { return args_.Callee(); }$/;"	f	class:FunctionCallbackInfo	typeref:typename:v8::Local<v8::Function>
+CanContinue	app/node_modules/nan/nan.h	/^  inline bool CanContinue() const { return try_catch_.CanContinue(); }$/;"	f	class:Nan::TryCatch	typeref:typename:bool
+Check	app/node_modules/nan/nan.h	/^  inline void Check() const { FromJust(); }$/;"	f	class:Nan::Maybe	typeref:typename:void
+ClearWeak	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline void ClearWeak() { persistent.ClearWeak(); }$/;"	f	class:PersistentBase	typeref:typename:void
+CloneElementAt	app/node_modules/nan/nan_maybe_43_inl.h	/^inline MaybeLocal<v8::Object> CloneElementAt($/;"	f	typeref:typename:MaybeLocal<v8::Object>
+CloneElementAt	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline MaybeLocal<v8::Object> CloneElementAt($/;"	f	typeref:typename:MaybeLocal<v8::Object>
+CompileScript	app/node_modules/nan/nan.h	/^  inline MaybeLocal<BoundScript> CompileScript($/;"	f	namespace:Nan	typeref:typename:MaybeLocal<BoundScript>
+Constants	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^static v8::Local<v8::Object> Constants() {$/;"	f	typeref:typename:v8::Local<v8::Object>	file:
+Constants	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^static v8::Local<v8::Object> Constants() {$/;"	f	typeref:typename:v8::Local<v8::Object>	file:
+ContextDisposedNotification	app/node_modules/nan/nan.h	/^  inline void ContextDisposedNotification() {$/;"	f	namespace:Nan	typeref:typename:void
+Copy	app/node_modules/nan/nan_persistent_12_inl.h	/^  inline void Copy(const Persistent<S, M2> &that) {$/;"	f	class:Persistent	typeref:typename:void
+Copy	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline static void Copy(const Persistent<S, M> &source,$/;"	f	class:NonCopyablePersistentTraits	typeref:typename:void
+Copy	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline void Copy(const Persistent<S, M2> &that) {$/;"	f	class:Persistent	typeref:typename:void
+Copy	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  static inline void Copy(const Persistent<S, M> &source,$/;"	f	struct:CopyablePersistentTraits	typeref:typename:void
+CopyBuffer	app/node_modules/nan/nan.h	/^  inline MaybeLocal<v8::Object> CopyBuffer($/;"	f	namespace:Nan	typeref:typename:MaybeLocal<v8::Object>
+CopyablePersistent	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  typedef Persistent<T, CopyablePersistentTraits<T> > CopyablePersistent;$/;"	t	struct:CopyablePersistentTraits	typeref:typename:Persistent<T,CopyablePersistentTraits<T>>
+CopyablePersistentTraits	app/node_modules/nan/nan.h	/^class CopyablePersistentTraits :$/;"	c	namespace:Nan
+CopyablePersistentTraits	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^struct CopyablePersistentTraits {$/;"	s
+Data	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline v8::Local<v8::Value> Data() const { return data_; }$/;"	f	class:FunctionCallbackInfo	typeref:typename:v8::Local<v8::Value>
+Data	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline v8::Local<v8::Value> Data() const { return data_; }$/;"	f	class:PropertyCallbackInfo	typeref:typename:v8::Local<v8::Value>
+Data	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline v8::Local<v8::Value> Data() const { return data_; }$/;"	f	class:FunctionCallbackInfo	typeref:typename:v8::Local<v8::Value>
+Data	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline v8::Local<v8::Value> Data() const { return data_; }$/;"	f	class:PropertyCallbackInfoBase	typeref:typename:v8::Local<v8::Value>
+DecodeBytes	app/node_modules/nan/nan.h	/^inline ssize_t DecodeBytes($/;"	f	namespace:Nan	typeref:typename:ssize_t
+DecodeWrite	app/node_modules/nan/nan.h	/^inline ssize_t DecodeWrite($/;"	f	namespace:Nan	typeref:typename:ssize_t
+DefineOwnProperty	app/node_modules/nan/nan_maybe_43_inl.h	/^inline Maybe<bool> DefineOwnProperty($/;"	f	typeref:typename:Maybe<bool>
+DefineOwnProperty	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline Maybe<bool> DefineOwnProperty($/;"	f	typeref:typename:Maybe<bool>
+DefineOwnPropertyHelper	app/node_modules/nan/nan_define_own_property_helper.h	/^inline Maybe<bool> DefineOwnPropertyHelper($/;"	f	namespace:imp	typeref:typename:Maybe<bool>
+Delete	app/node_modules/nan/nan_maybe_43_inl.h	/^Maybe<bool> Delete(v8::Local<v8::Object> obj, uint32_t index) {$/;"	f	typeref:typename:Maybe<bool>
+Delete	app/node_modules/nan/nan_maybe_43_inl.h	/^inline Maybe<bool> Delete($/;"	f	typeref:typename:Maybe<bool>
+Delete	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline Maybe<bool> Delete($/;"	f	typeref:typename:Maybe<bool>
+DeletePrivate	app/node_modules/nan/nan_private.h	/^inline Maybe<bool> DeletePrivate($/;"	f	typeref:typename:Maybe<bool>
+Destroy	app/node_modules/nan/nan.h	/^  virtual void Destroy() {$/;"	f	class:Nan::AsyncBareProgressWorkerBase	typeref:typename:void
+Destroy	app/node_modules/nan/nan.h	/^  virtual void Destroy() {$/;"	f	class:Nan::AsyncWorker	typeref:typename:void
+E	app/node_modules/nan/nan.h	/^  enum E {kParameter, kInternalFields};$/;"	g	struct:Nan::WeakCallbackType
+EXAMPLES	app/node_modules/progress/Makefile	/^EXAMPLES = $(foreach EXAMPLE, $(wildcard examples\/*.js), $(EXAMPLE))$/;"	m
+Empty	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline void Empty() { persistent.Clear(); }$/;"	f	class:PersistentBase	typeref:typename:void
+EmptyString	app/node_modules/nan/nan.h	/^  inline v8::Local<v8::String> EmptyString() {$/;"	f	namespace:Nan	typeref:typename:v8::Local<v8::String>
+Encode	app/node_modules/nan/nan.h	/^inline v8::Local<v8::Value> Encode($/;"	f	namespace:Nan	typeref:typename:v8::Local<v8::Value>
+Encode	app/node_modules/nan/nan_string_bytes.h	/^static Local<Value> Encode(const char* buf,$/;"	f	namespace:imp	typeref:typename:Local<Value>
+Encoding	app/node_modules/nan/nan.h	/^enum Encoding {ASCII, UTF8, BASE64, UCS2, BINARY, HEX, BUFFER};$/;"	g	namespace:Nan
+Equals	app/node_modules/nan/nan_maybe_43_inl.h	/^Maybe<bool> Equals(v8::Local<v8::Value> a, v8::Local<v8::Value>(b)) {$/;"	f	typeref:typename:Maybe<bool>
+Equals	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^Maybe<bool> Equals(v8::Handle<v8::Value> a, v8::Handle<v8::Value>(b)) {$/;"	f	typeref:typename:Maybe<bool>
+ErrnoException	app/node_modules/nan/nan.h	/^  inline v8::Local<v8::Value> ErrnoException($/;"	f	namespace:Nan	typeref:typename:v8::Local<v8::Value>
+ErrorMessage	app/node_modules/nan/nan.h	/^  const char* ErrorMessage() const {$/;"	f	class:Nan::AsyncWorker	typeref:typename:const char *
+EscapableHandleScope	app/node_modules/nan/nan.h	/^  inline EscapableHandleScope() : scope(v8::Isolate::GetCurrent()) {}$/;"	f	class:Nan::EscapableHandleScope
+EscapableHandleScope	app/node_modules/nan/nan.h	/^class EscapableHandleScope {$/;"	c	namespace:Nan
+Escape	app/node_modules/nan/nan.h	/^  inline v8::Local<T> Escape(v8::Local<T> value) {$/;"	f	class:Nan::EscapableHandleScope	typeref:typename:v8::Local<T>
+Exception	app/node_modules/nan/nan.h	/^  inline v8::Local<v8::Value> Exception() const {$/;"	f	class:Nan::TryCatch	typeref:typename:v8::Local<v8::Value>
+Execute	app/node_modules/nan/nan.h	/^  void Execute() \/*final override*\/ {$/;"	f	class:Nan::AsyncBareProgressQueueWorker	typeref:typename:void
+Execute	app/node_modules/nan/nan.h	/^  void Execute() \/*final override*\/ {$/;"	f	class:Nan::AsyncBareProgressWorker	typeref:typename:void
+ExecutionProgress	app/node_modules/nan/nan.h	/^    explicit ExecutionProgress(AsyncBareProgressQueueWorker *that)$/;"	f	class:Nan::AsyncBareProgressQueueWorker::ExecutionProgress
+ExecutionProgress	app/node_modules/nan/nan.h	/^    explicit ExecutionProgress(AsyncBareProgressWorker *that) : that_(that) {}$/;"	f	class:Nan::AsyncBareProgressWorker::ExecutionProgress
+ExecutionProgress	app/node_modules/nan/nan.h	/^  class ExecutionProgress {$/;"	c	class:Nan::AsyncBareProgressQueueWorker
+ExecutionProgress	app/node_modules/nan/nan.h	/^  class ExecutionProgress {$/;"	c	class:Nan::AsyncBareProgressWorker
+Export	app/node_modules/nan/nan.h	/^Export(ADDON_REGISTER_FUNCTION_ARGS_TYPE target, const char *name,$/;"	f	namespace:Nan	typeref:typename:void
+ExternalOneByteStringResource	app/node_modules/nan/nan.h	/^    ExternalOneByteStringResource;$/;"	t	namespace:Nan	typeref:typename:v8::String::ExternalAsciiStringResource
+ExternalOneByteStringResource	app/node_modules/nan/nan.h	/^    ExternalOneByteStringResource;$/;"	t	namespace:Nan	typeref:typename:v8::String::ExternalOneByteStringResource
+FSEvents	app/node_modules/watchpack-chokidar2/node_modules/fsevents/fsevents.cc	/^  class FSEvents : public Nan::ObjectWrap {$/;"	c	namespace:fse	file:
+FSEvents	app/node_modules/watchpack-chokidar2/node_modules/fsevents/fsevents.cc	/^FSEvents::FSEvents(const char *path)$/;"	f	class:FSEvents
+FSEvents	app/node_modules/webpack-dev-server/node_modules/fsevents/fsevents.cc	/^  class FSEvents : public Nan::ObjectWrap {$/;"	c	namespace:fse	file:
+FSEvents	app/node_modules/webpack-dev-server/node_modules/fsevents/fsevents.cc	/^FSEvents::FSEvents(const char *path)$/;"	f	class:FSEvents
+FTH	app/node_modules/nan/nan_new.h	/^  typedef v8::Local<v8::FunctionTemplate> FTH;$/;"	t	struct:imp::Factory	typeref:typename:v8::Local<v8::FunctionTemplate>
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::Array> : FactoryBase<v8::Array> {$/;"	s	namespace:imp
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::Boolean> : FactoryBase<v8::Boolean> {$/;"	s	namespace:imp
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::BooleanObject> : FactoryBase<v8::BooleanObject> {$/;"	s	namespace:imp
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::Context> : FactoryBase<v8::Context> {$/;"	s	namespace:imp
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::Date> : MaybeFactoryBase<v8::Date> {$/;"	s	namespace:imp
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::External> : FactoryBase<v8::External> {$/;"	s	namespace:imp
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::Function> : FactoryBase<v8::Function> {$/;"	s	namespace:imp
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::FunctionTemplate> : FactoryBase<v8::FunctionTemplate> {$/;"	s	namespace:imp
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::Int32> : IntegerFactory<v8::Int32> {};$/;"	s	namespace:imp
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::Integer> : IntegerFactory<v8::Integer> {};$/;"	s	namespace:imp
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::Number> : FactoryBase<v8::Number> {$/;"	s	namespace:imp
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::NumberObject> : FactoryBase<v8::NumberObject> {$/;"	s	namespace:imp
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::Object> : FactoryBase<v8::Object> {$/;"	s	namespace:imp
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::ObjectTemplate> : FactoryBase<v8::ObjectTemplate> {$/;"	s	namespace:imp
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::RegExp> : MaybeFactoryBase<v8::RegExp> {$/;"	s	namespace:imp
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::Script> : MaybeFactoryBase<v8::Script> {$/;"	s	namespace:imp
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::Signature> : FactoryBase<v8::Signature> {$/;"	s	namespace:imp
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::String> : MaybeFactoryBase<v8::String> {$/;"	s	namespace:imp
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::StringObject> : FactoryBase<v8::StringObject> {$/;"	s	namespace:imp
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::Uint32> : FactoryBase<v8::Uint32> {$/;"	s	namespace:imp
+Factory	app/node_modules/nan/nan_new.h	/^struct Factory<v8::UnboundScript> : MaybeFactoryBase<v8::UnboundScript> {$/;"	s	namespace:imp
+FactoryBase	app/node_modules/nan/nan_new.h	/^template <typename T> struct FactoryBase {$/;"	s	namespace:imp
+False	app/node_modules/nan/nan.h	/^  inline v8::Local<v8::Boolean> False() {$/;"	f	namespace:Nan	typeref:typename:v8::Local<v8::Boolean>
+FatalException	app/node_modules/nan/nan.h	/^  inline void FatalException(const TryCatch& try_catch) {$/;"	f	namespace:Nan	typeref:typename:void
+ForceSet	app/node_modules/nan/nan_maybe_43_inl.h	/^NAN_DEPRECATED inline Maybe<bool> ForceSet($/;"	f	typeref:typename:NAN_DEPRECATED Maybe<bool>
+ForceSet	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^NAN_DEPRECATED inline Maybe<bool> ForceSet($/;"	f	typeref:typename:NAN_DEPRECATED Maybe<bool>
+FreeCallback	app/node_modules/nan/nan.h	/^typedef void (*FreeCallback)(char *data, void *hint);$/;"	t	namespace:Nan	typeref:typename:void (*)(char * data,void * hint)
+FreeData	app/node_modules/nan/nan.h	/^  inline void FreeData(char *data, void *hint) {$/;"	f	namespace:Nan	typeref:typename:void
+FromJust	app/node_modules/nan/nan.h	/^  inline T FromJust() const {$/;"	f	class:Nan::Maybe	typeref:typename:T
+FromMaybe	app/node_modules/nan/nan.h	/^  inline T FromMaybe(const T& default_value) const {$/;"	f	class:Nan::Maybe	typeref:typename:T
+FromMaybe	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^  inline v8::Local<S> FromMaybe(v8::Local<S> default_value) const {$/;"	f	class:MaybeLocal	typeref:typename:v8::Local<S>
+FunctionCallback	app/node_modules/nan/nan_callbacks.h	/^typedef void(*FunctionCallback)(const FunctionCallbackInfo<v8::Value>&);$/;"	t	typeref:typename:void (*)(const FunctionCallbackInfo<v8::Value> &)
+FunctionCallbackInfo	app/node_modules/nan/nan_callbacks_12_inl.h	/^  explicit inline FunctionCallbackInfo($/;"	f	class:FunctionCallbackInfo
+FunctionCallbackInfo	app/node_modules/nan/nan_callbacks_12_inl.h	/^class FunctionCallbackInfo {$/;"	c
+FunctionCallbackInfo	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  explicit inline FunctionCallbackInfo($/;"	f	class:FunctionCallbackInfo
+FunctionCallbackInfo	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^class FunctionCallbackInfo {$/;"	c
+FunctionCallbackWrapper	app/node_modules/nan/nan_callbacks_12_inl.h	/^void FunctionCallbackWrapper(const v8::FunctionCallbackInfo<v8::Value> &info) {$/;"	f	namespace:imp	typeref:typename:void
+FunctionCallbackWrapper	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^v8::Handle<v8::Value> FunctionCallbackWrapper(const v8::Arguments &args) {$/;"	f	namespace:imp	typeref:typename:v8::Handle<v8::Value>
+GCEpilogueCallback	app/node_modules/nan/nan.h	/^  typedef v8::Isolate::GCCallback GCEpilogueCallback;$/;"	t	namespace:Nan	typeref:typename:v8::Isolate::GCCallback
+GCEpilogueCallback	app/node_modules/nan/nan.h	/^  typedef v8::Isolate::GCEpilogueCallback GCEpilogueCallback;$/;"	t	namespace:Nan	typeref:typename:v8::Isolate::GCEpilogueCallback
+GCPrologueCallback	app/node_modules/nan/nan.h	/^  typedef v8::Isolate::GCCallback GCPrologueCallback;$/;"	t	namespace:Nan	typeref:typename:v8::Isolate::GCCallback
+GCPrologueCallback	app/node_modules/nan/nan.h	/^  typedef v8::Isolate::GCPrologueCallback GCPrologueCallback;$/;"	t	namespace:Nan	typeref:typename:v8::Isolate::GCPrologueCallback
+Get	app/node_modules/nan/nan_maybe_43_inl.h	/^MaybeLocal<v8::Value> Get(v8::Local<v8::Object> obj, uint32_t index) {$/;"	f	typeref:typename:MaybeLocal<v8::Value>
+Get	app/node_modules/nan/nan_maybe_43_inl.h	/^inline MaybeLocal<v8::Value> Get($/;"	f	typeref:typename:MaybeLocal<v8::Value>
+Get	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline MaybeLocal<v8::Value> Get($/;"	f	typeref:typename:MaybeLocal<v8::Value>
+GetCurrentContext	app/node_modules/nan/nan.h	/^  inline v8::Local<v8::Context> GetCurrentContext() {$/;"	f	namespace:Nan	typeref:typename:v8::Local<v8::Context>
+GetCurrentEventLoop	app/node_modules/nan/nan.h	/^inline uv_loop_t* GetCurrentEventLoop() {$/;"	f	namespace:Nan	typeref:typename:uv_loop_t *
+GetEndColumn	app/node_modules/nan/nan_maybe_43_inl.h	/^inline Maybe<int> GetEndColumn(v8::Local<v8::Message> msg) {$/;"	f	typeref:typename:Maybe<int>
+GetEndColumn	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline Maybe<int> GetEndColumn(v8::Handle<v8::Message> msg) {$/;"	f	typeref:typename:Maybe<int>
+GetExternalResource	app/node_modules/nan/nan.h	/^GetExternalResource(v8::Local<v8::String> str) {$/;"	f	namespace:Nan::imp	typeref:typename:ExternalOneByteStringResource const *
+GetFromPersistent	app/node_modules/nan/nan.h	/^  GetFromPersistent(const v8::Local<v8::String> &key) const {$/;"	f	class:Nan::AsyncWorker	typeref:typename:v8::Local<v8::Value>
+GetFromPersistent	app/node_modules/nan/nan.h	/^  inline v8::Local<v8::Value> GetFromPersistent(const char *key) const {$/;"	f	class:Nan::AsyncWorker	typeref:typename:v8::Local<v8::Value>
+GetFromPersistent	app/node_modules/nan/nan.h	/^  inline v8::Local<v8::Value> GetFromPersistent(uint32_t index) const {$/;"	f	class:Nan::AsyncWorker	typeref:typename:v8::Local<v8::Value>
+GetFunction	app/node_modules/nan/nan.h	/^  inline v8::Local<v8::Function> GetFunction() const {$/;"	f	class:Nan::Callback	typeref:typename:v8::Local<v8::Function>
+GetFunction	app/node_modules/nan/nan_maybe_43_inl.h	/^inline MaybeLocal<v8::Function> GetFunction($/;"	f	typeref:typename:MaybeLocal<v8::Function>
+GetFunction	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^MaybeLocal<v8::Function> GetFunction(v8::Handle<v8::FunctionTemplate> t) {$/;"	f	typeref:typename:MaybeLocal<v8::Function>
+GetHeapStatistics	app/node_modules/nan/nan.h	/^  inline void GetHeapStatistics($/;"	f	namespace:Nan	typeref:typename:void
+GetInternalField	app/node_modules/nan/nan_weak.h	/^  inline void *GetInternalField(int index) const {$/;"	f	class:WeakCallbackInfo	typeref:typename:void *
+GetInternalFieldPointer	app/node_modules/nan/nan.h	/^  inline void* GetInternalFieldPointer($/;"	f	namespace:Nan	typeref:typename:void *
+GetIsolate	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline v8::Isolate *GetIsolate() const { return info_.GetIsolate(); }$/;"	f	class:FunctionCallbackInfo	typeref:typename:v8::Isolate *
+GetIsolate	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline v8::Isolate *GetIsolate() const {$/;"	f	class:ReturnValue	typeref:typename:v8::Isolate *
+GetIsolate	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline v8::Isolate* GetIsolate() const { return info_.GetIsolate(); }$/;"	f	class:PropertyCallbackInfo	typeref:typename:v8::Isolate *
+GetIsolate	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline v8::Isolate *GetIsolate() const { return args_.GetIsolate(); }$/;"	f	class:FunctionCallbackInfo	typeref:typename:v8::Isolate *
+GetIsolate	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline v8::Isolate *GetIsolate() const {$/;"	f	class:ReturnValue	typeref:typename:v8::Isolate *
+GetIsolate	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline v8::Isolate* GetIsolate() const { return info_.GetIsolate(); }$/;"	f	class:PropertyCallbackInfoBase	typeref:typename:v8::Isolate *
+GetIsolate	app/node_modules/nan/nan_weak.h	/^  inline v8::Isolate *GetIsolate() const { return isolate_; }$/;"	f	class:WeakCallbackInfo	typeref:typename:v8::Isolate *
+GetIsolateData	app/node_modules/nan/nan.h	/^  inline T *GetIsolateData($/;"	f	namespace:Nan	typeref:typename:T *
+GetLineNumber	app/node_modules/nan/nan_maybe_43_inl.h	/^inline Maybe<int> GetLineNumber(v8::Local<v8::Message> msg) {$/;"	f	typeref:typename:Maybe<int>
+GetLineNumber	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline Maybe<int> GetLineNumber(v8::Handle<v8::Message> msg) {$/;"	f	typeref:typename:Maybe<int>
+GetOwnPropertyNames	app/node_modules/nan/nan_maybe_43_inl.h	/^MaybeLocal<v8::Array> GetOwnPropertyNames(v8::Local<v8::Object> obj) {$/;"	f	typeref:typename:MaybeLocal<v8::Array>
+GetOwnPropertyNames	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^MaybeLocal<v8::Array> GetOwnPropertyNames(v8::Handle<v8::Object> obj) {$/;"	f	typeref:typename:MaybeLocal<v8::Array>
+GetParameter	app/node_modules/nan/nan_weak.h	/^  inline T *GetParameter() const { return static_cast<T*>(parameter_); }$/;"	f	class:WeakCallbackInfo	typeref:typename:T *
+GetPrivate	app/node_modules/nan/nan_private.h	/^GetPrivate(v8::Local<v8::Object> object, v8::Local<v8::String> key) {$/;"	f	typeref:typename:MaybeLocal<v8::Value>
+GetPropertyAttributes	app/node_modules/nan/nan_maybe_43_inl.h	/^inline v8::PropertyAttribute GetPropertyAttributes($/;"	f	typeref:typename:v8::PropertyAttribute
+GetPropertyAttributes	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline Maybe<v8::PropertyAttribute> GetPropertyAttributes($/;"	f	typeref:typename:Maybe<v8::PropertyAttribute>
+GetPropertyNames	app/node_modules/nan/nan_maybe_43_inl.h	/^MaybeLocal<v8::Array> GetPropertyNames(v8::Local<v8::Object> obj) {$/;"	f	typeref:typename:MaybeLocal<v8::Array>
+GetPropertyNames	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^MaybeLocal<v8::Array> GetPropertyNames(v8::Handle<v8::Object> obj) {$/;"	f	typeref:typename:MaybeLocal<v8::Array>
+GetRealNamedProperty	app/node_modules/nan/nan_maybe_43_inl.h	/^inline MaybeLocal<v8::Value> GetRealNamedProperty($/;"	f	typeref:typename:MaybeLocal<v8::Value>
+GetRealNamedProperty	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline MaybeLocal<v8::Value> GetRealNamedProperty($/;"	f	typeref:typename:MaybeLocal<v8::Value>
+GetRealNamedPropertyInPrototypeChain	app/node_modules/nan/nan_maybe_43_inl.h	/^inline MaybeLocal<v8::Value> GetRealNamedPropertyInPrototypeChain($/;"	f	typeref:typename:MaybeLocal<v8::Value>
+GetRealNamedPropertyInPrototypeChain	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline MaybeLocal<v8::Value> GetRealNamedPropertyInPrototypeChain($/;"	f	typeref:typename:MaybeLocal<v8::Value>
+GetReturnValue	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline ReturnValue<T> GetReturnValue() const {$/;"	f	class:FunctionCallbackInfo	typeref:typename:ReturnValue<T>
+GetReturnValue	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline ReturnValue<T> GetReturnValue() const {$/;"	f	class:PropertyCallbackInfo	typeref:typename:ReturnValue<T>
+GetReturnValue	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline ReturnValue<T> GetReturnValue() const { return return_value_; }$/;"	f	class:PropertyCallbackInfo	typeref:typename:ReturnValue<T>
+GetReturnValue	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline ReturnValue<T> GetReturnValue() const {$/;"	f	class:FunctionCallbackInfo	typeref:typename:ReturnValue<T>
+GetReturnValue	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline ReturnValue<v8::Array> GetReturnValue() const {$/;"	f	class:PropertyCallbackInfo	typeref:typename:ReturnValue<v8::Array>
+GetReturnValue	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline ReturnValue<v8::Boolean> GetReturnValue() const {$/;"	f	class:PropertyCallbackInfo	typeref:typename:ReturnValue<v8::Boolean>
+GetReturnValue	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline ReturnValue<v8::Integer> GetReturnValue() const {$/;"	f	class:PropertyCallbackInfo	typeref:typename:ReturnValue<v8::Integer>
+GetSourceLine	app/node_modules/nan/nan_maybe_43_inl.h	/^MaybeLocal<v8::String> GetSourceLine(v8::Local<v8::Message> msg) {$/;"	f	typeref:typename:MaybeLocal<v8::String>
+GetSourceLine	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^MaybeLocal<v8::String> GetSourceLine(v8::Handle<v8::Message> msg) {$/;"	f	typeref:typename:MaybeLocal<v8::String>
+GetStartColumn	app/node_modules/nan/nan_maybe_43_inl.h	/^inline Maybe<int> GetStartColumn(v8::Local<v8::Message> msg) {$/;"	f	typeref:typename:Maybe<int>
+GetStartColumn	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline Maybe<int> GetStartColumn(v8::Handle<v8::Message> msg) {$/;"	f	typeref:typename:Maybe<int>
+GetterCallback	app/node_modules/nan/nan_callbacks.h	/^typedef void(*GetterCallback)$/;"	t	typeref:typename:void (*)(v8::Local<v8::String>,const PropertyCallbackInfo<v8::Value> &)
+GetterCallbackWrapper	app/node_modules/nan/nan_callbacks_12_inl.h	/^void GetterCallbackWrapper($/;"	f	namespace:imp	typeref:typename:void
+GetterCallbackWrapper	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^v8::Handle<v8::Value> GetterCallbackWrapper($/;"	f	namespace:imp	typeref:typename:v8::Handle<v8::Value>
+Global	app/node_modules/nan/nan_persistent_12_inl.h	/^  Global(const v8::PersistentBase<S> &that) :  \/\/ NOLINT(runtime\/explicit)$/;"	f	class:Global
+Global	app/node_modules/nan/nan_persistent_12_inl.h	/^  inline Global() : v8::Global<T>() {}$/;"	f	class:Global
+Global	app/node_modules/nan/nan_persistent_12_inl.h	/^  inline Global() : v8::UniquePersistent<T>() {}$/;"	f	class:Global
+Global	app/node_modules/nan/nan_persistent_12_inl.h	/^  template<typename S> inline Global(v8::Local<S> that) :$/;"	f	class:Global
+Global	app/node_modules/nan/nan_persistent_12_inl.h	/^class Global : public v8::Global<T> {$/;"	c
+Global	app/node_modules/nan/nan_persistent_12_inl.h	/^class Global : public v8::UniquePersistent<T> {$/;"	c
+Global	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline Global() : PersistentBase<T>(0) { }$/;"	f	class:Global
+Global	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline Global(RValue rvalue)  \/\/ NOLINT(runtime\/explicit)$/;"	f	class:Global
+Global	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline Global(const PersistentBase<S> &that)  \/\/ NOLINT(runtime\/explicit)$/;"	f	class:Global
+Global	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline Global(v8::Local<S> that)  \/\/ NOLINT(runtime\/explicit)$/;"	f	class:Global
+Global	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^class Global : public PersistentBase<T> {$/;"	c
+HEX	app/node_modules/nan/nan.h	/^enum Encoding {ASCII, UTF8, BASE64, UCS2, BINARY, HEX, BUFFER};$/;"	e	enum:Nan::Encoding
+HandleErrorCallback	app/node_modules/nan/nan.h	/^  virtual void HandleErrorCallback() {$/;"	f	class:Nan::AsyncWorker	typeref:typename:void
+HandleOKCallback	app/node_modules/nan/nan.h	/^  virtual void HandleOKCallback() {$/;"	f	class:Nan::AsyncWorker	typeref:typename:void
+HandleScope	app/node_modules/nan/nan.h	/^  inline HandleScope() : scope(v8::Isolate::GetCurrent()) {}$/;"	f	class:Nan::HandleScope
+HandleScope	app/node_modules/nan/nan.h	/^class HandleScope {$/;"	c	namespace:Nan
+HandleStreamEvents	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/thread.cc	/^void HandleStreamEvents(ConstFSEventStreamRef stream, void *ctx, size_t numEvents, void *eventPa/;"	f	typeref:typename:void
+HandleStreamEvents	app/node_modules/webpack-dev-server/node_modules/fsevents/src/thread.cc	/^void HandleStreamEvents(ConstFSEventStreamRef stream, void *ctx, size_t numEvents, void *eventPa/;"	f	typeref:typename:void
+Has	app/node_modules/nan/nan_maybe_43_inl.h	/^inline Maybe<bool> Has($/;"	f	typeref:typename:Maybe<bool>
+Has	app/node_modules/nan/nan_maybe_43_inl.h	/^inline Maybe<bool> Has(v8::Local<v8::Object> obj, uint32_t index) {$/;"	f	typeref:typename:Maybe<bool>
+Has	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline Maybe<bool> Has($/;"	f	typeref:typename:Maybe<bool>
+HasCaught	app/node_modules/nan/nan.h	/^  inline bool HasCaught() const { return try_catch_.HasCaught(); }$/;"	f	class:Nan::TryCatch	typeref:typename:bool
+HasOwnProperty	app/node_modules/nan/nan_maybe_43_inl.h	/^inline Maybe<bool> HasOwnProperty($/;"	f	typeref:typename:Maybe<bool>
+HasOwnProperty	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline Maybe<bool> HasOwnProperty($/;"	f	typeref:typename:Maybe<bool>
+HasPrivate	app/node_modules/nan/nan_private.h	/^HasPrivate(v8::Local<v8::Object> object, v8::Local<v8::String> key) {$/;"	f	typeref:typename:Maybe<bool>
+HasRealIndexedProperty	app/node_modules/nan/nan_maybe_43_inl.h	/^inline Maybe<bool> HasRealIndexedProperty($/;"	f	typeref:typename:Maybe<bool>
+HasRealIndexedProperty	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline Maybe<bool> HasRealIndexedProperty($/;"	f	typeref:typename:Maybe<bool>
+HasRealNamedCallbackProperty	app/node_modules/nan/nan_maybe_43_inl.h	/^inline Maybe<bool> HasRealNamedCallbackProperty($/;"	f	typeref:typename:Maybe<bool>
+HasRealNamedCallbackProperty	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline Maybe<bool> HasRealNamedCallbackProperty($/;"	f	typeref:typename:Maybe<bool>
+HasRealNamedProperty	app/node_modules/nan/nan_maybe_43_inl.h	/^inline Maybe<bool> HasRealNamedProperty($/;"	f	typeref:typename:Maybe<bool>
+HasRealNamedProperty	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline Maybe<bool> HasRealNamedProperty($/;"	f	typeref:typename:Maybe<bool>
+Holder	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline v8::Local<v8::Object> Holder() const { return info_.Holder(); }$/;"	f	class:FunctionCallbackInfo	typeref:typename:v8::Local<v8::Object>
+Holder	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline v8::Local<v8::Object> Holder() const { return info_.Holder(); }$/;"	f	class:PropertyCallbackInfo	typeref:typename:v8::Local<v8::Object>
+Holder	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline v8::Local<v8::Object> Holder() const { return args_.Holder(); }$/;"	f	class:FunctionCallbackInfo	typeref:typename:v8::Local<v8::Object>
+Holder	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline v8::Local<v8::Object> Holder() const { return info_.Holder(); }$/;"	f	class:PropertyCallbackInfoBase	typeref:typename:v8::Local<v8::Object>
+IOJS_1_0_MODULE_VERSION	app/node_modules/nan/nan.h	/^#define IOJS_1_0_MODULE_VERSION /;"	d
+IOJS_1_1_MODULE_VERSION	app/node_modules/nan/nan.h	/^#define IOJS_1_1_MODULE_VERSION /;"	d
+IOJS_2_0_MODULE_VERSION	app/node_modules/nan/nan.h	/^#define IOJS_2_0_MODULE_VERSION /;"	d
+IOJS_3_0_MODULE_VERSION	app/node_modules/nan/nan.h	/^#define IOJS_3_0_MODULE_VERSION /;"	d
+IdleNotification	app/node_modules/nan/nan.h	/^  inline bool IdleNotification(int idle_time_in_ms) {$/;"	f	namespace:Nan	typeref:typename:bool
+IndexDeleterCallback	app/node_modules/nan/nan_callbacks.h	/^typedef void(*IndexDeleterCallback)($/;"	t	typeref:typename:void (*)(uint32_t,const PropertyCallbackInfo<v8::Boolean> &)
+IndexDeleterCallbackWrapper	app/node_modules/nan/nan_callbacks_12_inl.h	/^void IndexDeleterCallbackWrapper($/;"	f	namespace:imp	typeref:typename:void
+IndexDeleterCallbackWrapper	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^v8::Handle<v8::Boolean> IndexDeleterCallbackWrapper($/;"	f	namespace:imp	typeref:typename:v8::Handle<v8::Boolean>
+IndexEnumeratorCallback	app/node_modules/nan/nan_callbacks.h	/^typedef void(*IndexEnumeratorCallback)$/;"	t	typeref:typename:void (*)(const PropertyCallbackInfo<v8::Array> &)
+IndexEnumeratorCallbackWrapper	app/node_modules/nan/nan_callbacks_12_inl.h	/^void IndexEnumeratorCallbackWrapper($/;"	f	namespace:imp	typeref:typename:void
+IndexEnumeratorCallbackWrapper	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^v8::Handle<v8::Array> IndexEnumeratorCallbackWrapper($/;"	f	namespace:imp	typeref:typename:v8::Handle<v8::Array>
+IndexGetterCallback	app/node_modules/nan/nan_callbacks.h	/^typedef void(*IndexGetterCallback)($/;"	t	typeref:typename:void (*)(uint32_t,const PropertyCallbackInfo<v8::Value> &)
+IndexGetterCallbackWrapper	app/node_modules/nan/nan_callbacks_12_inl.h	/^void IndexGetterCallbackWrapper($/;"	f	namespace:imp	typeref:typename:void
+IndexGetterCallbackWrapper	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^v8::Handle<v8::Value> IndexGetterCallbackWrapper($/;"	f	namespace:imp	typeref:typename:v8::Handle<v8::Value>
+IndexQueryCallback	app/node_modules/nan/nan_callbacks.h	/^typedef void(*IndexQueryCallback)($/;"	t	typeref:typename:void (*)(uint32_t,const PropertyCallbackInfo<v8::Integer> &)
+IndexQueryCallbackWrapper	app/node_modules/nan/nan_callbacks_12_inl.h	/^void IndexQueryCallbackWrapper($/;"	f	namespace:imp	typeref:typename:void
+IndexQueryCallbackWrapper	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^v8::Handle<v8::Integer> IndexQueryCallbackWrapper($/;"	f	namespace:imp	typeref:typename:v8::Handle<v8::Integer>
+IndexSetterCallback	app/node_modules/nan/nan_callbacks.h	/^typedef void(*IndexSetterCallback)($/;"	t	typeref:typename:void (*)(uint32_t,v8::Local<v8::Value>,const PropertyCallbackInfo<v8::Value> &)
+IndexSetterCallbackWrapper	app/node_modules/nan/nan_callbacks_12_inl.h	/^void IndexSetterCallbackWrapper($/;"	f	namespace:imp	typeref:typename:void
+IndexSetterCallbackWrapper	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^v8::Handle<v8::Value> IndexSetterCallbackWrapper($/;"	f	namespace:imp	typeref:typename:v8::Handle<v8::Value>
+Initialize	app/node_modules/watchpack-chokidar2/node_modules/fsevents/fsevents.cc	/^void FSEvents::Initialize(v8::Local<v8::Object> exports) {$/;"	f	class:FSEvents	typeref:typename:void
+Initialize	app/node_modules/webpack-dev-server/node_modules/fsevents/fsevents.cc	/^void FSEvents::Initialize(v8::Local<v8::Object> exports) {$/;"	f	class:FSEvents	typeref:typename:void
+IntegerFactory	app/node_modules/nan/nan_new.h	/^struct IntegerFactory : FactoryBase<T> {$/;"	s	namespace:imp
+IsConstructCall	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline bool IsConstructCall() const { return info_.IsConstructCall(); }$/;"	f	class:FunctionCallbackInfo	typeref:typename:bool
+IsConstructCall	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline bool IsConstructCall() const { return args_.IsConstructCall(); }$/;"	f	class:FunctionCallbackInfo	typeref:typename:bool
+IsEmpty	app/node_modules/nan/nan.h	/^  inline bool IsEmpty() const {$/;"	f	class:Nan::Callback	typeref:typename:bool
+IsEmpty	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^  inline bool IsEmpty() const { return val_.IsEmpty(); }$/;"	f	class:MaybeLocal	typeref:typename:bool
+IsEmpty	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline bool IsEmpty() const { return persistent.IsEmpty(); }$/;"	f	class:PersistentBase	typeref:typename:bool
+IsExternal	app/node_modules/nan/nan.h	/^IsExternal(v8::Local<v8::String> str) {$/;"	f	namespace:Nan::imp	typeref:typename:bool
+IsIndependent	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline bool IsIndependent() const { return persistent.IsIndependent(); }$/;"	f	class:PersistentBase	typeref:typename:bool
+IsJust	app/node_modules/nan/nan.h	/^  inline bool IsJust() const { return has_value_; }$/;"	f	class:Nan::Maybe	typeref:typename:bool
+IsNearDeath	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline bool IsNearDeath() const { return persistent.IsNearDeath(); }$/;"	f	class:PersistentBase	typeref:typename:bool
+IsNothing	app/node_modules/nan/nan.h	/^  inline bool IsNothing() const { return !has_value_; }$/;"	f	class:Nan::Maybe	typeref:typename:bool
+IsWeak	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline bool IsWeak() const { return persistent.IsWeak(); }$/;"	f	class:PersistentBase	typeref:typename:bool
+JSL	app/node_modules/extsprintf/Makefile	/^JSL		 = jsl$/;"	m
+JSL_CONF_NODE	app/node_modules/extsprintf/Makefile	/^JSL_CONF_NODE	 = jsl.node.conf$/;"	m
+JSL_FILES_NODE	app/node_modules/extsprintf/Makefile	/^JSL_FILES_NODE   = $(JS_FILES)$/;"	m
+JSON	app/node_modules/nan/nan_json.h	/^  JSON() {$/;"	f	class:JSON
+JSON	app/node_modules/nan/nan_json.h	/^class JSON {$/;"	c
+JSSTYLE	app/node_modules/extsprintf/Makefile	/^JSSTYLE		 = jsstyle$/;"	m
+JSSTYLE_FILES	app/node_modules/chrome-trace-event/Makefile	/^JSSTYLE_FILES := $(shell find lib test -name "*.js")$/;"	m
+JSSTYLE_FILES	app/node_modules/extsprintf/Makefile	/^JSSTYLE_FILES	 = $(JS_FILES)$/;"	m
+JS_FILES	app/node_modules/extsprintf/Makefile	/^JS_FILES	:= $(shell find examples lib -name '*.js')$/;"	m
+Just	app/node_modules/nan/nan.h	/^inline Maybe<T> Just(const T& t) {$/;"	f	namespace:Nan	typeref:typename:Maybe<T>
+Length	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline int Length() const { return info_.Length(); }$/;"	f	class:FunctionCallbackInfo	typeref:typename:int
+Length	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline int Length() const { return args_.Length(); }$/;"	f	class:FunctionCallbackInfo	typeref:typename:int
+LowMemoryNotification	app/node_modules/nan/nan.h	/^  inline void LowMemoryNotification() {$/;"	f	namespace:Nan	typeref:typename:void
+MakeCallback	app/node_modules/nan/nan.h	/^  NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback($/;"	f	namespace:Nan	typeref:typename:NAN_DEPRECATED v8::Local<v8::Value>
+MakeCallback	app/node_modules/nan/nan.h	/^  inline v8::Local<v8::Value> MakeCallback($/;"	f	namespace:Nan	typeref:typename:v8::Local<v8::Value>
+MakeWeak	app/node_modules/nan/nan_object_wrap.h	/^  inline void MakeWeak() {$/;"	f	class:ObjectWrap	typeref:typename:void
+MarkIndependent	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline void MarkIndependent() { persistent.MarkIndependent(); }$/;"	f	class:PersistentBase	typeref:typename:void
+Maybe	app/node_modules/nan/nan.h	/^  Maybe() : has_value_(false) {}$/;"	f	class:Nan::Maybe
+Maybe	app/node_modules/nan/nan.h	/^  Maybe(const v8::Maybe<T>& that)  \/\/ NOLINT(runtime\/explicit)$/;"	f	class:Nan::Maybe
+Maybe	app/node_modules/nan/nan.h	/^  explicit Maybe(const T& t) : has_value_(true), value_(t) {}$/;"	f	class:Nan::Maybe
+Maybe	app/node_modules/nan/nan.h	/^class Maybe {$/;"	c	namespace:Nan
+MaybeFactoryBase	app/node_modules/nan/nan_new.h	/^template <typename T> struct MaybeFactoryBase {$/;"	s	namespace:imp
+MaybeLocal	app/node_modules/nan/nan_maybe_43_inl.h	/^using MaybeLocal = v8::MaybeLocal<T>;$/;"	t	typeref:typename:v8::MaybeLocal<T>
+MaybeLocal	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^  MaybeLocal(v8::Local<S> that) : val_(that) {}  \/\/ NOLINT(runtime\/explicit)$/;"	f	class:MaybeLocal
+MaybeLocal	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^  inline MaybeLocal() : val_(v8::Local<T>()) {}$/;"	f	class:MaybeLocal
+MaybeLocal	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^class MaybeLocal {$/;"	c
+Message	app/node_modules/nan/nan.h	/^  inline v8::Local<v8::Message> Message() const {$/;"	f	class:Nan::TryCatch	typeref:typename:v8::Local<v8::Message>
+NAN_CALLBACKS_12_INL_H_	app/node_modules/nan/nan_callbacks_12_inl.h	/^#define NAN_CALLBACKS_12_INL_H_$/;"	d
+NAN_CALLBACKS_H_	app/node_modules/nan/nan_callbacks.h	/^#define NAN_CALLBACKS_H_$/;"	d
+NAN_CALLBACKS_PRE_12_INL_H_	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^#define NAN_CALLBACKS_PRE_12_INL_H_$/;"	d
+NAN_CONCAT	app/node_modules/nan/nan.h	/^#define NAN_CONCAT(/;"	d
+NAN_CONCAT_HELPER	app/node_modules/nan/nan.h	/^#define NAN_CONCAT_HELPER(/;"	d
+NAN_CONVERTERS_43_INL_H_	app/node_modules/nan/nan_converters_43_inl.h	/^#define NAN_CONVERTERS_43_INL_H_$/;"	d
+NAN_CONVERTERS_H_	app/node_modules/nan/nan_converters.h	/^#define NAN_CONVERTERS_H_$/;"	d
+NAN_CONVERTERS_PRE_43_INL_H_	app/node_modules/nan/nan_converters_pre_43_inl.h	/^#define NAN_CONVERTERS_PRE_43_INL_H_$/;"	d
+NAN_DEFINE_OWN_PROPERTY_HELPER_H_	app/node_modules/nan/nan_define_own_property_helper.h	/^#define NAN_DEFINE_OWN_PROPERTY_HELPER_H_$/;"	d
+NAN_DEPRECATED	app/node_modules/nan/nan.h	/^# define NAN_DEPRECATED /;"	d
+NAN_DISALLOW_ASSIGN	app/node_modules/nan/nan.h	/^# define NAN_DISALLOW_ASSIGN(/;"	d
+NAN_DISALLOW_ASSIGN_COPY	app/node_modules/nan/nan.h	/^#define NAN_DISALLOW_ASSIGN_COPY(/;"	d
+NAN_DISALLOW_ASSIGN_COPY_MOVE	app/node_modules/nan/nan.h	/^#define NAN_DISALLOW_ASSIGN_COPY_MOVE(/;"	d
+NAN_DISALLOW_ASSIGN_COPY_MOVE	app/node_modules/nan/nan_object_wrap.h	/^  NAN_DISALLOW_ASSIGN_COPY_MOVE(ObjectWrap)$/;"	f	class:ObjectWrap
+NAN_DISALLOW_ASSIGN_MOVE	app/node_modules/nan/nan.h	/^#define NAN_DISALLOW_ASSIGN_MOVE(/;"	d
+NAN_DISALLOW_COPY	app/node_modules/nan/nan.h	/^# define NAN_DISALLOW_COPY(/;"	d
+NAN_DISALLOW_COPY_MOVE	app/node_modules/nan/nan.h	/^#define NAN_DISALLOW_COPY_MOVE(/;"	d
+NAN_DISALLOW_MOVE	app/node_modules/nan/nan.h	/^# define NAN_DISALLOW_MOVE(/;"	d
+NAN_EXPORT	app/node_modules/nan/nan.h	/^#define NAN_EXPORT(/;"	d
+NAN_GC_CALLBACK	app/node_modules/nan/nan.h	/^# define NAN_GC_CALLBACK(/;"	d
+NAN_GETTER	app/node_modules/nan/nan.h	/^#define NAN_GETTER(/;"	d
+NAN_GETTER_ARGS_TYPE	app/node_modules/nan/nan.h	/^typedef const PropertyCallbackInfo<v8::Value>& NAN_GETTER_ARGS_TYPE;$/;"	t	namespace:Nan	typeref:typename:const PropertyCallbackInfo<v8::Value> &
+NAN_GETTER_RETURN_TYPE	app/node_modules/nan/nan.h	/^typedef void NAN_GETTER_RETURN_TYPE;$/;"	t	namespace:Nan	typeref:typename:void
+NAN_HAS_CPLUSPLUS_11	app/node_modules/nan/nan.h	/^# define NAN_HAS_CPLUSPLUS_11 /;"	d
+NAN_H_	app/node_modules/nan/nan.h	/^#define NAN_H_$/;"	d
+NAN_IMPLEMENTATION_12_INL_H_	app/node_modules/nan/nan_implementation_12_inl.h	/^#define NAN_IMPLEMENTATION_12_INL_H_$/;"	d
+NAN_IMPLEMENTATION_PRE_12_INL_H_	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^#define NAN_IMPLEMENTATION_PRE_12_INL_H_$/;"	d
+NAN_INDEX_DELETER	app/node_modules/nan/nan.h	/^#define NAN_INDEX_DELETER(/;"	d
+NAN_INDEX_DELETER_ARGS_TYPE	app/node_modules/nan/nan.h	/^    NAN_INDEX_DELETER_ARGS_TYPE;$/;"	t	namespace:Nan	typeref:typename:const PropertyCallbackInfo<v8::Boolean> &
+NAN_INDEX_DELETER_RETURN_TYPE	app/node_modules/nan/nan.h	/^typedef void NAN_INDEX_DELETER_RETURN_TYPE;$/;"	t	namespace:Nan	typeref:typename:void
+NAN_INDEX_ENUMERATOR	app/node_modules/nan/nan.h	/^#define NAN_INDEX_ENUMERATOR(/;"	d
+NAN_INDEX_ENUMERATOR_ARGS_TYPE	app/node_modules/nan/nan.h	/^    NAN_INDEX_ENUMERATOR_ARGS_TYPE;$/;"	t	namespace:Nan	typeref:typename:const PropertyCallbackInfo<v8::Array> &
+NAN_INDEX_ENUMERATOR_RETURN_TYPE	app/node_modules/nan/nan.h	/^typedef void NAN_INDEX_ENUMERATOR_RETURN_TYPE;$/;"	t	namespace:Nan	typeref:typename:void
+NAN_INDEX_GETTER	app/node_modules/nan/nan.h	/^# define NAN_INDEX_GETTER(/;"	d
+NAN_INDEX_GETTER_ARGS_TYPE	app/node_modules/nan/nan.h	/^typedef const PropertyCallbackInfo<v8::Value>& NAN_INDEX_GETTER_ARGS_TYPE;$/;"	t	namespace:Nan	typeref:typename:const PropertyCallbackInfo<v8::Value> &
+NAN_INDEX_GETTER_RETURN_TYPE	app/node_modules/nan/nan.h	/^typedef void NAN_INDEX_GETTER_RETURN_TYPE;$/;"	t	namespace:Nan	typeref:typename:void
+NAN_INDEX_QUERY	app/node_modules/nan/nan.h	/^#define NAN_INDEX_QUERY(/;"	d
+NAN_INDEX_QUERY_ARGS_TYPE	app/node_modules/nan/nan.h	/^    NAN_INDEX_QUERY_ARGS_TYPE;$/;"	t	namespace:Nan	typeref:typename:const PropertyCallbackInfo<v8::Integer> &
+NAN_INDEX_QUERY_RETURN_TYPE	app/node_modules/nan/nan.h	/^typedef void NAN_INDEX_QUERY_RETURN_TYPE;$/;"	t	namespace:Nan	typeref:typename:void
+NAN_INDEX_SETTER	app/node_modules/nan/nan.h	/^#define NAN_INDEX_SETTER(/;"	d
+NAN_INDEX_SETTER_ARGS_TYPE	app/node_modules/nan/nan.h	/^typedef const PropertyCallbackInfo<v8::Value>& NAN_INDEX_SETTER_ARGS_TYPE;$/;"	t	namespace:Nan	typeref:typename:const PropertyCallbackInfo<v8::Value> &
+NAN_INDEX_SETTER_RETURN_TYPE	app/node_modules/nan/nan.h	/^typedef void NAN_INDEX_SETTER_RETURN_TYPE;$/;"	t	namespace:Nan	typeref:typename:void
+NAN_INLINE	app/node_modules/nan/nan.h	/^#define NAN_INLINE /;"	d
+NAN_JSON_H_	app/node_modules/nan/nan_json.h	/^#define NAN_JSON_H_$/;"	d
+NAN_JSON_H_NEED_PARSE	app/node_modules/nan/nan_json.h	/^#define NAN_JSON_H_NEED_PARSE /;"	d
+NAN_JSON_H_NEED_STRINGIFY	app/node_modules/nan/nan_json.h	/^#define NAN_JSON_H_NEED_STRINGIFY /;"	d
+NAN_MAYBE_43_INL_H_	app/node_modules/nan/nan_maybe_43_inl.h	/^#define NAN_MAYBE_43_INL_H_$/;"	d
+NAN_MAYBE_PRE_43_INL_H_	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^#define NAN_MAYBE_PRE_43_INL_H_$/;"	d
+NAN_METHOD	app/node_modules/nan/nan.h	/^#define NAN_METHOD(/;"	d
+NAN_METHOD	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/methods.cc	/^NAN_METHOD(FSEvents::New) {$/;"	f
+NAN_METHOD	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/methods.cc	/^NAN_METHOD(FSEvents::Start) {$/;"	f
+NAN_METHOD	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/methods.cc	/^NAN_METHOD(FSEvents::Stop) {$/;"	f
+NAN_METHOD	app/node_modules/webpack-dev-server/node_modules/fsevents/src/methods.cc	/^NAN_METHOD(FSEvents::New) {$/;"	f
+NAN_METHOD	app/node_modules/webpack-dev-server/node_modules/fsevents/src/methods.cc	/^NAN_METHOD(FSEvents::Start) {$/;"	f
+NAN_METHOD	app/node_modules/webpack-dev-server/node_modules/fsevents/src/methods.cc	/^NAN_METHOD(FSEvents::Stop) {$/;"	f
+NAN_METHOD_ARGS_TYPE	app/node_modules/nan/nan.h	/^typedef const FunctionCallbackInfo<v8::Value>& NAN_METHOD_ARGS_TYPE;$/;"	t	namespace:Nan	typeref:typename:const FunctionCallbackInfo<v8::Value> &
+NAN_METHOD_RETURN_TYPE	app/node_modules/nan/nan.h	/^typedef void NAN_METHOD_RETURN_TYPE;$/;"	t	namespace:Nan	typeref:typename:void
+NAN_MODULE_INIT	app/node_modules/nan/nan.h	/^#define NAN_MODULE_INIT(/;"	d
+NAN_MODULE_WORKER_ENABLED	app/node_modules/nan/nan.h	/^#define NAN_MODULE_WORKER_ENABLED(/;"	d
+NAN_NEW_H_	app/node_modules/nan/nan_new.h	/^#define NAN_NEW_H_$/;"	d
+NAN_OBJECT_WRAP_H_	app/node_modules/nan/nan_object_wrap.h	/^#define NAN_OBJECT_WRAP_H_$/;"	d
+NAN_PERSISTENT_12_INL_H_	app/node_modules/nan/nan_persistent_12_inl.h	/^#define NAN_PERSISTENT_12_INL_H_$/;"	d
+NAN_PERSISTENT_PRE_12_INL_H_	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^#define NAN_PERSISTENT_PRE_12_INL_H_$/;"	d
+NAN_PRIVATE_H_	app/node_modules/nan/nan_private.h	/^#define NAN_PRIVATE_H_$/;"	d
+NAN_PROPERTY_DELETER	app/node_modules/nan/nan.h	/^#define NAN_PROPERTY_DELETER(/;"	d
+NAN_PROPERTY_DELETER_ARGS_TYPE	app/node_modules/nan/nan.h	/^    NAN_PROPERTY_DELETER_ARGS_TYPE;$/;"	t	namespace:Nan	typeref:typename:const PropertyCallbackInfo<v8::Boolean> &
+NAN_PROPERTY_DELETER_RETURN_TYPE	app/node_modules/nan/nan.h	/^typedef void NAN_PROPERTY_DELETER_RETURN_TYPE;$/;"	t	namespace:Nan	typeref:typename:void
+NAN_PROPERTY_ENUMERATOR	app/node_modules/nan/nan.h	/^#define NAN_PROPERTY_ENUMERATOR(/;"	d
+NAN_PROPERTY_ENUMERATOR_ARGS_TYPE	app/node_modules/nan/nan.h	/^    NAN_PROPERTY_ENUMERATOR_ARGS_TYPE;$/;"	t	namespace:Nan	typeref:typename:const PropertyCallbackInfo<v8::Array> &
+NAN_PROPERTY_ENUMERATOR_RETURN_TYPE	app/node_modules/nan/nan.h	/^typedef void NAN_PROPERTY_ENUMERATOR_RETURN_TYPE;$/;"	t	namespace:Nan	typeref:typename:void
+NAN_PROPERTY_GETTER	app/node_modules/nan/nan.h	/^#define NAN_PROPERTY_GETTER(/;"	d
+NAN_PROPERTY_GETTER_ARGS_TYPE	app/node_modules/nan/nan.h	/^    NAN_PROPERTY_GETTER_ARGS_TYPE;$/;"	t	namespace:Nan	typeref:typename:const PropertyCallbackInfo<v8::Value> &
+NAN_PROPERTY_GETTER_RETURN_TYPE	app/node_modules/nan/nan.h	/^typedef void NAN_PROPERTY_GETTER_RETURN_TYPE;$/;"	t	namespace:Nan	typeref:typename:void
+NAN_PROPERTY_QUERY	app/node_modules/nan/nan.h	/^#define NAN_PROPERTY_QUERY(/;"	d
+NAN_PROPERTY_QUERY_ARGS_TYPE	app/node_modules/nan/nan.h	/^    NAN_PROPERTY_QUERY_ARGS_TYPE;$/;"	t	namespace:Nan	typeref:typename:const PropertyCallbackInfo<v8::Integer> &
+NAN_PROPERTY_QUERY_RETURN_TYPE	app/node_modules/nan/nan.h	/^typedef void NAN_PROPERTY_QUERY_RETURN_TYPE;$/;"	t	namespace:Nan	typeref:typename:void
+NAN_PROPERTY_SETTER	app/node_modules/nan/nan.h	/^#define NAN_PROPERTY_SETTER(/;"	d
+NAN_PROPERTY_SETTER_ARGS_TYPE	app/node_modules/nan/nan.h	/^    NAN_PROPERTY_SETTER_ARGS_TYPE;$/;"	t	namespace:Nan	typeref:typename:const PropertyCallbackInfo<v8::Value> &
+NAN_PROPERTY_SETTER_RETURN_TYPE	app/node_modules/nan/nan.h	/^typedef void NAN_PROPERTY_SETTER_RETURN_TYPE;$/;"	t	namespace:Nan	typeref:typename:void
+NAN_SETTER	app/node_modules/nan/nan.h	/^#define NAN_SETTER(/;"	d
+NAN_SETTER_ARGS_TYPE	app/node_modules/nan/nan.h	/^typedef const PropertyCallbackInfo<void>& NAN_SETTER_ARGS_TYPE;$/;"	t	namespace:Nan	typeref:typename:const PropertyCallbackInfo<void> &
+NAN_SETTER_RETURN_TYPE	app/node_modules/nan/nan.h	/^typedef void NAN_SETTER_RETURN_TYPE;$/;"	t	namespace:Nan	typeref:typename:void
+NAN_STRINGIZE	app/node_modules/nan/nan.h	/^#define NAN_STRINGIZE(/;"	d
+NAN_STRINGIZE2	app/node_modules/nan/nan.h	/^#define NAN_STRINGIZE2(/;"	d
+NAN_STRING_BYTES_H_	app/node_modules/nan/nan_string_bytes.h	/^#define NAN_STRING_BYTES_H_$/;"	d
+NAN_TEST_EXPRESSION	app/node_modules/nan/nan.h	/^#define NAN_TEST_EXPRESSION(/;"	d
+NAN_TYPEDARRAY_CONTENTS_H_	app/node_modules/nan/nan_typedarray_contents.h	/^#define NAN_TYPEDARRAY_CONTENTS_H_$/;"	d
+NAN_WEAK_CALLBACK_DATA_TYPE_	app/node_modules/nan/nan_weak.h	/^# define NAN_WEAK_CALLBACK_DATA_TYPE_ /;"	d
+NAN_WEAK_CALLBACK_SIG_	app/node_modules/nan/nan_weak.h	/^# define NAN_WEAK_CALLBACK_SIG_ /;"	d
+NAN_WEAK_H_	app/node_modules/nan/nan_weak.h	/^#define NAN_WEAK_H_$/;"	d
+NAN_WEAK_PARAMETER_CALLBACK_DATA_TYPE_	app/node_modules/nan/nan_weak.h	/^# define NAN_WEAK_PARAMETER_CALLBACK_DATA_TYPE_ /;"	d
+NAN_WEAK_PARAMETER_CALLBACK_SIG_	app/node_modules/nan/nan_weak.h	/^# define NAN_WEAK_PARAMETER_CALLBACK_SIG_ /;"	d
+NAN_WEAK_TWOFIELD_CALLBACK_DATA_TYPE_	app/node_modules/nan/nan_weak.h	/^# define NAN_WEAK_TWOFIELD_CALLBACK_DATA_TYPE_ /;"	d
+NAN_WEAK_TWOFIELD_CALLBACK_SIG_	app/node_modules/nan/nan_weak.h	/^# define NAN_WEAK_TWOFIELD_CALLBACK_SIG_ /;"	d
+NAUV_UVVERSION	app/node_modules/nan/nan.h	/^# define NAUV_UVVERSION /;"	d
+NAUV_WORK_CB	app/node_modules/nan/nan.h	/^  inline static NAUV_WORK_CB(AsyncProgress_) {$/;"	f	class:Nan::AsyncBareProgressWorkerBase
+NAUV_WORK_CB	app/node_modules/nan/nan.h	/^#define NAUV_WORK_CB(/;"	d
+NODE	app/node_modules/body-parser/node_modules/debug/Makefile	/^NODE ?= $(shell which node)$/;"	m
+NODE	app/node_modules/compression/node_modules/debug/Makefile	/^NODE ?= $(shell which node)$/;"	m
+NODE	app/node_modules/expand-brackets/node_modules/debug/Makefile	/^NODE ?= $(shell which node)$/;"	m
+NODE	app/node_modules/express/node_modules/debug/Makefile	/^NODE ?= $(shell which node)$/;"	m
+NODE	app/node_modules/finalhandler/node_modules/debug/Makefile	/^NODE ?= $(shell which node)$/;"	m
+NODE	app/node_modules/send/node_modules/debug/Makefile	/^NODE ?= $(shell which node)$/;"	m
+NODE	app/node_modules/serve-index/node_modules/debug/Makefile	/^NODE ?= $(shell which node)$/;"	m
+NODE	app/node_modules/snapdragon/node_modules/debug/Makefile	/^NODE ?= $(shell which node)$/;"	m
+NODE_0_10_MODULE_VERSION	app/node_modules/nan/nan.h	/^#define NODE_0_10_MODULE_VERSION /;"	d
+NODE_0_12_MODULE_VERSION	app/node_modules/nan/nan.h	/^#define NODE_0_12_MODULE_VERSION /;"	d
+NODE_10_0_MODULE_VERSION	app/node_modules/nan/nan.h	/^#define NODE_10_0_MODULE_VERSION /;"	d
+NODE_11_0_MODULE_VERSION	app/node_modules/nan/nan.h	/^#define NODE_11_0_MODULE_VERSION /;"	d
+NODE_12_0_MODULE_VERSION	app/node_modules/nan/nan.h	/^#define NODE_12_0_MODULE_VERSION /;"	d
+NODE_13_0_MODULE_VERSION	app/node_modules/nan/nan.h	/^#define NODE_13_0_MODULE_VERSION /;"	d
+NODE_14_0_MODULE_VERSION	app/node_modules/nan/nan.h	/^#define NODE_14_0_MODULE_VERSION /;"	d
+NODE_4_0_MODULE_VERSION	app/node_modules/nan/nan.h	/^#define NODE_4_0_MODULE_VERSION /;"	d
+NODE_5_0_MODULE_VERSION	app/node_modules/nan/nan.h	/^#define NODE_5_0_MODULE_VERSION /;"	d
+NODE_6_0_MODULE_VERSION	app/node_modules/nan/nan.h	/^#define NODE_6_0_MODULE_VERSION /;"	d
+NODE_7_0_MODULE_VERSION	app/node_modules/nan/nan.h	/^#define NODE_7_0_MODULE_VERSION /;"	d
+NODE_8_0_MODULE_VERSION	app/node_modules/nan/nan.h	/^#define NODE_8_0_MODULE_VERSION /;"	d
+NODE_9_0_MODULE_VERSION	app/node_modules/nan/nan.h	/^#define NODE_9_0_MODULE_VERSION /;"	d
+NODE_OPTS	app/node_modules/json-stringify-safe/Makefile	/^NODE_OPTS =$/;"	m
+Nan	app/node_modules/nan/nan.h	/^namespace Nan {$/;"	n
+NanErrnoException	app/node_modules/nan/nan.h	/^  NAN_DEPRECATED inline v8::Local<v8::Value> NanErrnoException($/;"	f	namespace:Nan	typeref:typename:NAN_DEPRECATED v8::Local<v8::Value>
+NativeFunction	app/node_modules/nan/nan_callbacks_12_inl.h	/^typedef void (*NativeFunction)(const v8::FunctionCallbackInfo<v8::Value> &);$/;"	t	namespace:imp	typeref:typename:void (*)(const v8::FunctionCallbackInfo<v8::Value> &)
+NativeFunction	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^typedef v8::Handle<v8::Value> (*NativeFunction)(const v8::Arguments &);$/;"	t	namespace:imp	typeref:typename:v8::Handle<v8::Value> (*)(const v8::Arguments &)
+NativeGetter	app/node_modules/nan/nan_callbacks_12_inl.h	/^typedef void (*NativeGetter)$/;"	t	namespace:imp	typeref:typename:void (*)(v8::Local<v8::Name>,const v8::PropertyCallbackInfo<v8::Value> &)
+NativeGetter	app/node_modules/nan/nan_callbacks_12_inl.h	/^typedef void (*NativeGetter)$/;"	t	namespace:imp	typeref:typename:void (*)(v8::Local<v8::String>,const v8::PropertyCallbackInfo<v8::Value> &)
+NativeGetter	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^typedef v8::Handle<v8::Value> (*NativeGetter)$/;"	t	namespace:imp	typeref:typename:v8::Handle<v8::Value> (*)(v8::Local<v8::String>,const v8::AccessorInfo &)
+NativeIndexDeleter	app/node_modules/nan/nan_callbacks_12_inl.h	/^typedef void (*NativeIndexDeleter)$/;"	t	namespace:imp	typeref:typename:void (*)(uint32_t,const v8::PropertyCallbackInfo<v8::Boolean> &)
+NativeIndexDeleter	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^typedef v8::Handle<v8::Boolean> (*NativeIndexDeleter)$/;"	t	namespace:imp	typeref:typename:v8::Handle<v8::Boolean> (*)(uint32_t,const v8::AccessorInfo &)
+NativeIndexEnumerator	app/node_modules/nan/nan_callbacks_12_inl.h	/^typedef void (*NativeIndexEnumerator)$/;"	t	namespace:imp	typeref:typename:void (*)(const v8::PropertyCallbackInfo<v8::Array> &)
+NativeIndexEnumerator	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^typedef v8::Handle<v8::Array> (*NativeIndexEnumerator)$/;"	t	namespace:imp	typeref:typename:v8::Handle<v8::Array> (*)(const v8::AccessorInfo &)
+NativeIndexGetter	app/node_modules/nan/nan_callbacks_12_inl.h	/^typedef void (*NativeIndexGetter)$/;"	t	namespace:imp	typeref:typename:void (*)(uint32_t,const v8::PropertyCallbackInfo<v8::Value> &)
+NativeIndexGetter	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^typedef v8::Handle<v8::Value> (*NativeIndexGetter)$/;"	t	namespace:imp	typeref:typename:v8::Handle<v8::Value> (*)(uint32_t,const v8::AccessorInfo &)
+NativeIndexQuery	app/node_modules/nan/nan_callbacks_12_inl.h	/^typedef void (*NativeIndexQuery)$/;"	t	namespace:imp	typeref:typename:void (*)(uint32_t,const v8::PropertyCallbackInfo<v8::Integer> &)
+NativeIndexQuery	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^typedef v8::Handle<v8::Integer> (*NativeIndexQuery)$/;"	t	namespace:imp	typeref:typename:v8::Handle<v8::Integer> (*)(uint32_t,const v8::AccessorInfo &)
+NativeIndexSetter	app/node_modules/nan/nan_callbacks_12_inl.h	/^typedef void (*NativeIndexSetter)($/;"	t	namespace:imp	typeref:typename:void (*)(uint32_t,v8::Local<v8::Value>,const v8::PropertyCallbackInfo<v8::Value> &)
+NativeIndexSetter	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^typedef v8::Handle<v8::Value> (*NativeIndexSetter)$/;"	t	namespace:imp	typeref:typename:v8::Handle<v8::Value> (*)(uint32_t,v8::Local<v8::Value>,const v8::AccessorInfo &)
+NativePropertyDeleter	app/node_modules/nan/nan_callbacks_12_inl.h	/^typedef void (NativePropertyDeleter)$/;"	t	namespace:imp	typeref:typename:void ()(v8::Local<v8::Name>,const v8::PropertyCallbackInfo<v8::Boolean> &)
+NativePropertyDeleter	app/node_modules/nan/nan_callbacks_12_inl.h	/^typedef void (NativePropertyDeleter)$/;"	t	namespace:imp	typeref:typename:void ()(v8::Local<v8::String>,const v8::PropertyCallbackInfo<v8::Boolean> &)
+NativePropertyDeleter	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^typedef v8::Handle<v8::Boolean> (NativePropertyDeleter)$/;"	t	namespace:imp	typeref:typename:v8::Handle<v8::Boolean> ()(v8::Local<v8::String>,const v8::AccessorInfo &)
+NativePropertyEnumerator	app/node_modules/nan/nan_callbacks_12_inl.h	/^typedef void (*NativePropertyEnumerator)$/;"	t	namespace:imp	typeref:typename:void (*)(const v8::PropertyCallbackInfo<v8::Array> &)
+NativePropertyEnumerator	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^typedef v8::Handle<v8::Array> (*NativePropertyEnumerator)$/;"	t	namespace:imp	typeref:typename:v8::Handle<v8::Array> (*)(const v8::AccessorInfo &)
+NativePropertyGetter	app/node_modules/nan/nan_callbacks_12_inl.h	/^typedef void (*NativePropertyGetter)$/;"	t	namespace:imp	typeref:typename:void (*)(v8::Local<v8::Name>,const v8::PropertyCallbackInfo<v8::Value> &)
+NativePropertyGetter	app/node_modules/nan/nan_callbacks_12_inl.h	/^typedef void (*NativePropertyGetter)$/;"	t	namespace:imp	typeref:typename:void (*)(v8::Local<v8::String>,const v8::PropertyCallbackInfo<v8::Value> &)
+NativePropertyGetter	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^typedef v8::Handle<v8::Value> (*NativePropertyGetter)$/;"	t	namespace:imp	typeref:typename:v8::Handle<v8::Value> (*)(v8::Local<v8::String>,const v8::AccessorInfo &)
+NativePropertyQuery	app/node_modules/nan/nan_callbacks_12_inl.h	/^typedef void (*NativePropertyQuery)$/;"	t	namespace:imp	typeref:typename:void (*)(v8::Local<v8::Name>,const v8::PropertyCallbackInfo<v8::Integer> &)
+NativePropertyQuery	app/node_modules/nan/nan_callbacks_12_inl.h	/^typedef void (*NativePropertyQuery)$/;"	t	namespace:imp	typeref:typename:void (*)(v8::Local<v8::String>,const v8::PropertyCallbackInfo<v8::Integer> &)
+NativePropertyQuery	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^typedef v8::Handle<v8::Integer> (*NativePropertyQuery)$/;"	t	namespace:imp	typeref:typename:v8::Handle<v8::Integer> (*)(v8::Local<v8::String>,const v8::AccessorInfo &)
+NativePropertySetter	app/node_modules/nan/nan_callbacks_12_inl.h	/^typedef void (*NativePropertySetter)($/;"	t	namespace:imp	typeref:typename:void (*)(v8::Local<v8::Name>,v8::Local<v8::Value>,const v8::PropertyCallbackInfo<v8::Value> &)
+NativePropertySetter	app/node_modules/nan/nan_callbacks_12_inl.h	/^typedef void (*NativePropertySetter)($/;"	t	namespace:imp	typeref:typename:void (*)(v8::Local<v8::String>,v8::Local<v8::Value>,const v8::PropertyCallbackInfo<v8::Value> &)
+NativePropertySetter	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^typedef v8::Handle<v8::Value> (*NativePropertySetter)$/;"	t	namespace:imp	typeref:typename:v8::Handle<v8::Value> (*)(v8::Local<v8::String>,v8::Local<v8::Value>,const v8::AccessorInfo &)
+NativeSetter	app/node_modules/nan/nan_callbacks_12_inl.h	/^typedef void (*NativeSetter)($/;"	t	namespace:imp	typeref:typename:void (*)(v8::Local<v8::Name>,v8::Local<v8::Value>,const v8::PropertyCallbackInfo<void> &)
+NativeSetter	app/node_modules/nan/nan_callbacks_12_inl.h	/^typedef void (*NativeSetter)($/;"	t	namespace:imp	typeref:typename:void (*)(v8::Local<v8::String>,v8::Local<v8::Value>,const v8::PropertyCallbackInfo<void> &)
+NativeSetter	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^typedef void (*NativeSetter)$/;"	t	namespace:imp	typeref:typename:void (*)(v8::Local<v8::String>,v8::Local<v8::Value>,const v8::AccessorInfo &)
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::Array>::New() {$/;"	f	class:imp::Factory::Array	typeref:typename:Factory<v8::Array>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::Array>::New(int length) {$/;"	f	class:imp::Factory::Array	typeref:typename:Factory<v8::Array>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::Boolean>::New(bool value) {$/;"	f	class:imp::Factory::Boolean	typeref:typename:Factory<v8::Boolean>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::BooleanObject>::New(bool value) {$/;"	f	class:imp::Factory::BooleanObject	typeref:typename:Factory<v8::BooleanObject>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::Context>::New( v8::ExtensionConfiguration* extensions$/;"	f	class:imp::Factory::Context	typeref:typename:Factory<v8::Context>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::Date>::New(double value) {$/;"	f	class:imp::Factory::Date	typeref:typename:Factory<v8::Date>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::External>::New(void * value) {$/;"	f	class:imp::Factory::External	typeref:typename:Factory<v8::External>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::Function>::New( FunctionCallback callback$/;"	f	class:imp::Factory::Function	typeref:typename:Factory<v8::Function>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::FunctionTemplate>::New( FunctionCallback callback$/;"	f	class:imp::Factory::FunctionTemplate	typeref:typename:Factory<v8::FunctionTemplate>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::Number>::New(double value) {$/;"	f	class:imp::Factory::Number	typeref:typename:Factory<v8::Number>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::NumberObject>::New(double value) {$/;"	f	class:imp::Factory::NumberObject	typeref:typename:Factory<v8::NumberObject>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::Object>::New() {$/;"	f	class:imp::Factory::Object	typeref:typename:Factory<v8::Object>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::ObjectTemplate>::New() {$/;"	f	class:imp::Factory::ObjectTemplate	typeref:typename:Factory<v8::ObjectTemplate>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::RegExp>::New($/;"	f	class:imp::Factory::RegExp	typeref:typename:Factory<v8::RegExp>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::Script>::New( v8::Local<v8::String> source$/;"	f	class:imp::Factory::Script	typeref:typename:Factory<v8::Script>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::Script>::New( v8::Local<v8::String> source) {$/;"	f	class:imp::Factory::Script	typeref:typename:Factory<v8::Script>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::Signature>::New(Factory<v8::Signature>::FTH receiver) {$/;"	f	class:imp::Factory::Signature	typeref:typename:Factory<v8::Signature>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::String>::New($/;"	f	class:imp::Factory::String	typeref:typename:Factory<v8::String>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::String>::New() {$/;"	f	class:imp::Factory::String	typeref:typename:Factory<v8::String>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::String>::New(ExternalOneByteStringResource * value) {$/;"	f	class:imp::Factory::String	typeref:typename:Factory<v8::String>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::String>::New(const char * value, int length) {$/;"	f	class:imp::Factory::String	typeref:typename:Factory<v8::String>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::String>::New(const uint16_t * value, int length) {$/;"	f	class:imp::Factory::String	typeref:typename:Factory<v8::String>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::String>::New(std::string const& value) {$/;"	f	class:imp::Factory::String	typeref:typename:Factory<v8::String>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::String>::New(v8::String::ExternalStringResource * value) {$/;"	f	class:imp::Factory::String	typeref:typename:Factory<v8::String>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::StringObject>::New(v8::Local<v8::String> value) {$/;"	f	class:imp::Factory::StringObject	typeref:typename:Factory<v8::StringObject>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::Uint32>::New(int32_t value) {$/;"	f	class:imp::Factory::Uint32	typeref:typename:Factory<v8::Uint32>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::Uint32>::New(uint32_t value) {$/;"	f	class:imp::Factory::Uint32	typeref:typename:Factory<v8::Uint32>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::UnboundScript>::New( v8::Local<v8::String> source$/;"	f	class:imp::Factory::UnboundScript	typeref:typename:Factory<v8::UnboundScript>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^Factory<v8::UnboundScript>::New(v8::Local<v8::String> source) {$/;"	f	class:imp::Factory::UnboundScript	typeref:typename:Factory<v8::UnboundScript>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^IntegerFactory<T>::New(int32_t value) {$/;"	f	class:imp::IntegerFactory	typeref:typename:IntegerFactory<T>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^IntegerFactory<T>::New(uint32_t value) {$/;"	f	class:imp::IntegerFactory	typeref:typename:IntegerFactory<T>::return_t
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^inline v8::Local<T> New(Global<T> const& p) {$/;"	f	typeref:typename:v8::Local<T>
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^inline v8::Local<T> New(Persistent<T, M> const& p) {$/;"	f	typeref:typename:v8::Local<T>
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^inline v8::Local<T> New(v8::Handle<T> h) {$/;"	f	typeref:typename:v8::Local<T>
+New	app/node_modules/nan/nan_implementation_12_inl.h	/^inline v8::Local<T> New(v8::Persistent<T, M> const& p) {$/;"	f	typeref:typename:v8::Local<T>
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::Array>::New() {$/;"	f	class:imp::Factory::Array	typeref:typename:Factory<v8::Array>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::Array>::New(int length) {$/;"	f	class:imp::Factory::Array	typeref:typename:Factory<v8::Array>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::Boolean>::New(bool value) {$/;"	f	class:imp::Factory::Boolean	typeref:typename:Factory<v8::Boolean>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::BooleanObject>::New(bool value) {$/;"	f	class:imp::Factory::BooleanObject	typeref:typename:Factory<v8::BooleanObject>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::Context>::New( v8::ExtensionConfiguration* extensions$/;"	f	class:imp::Factory::Context	typeref:typename:Factory<v8::Context>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::Date>::New(double value) {$/;"	f	class:imp::Factory::Date	typeref:typename:Factory<v8::Date>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::External>::New(void * value) {$/;"	f	class:imp::Factory::External	typeref:typename:Factory<v8::External>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::Function>::New( FunctionCallback callback$/;"	f	class:imp::Factory::Function	typeref:typename:Factory<v8::Function>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::FunctionTemplate>::New( FunctionCallback callback$/;"	f	class:imp::Factory::FunctionTemplate	typeref:typename:Factory<v8::FunctionTemplate>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::Number>::New(double value) {$/;"	f	class:imp::Factory::Number	typeref:typename:Factory<v8::Number>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::NumberObject>::New(double value) {$/;"	f	class:imp::Factory::NumberObject	typeref:typename:Factory<v8::NumberObject>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::Object>::New() {$/;"	f	class:imp::Factory::Object	typeref:typename:Factory<v8::Object>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::ObjectTemplate>::New() {$/;"	f	class:imp::Factory::ObjectTemplate	typeref:typename:Factory<v8::ObjectTemplate>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::RegExp>::New($/;"	f	class:imp::Factory::RegExp	typeref:typename:Factory<v8::RegExp>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::Script>::New( v8::Local<v8::String> source$/;"	f	class:imp::Factory::Script	typeref:typename:Factory<v8::Script>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::Script>::New( v8::Local<v8::String> source) {$/;"	f	class:imp::Factory::Script	typeref:typename:Factory<v8::Script>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::Signature>::New(Factory<v8::Signature>::FTH receiver) {$/;"	f	class:imp::Factory::Signature	typeref:typename:Factory<v8::Signature>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::String>::New($/;"	f	class:imp::Factory::String	typeref:typename:Factory<v8::String>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::String>::New() {$/;"	f	class:imp::Factory::String	typeref:typename:Factory<v8::String>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::String>::New(const char * value, int length) {$/;"	f	class:imp::Factory::String	typeref:typename:Factory<v8::String>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::String>::New(const uint16_t * value, int length) {$/;"	f	class:imp::Factory::String	typeref:typename:Factory<v8::String>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::String>::New(v8::String::ExternalAsciiStringResource * value) {$/;"	f	class:imp::Factory::String	typeref:typename:Factory<v8::String>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::String>::New(v8::String::ExternalStringResource * value) {$/;"	f	class:imp::Factory::String	typeref:typename:Factory<v8::String>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::StringObject>::New(v8::Local<v8::String> value) {$/;"	f	class:imp::Factory::StringObject	typeref:typename:Factory<v8::StringObject>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::Uint32>::New(int32_t value) {$/;"	f	class:imp::Factory::Uint32	typeref:typename:Factory<v8::Uint32>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^Factory<v8::Uint32>::New(uint32_t value) {$/;"	f	class:imp::Factory::Uint32	typeref:typename:Factory<v8::Uint32>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^IntegerFactory<T>::New(int32_t value) {$/;"	f	class:imp::IntegerFactory	typeref:typename:IntegerFactory<T>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^IntegerFactory<T>::New(uint32_t value) {$/;"	f	class:imp::IntegerFactory	typeref:typename:IntegerFactory<T>::return_t
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^inline v8::Local<T> New(Global<T> const& p) {$/;"	f	typeref:typename:v8::Local<T>
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^inline v8::Local<T> New(Persistent<T, M> const& p) {$/;"	f	typeref:typename:v8::Local<T>
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^inline v8::Local<T> New(v8::Handle<T> h) {$/;"	f	typeref:typename:v8::Local<T>
+New	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^inline v8::Local<T> New(v8::Persistent<T> const& p) {$/;"	f	typeref:typename:v8::Local<T>
+New	app/node_modules/nan/nan_new.h	/^New( FunctionCallback callback$/;"	f	typeref:typename:imp::Factory<T>::return_t
+New	app/node_modules/nan/nan_new.h	/^New() {$/;"	f	typeref:typename:imp::Factory<T>::return_t
+New	app/node_modules/nan/nan_new.h	/^New(A0 arg0) {$/;"	f	typeref:typename:imp::Factory<T>::return_t
+New	app/node_modules/nan/nan_new.h	/^New(A0 arg0, A1 arg1) {$/;"	f	typeref:typename:imp::Factory<T>::return_t
+New	app/node_modules/nan/nan_new.h	/^New(A0 arg0, A1 arg1, A2 arg2) {$/;"	f	typeref:typename:imp::Factory<T>::return_t
+New	app/node_modules/nan/nan_new.h	/^New(A0 arg0, A1 arg1, A2 arg2, A3 arg3) {$/;"	f	typeref:typename:imp::Factory<T>::return_t
+New	app/node_modules/nan/nan_new.h	/^New(ExternalOneByteStringResource * value) {$/;"	f	typeref:typename:imp::Factory<v8::String>::return_t
+New	app/node_modules/nan/nan_new.h	/^New(bool value) {$/;"	f	typeref:typename:imp::Factory<v8::Boolean>::return_t
+New	app/node_modules/nan/nan_new.h	/^New(const char * value) {$/;"	f	typeref:typename:imp::Factory<v8::String>::return_t
+New	app/node_modules/nan/nan_new.h	/^New(const char * value, int length) {$/;"	f	typeref:typename:imp::Factory<v8::String>::return_t
+New	app/node_modules/nan/nan_new.h	/^New(const uint16_t * value) {$/;"	f	typeref:typename:imp::Factory<v8::String>::return_t
+New	app/node_modules/nan/nan_new.h	/^New(const uint16_t * value, int length) {$/;"	f	typeref:typename:imp::Factory<v8::String>::return_t
+New	app/node_modules/nan/nan_new.h	/^New(double value) {$/;"	f	typeref:typename:imp::Factory<v8::Number>::return_t
+New	app/node_modules/nan/nan_new.h	/^New(int32_t value) {$/;"	f	typeref:typename:imp::Factory<v8::Int32>::return_t
+New	app/node_modules/nan/nan_new.h	/^New(std::string const& value) {  \/\/ NOLINT(build\/include_what_you_use)$/;"	f	typeref:typename:imp::Factory<v8::String>::return_t
+New	app/node_modules/nan/nan_new.h	/^New(uint32_t value) {$/;"	f	typeref:typename:imp::Factory<v8::Uint32>::return_t
+New	app/node_modules/nan/nan_new.h	/^New(v8::Local<v8::String> pattern, v8::RegExp::Flags flags) {$/;"	f	typeref:typename:imp::Factory<v8::RegExp>::return_t
+New	app/node_modules/nan/nan_new.h	/^New(v8::String::ExternalStringResource * value) {$/;"	f	typeref:typename:imp::Factory<v8::String>::return_t
+NewBuffer	app/node_modules/nan/nan.h	/^  inline MaybeLocal<v8::Object> NewBuffer($/;"	f	namespace:Nan	typeref:typename:MaybeLocal<v8::Object>
+NewBuffer	app/node_modules/nan/nan.h	/^  inline MaybeLocal<v8::Object> NewBuffer(uint32_t size) {$/;"	f	namespace:Nan	typeref:typename:MaybeLocal<v8::Object>
+NewInstance	app/node_modules/nan/nan_maybe_43_inl.h	/^MaybeLocal<v8::Object> NewInstance($/;"	f	typeref:typename:MaybeLocal<v8::Object>
+NewInstance	app/node_modules/nan/nan_maybe_43_inl.h	/^MaybeLocal<v8::Object> NewInstance(v8::Local<v8::Function> h) {$/;"	f	typeref:typename:MaybeLocal<v8::Object>
+NewInstance	app/node_modules/nan/nan_maybe_43_inl.h	/^MaybeLocal<v8::Object> NewInstance(v8::Local<v8::ObjectTemplate> h) {$/;"	f	typeref:typename:MaybeLocal<v8::Object>
+NewInstance	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^MaybeLocal<v8::Object> NewInstance($/;"	f	typeref:typename:MaybeLocal<v8::Object>
+NewInstance	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^MaybeLocal<v8::Object> NewInstance(v8::Handle<v8::Function> h) {$/;"	f	typeref:typename:MaybeLocal<v8::Object>
+NewInstance	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^MaybeLocal<v8::Object> NewInstance(v8::Handle<v8::ObjectTemplate> h) {$/;"	f	typeref:typename:MaybeLocal<v8::Object>
+NewOneByteString	app/node_modules/nan/nan.h	/^  NewOneByteString(const uint8_t * value, int length = -1) {$/;"	f	namespace:Nan	typeref:typename:MaybeLocal<v8::String>
+NonCopyablePersistent	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^      NonCopyablePersistent;$/;"	t	class:NonCopyablePersistentTraits	typeref:typename:Persistent<T,NonCopyablePersistentTraits<T>>
+NonCopyablePersistentTraits	app/node_modules/nan/nan.h	/^class NonCopyablePersistentTraits :$/;"	c	namespace:Nan
+NonCopyablePersistentTraits	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^class NonCopyablePersistentTraits {$/;"	c
+Nothing	app/node_modules/nan/nan.h	/^inline Maybe<T> Nothing() {$/;"	f	namespace:Nan	typeref:typename:Maybe<T>
+Null	app/node_modules/nan/nan.h	/^  inline v8::Local<v8::Primitive> Null() {$/;"	f	namespace:Nan	typeref:typename:v8::Local<v8::Primitive>
+NumberOfHandles	app/node_modules/nan/nan.h	/^  inline static int NumberOfHandles() {$/;"	f	class:Nan::EscapableHandleScope	typeref:typename:int
+NumberOfHandles	app/node_modules/nan/nan.h	/^  inline static int NumberOfHandles() {$/;"	f	class:Nan::HandleScope	typeref:typename:int
+ObjectProtoToString	app/node_modules/nan/nan_maybe_43_inl.h	/^inline MaybeLocal<v8::String> ObjectProtoToString($/;"	f	typeref:typename:MaybeLocal<v8::String>
+ObjectProtoToString	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline MaybeLocal<v8::String> ObjectProtoToString($/;"	f	typeref:typename:MaybeLocal<v8::String>
+ObjectWrap	app/node_modules/nan/nan_object_wrap.h	/^  ObjectWrap() {$/;"	f	class:ObjectWrap
+ObjectWrap	app/node_modules/nan/nan_object_wrap.h	/^class ObjectWrap {$/;"	c
+PATH	app/node_modules/body-parser/node_modules/debug/Makefile	/^PATH := node_modules\/.bin:$(PATH)$/;"	m
+PATH	app/node_modules/compression/node_modules/debug/Makefile	/^PATH := node_modules\/.bin:$(PATH)$/;"	m
+PATH	app/node_modules/es-to-primitive/Makefile	/^export PATH := $(shell printf '%s' "$$PWD\/node_modules\/.bin:$$PATH")$/;"	m
+PATH	app/node_modules/expand-brackets/node_modules/debug/Makefile	/^PATH := node_modules\/.bin:$(PATH)$/;"	m
+PATH	app/node_modules/express/node_modules/debug/Makefile	/^PATH := node_modules\/.bin:$(PATH)$/;"	m
+PATH	app/node_modules/finalhandler/node_modules/debug/Makefile	/^PATH := node_modules\/.bin:$(PATH)$/;"	m
+PATH	app/node_modules/is-symbol/Makefile	/^export PATH := $(shell printf '%s' "$$PWD\/node_modules\/.bin:$$PATH")$/;"	m
+PATH	app/node_modules/send/node_modules/debug/Makefile	/^PATH := node_modules\/.bin:$(PATH)$/;"	m
+PATH	app/node_modules/serve-index/node_modules/debug/Makefile	/^PATH := node_modules\/.bin:$(PATH)$/;"	m
+PATH	app/node_modules/snapdragon/node_modules/debug/Makefile	/^PATH := node_modules\/.bin:$(PATH)$/;"	m
+PKG	app/node_modules/body-parser/node_modules/debug/Makefile	/^PKG ?= $(if $(YARN),$(YARN),$(NODE) $(shell which npm))$/;"	m
+PKG	app/node_modules/compression/node_modules/debug/Makefile	/^PKG ?= $(if $(YARN),$(YARN),$(NODE) $(shell which npm))$/;"	m
+PKG	app/node_modules/expand-brackets/node_modules/debug/Makefile	/^PKG ?= $(if $(YARN),$(YARN),$(NODE) $(shell which npm))$/;"	m
+PKG	app/node_modules/express/node_modules/debug/Makefile	/^PKG ?= $(if $(YARN),$(YARN),$(NODE) $(shell which npm))$/;"	m
+PKG	app/node_modules/finalhandler/node_modules/debug/Makefile	/^PKG ?= $(if $(YARN),$(YARN),$(NODE) $(shell which npm))$/;"	m
+PKG	app/node_modules/send/node_modules/debug/Makefile	/^PKG ?= $(if $(YARN),$(YARN),$(NODE) $(shell which npm))$/;"	m
+PKG	app/node_modules/serve-index/node_modules/debug/Makefile	/^PKG ?= $(if $(YARN),$(YARN),$(NODE) $(shell which npm))$/;"	m
+PKG	app/node_modules/snapdragon/node_modules/debug/Makefile	/^PKG ?= $(if $(YARN),$(YARN),$(NODE) $(shell which npm))$/;"	m
+Parse	app/node_modules/nan/nan_json.h	/^  Nan::MaybeLocal<v8::Value> Parse(v8::Local<v8::String> json_string) {$/;"	f	class:JSON	typeref:typename:Nan::MaybeLocal<v8::Value>
+Pass	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  Global Pass() { return Global(RValue(this)); }$/;"	f	class:Global	typeref:typename:Global
+Persistent	app/node_modules/nan/nan_persistent_12_inl.h	/^  Persistent(const v8::Persistent<S, M2> &that) :  \/\/ NOLINT(runtime\/explicit)$/;"	f	class:Persistent
+Persistent	app/node_modules/nan/nan_persistent_12_inl.h	/^  inline Persistent() : v8::Persistent<T, M>() {}$/;"	f	class:Persistent
+Persistent	app/node_modules/nan/nan_persistent_12_inl.h	/^  template<typename S> inline Persistent(v8::Local<S> that) :$/;"	f	class:Persistent
+Persistent	app/node_modules/nan/nan_persistent_12_inl.h	/^template<typename T, typename M> class Persistent :$/;"	c
+Persistent	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline Persistent() {}$/;"	f	class:Persistent
+Persistent	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline Persistent(const Persistent &that) : PersistentBase<T>() {$/;"	f	class:Persistent
+Persistent	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline Persistent(const Persistent<S, M2> &that) :$/;"	f	class:Persistent
+Persistent	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  template<typename S> inline Persistent(v8::Handle<S> that)$/;"	f	class:Persistent
+Persistent	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^template<typename T, typename M> class Persistent :$/;"	c
+PersistentBase	app/node_modules/nan/nan.h	/^class PersistentBase :$/;"	c	namespace:Nan
+PersistentBase	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline PersistentBase() :$/;"	f	class:PersistentBase
+PersistentBase	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline explicit PersistentBase(T *val) : persistent(val) {}$/;"	f	class:PersistentBase
+PersistentBase	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline explicit PersistentBase(v8::Persistent<T> that) :$/;"	f	class:PersistentBase
+PersistentBase	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^class PersistentBase {$/;"	c
+PropertyCallbackInfo	app/node_modules/nan/nan_callbacks_12_inl.h	/^  explicit inline PropertyCallbackInfo($/;"	f	class:PropertyCallbackInfo
+PropertyCallbackInfo	app/node_modules/nan/nan_callbacks_12_inl.h	/^class PropertyCallbackInfo {$/;"	c
+PropertyCallbackInfo	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  explicit inline PropertyCallbackInfo($/;"	f	class:PropertyCallbackInfo
+PropertyCallbackInfo	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^class PropertyCallbackInfo : public PropertyCallbackInfoBase<T> {$/;"	c
+PropertyCallbackInfo	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^class PropertyCallbackInfo<v8::Array> :$/;"	c
+PropertyCallbackInfo	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^class PropertyCallbackInfo<v8::Boolean> :$/;"	c
+PropertyCallbackInfo	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^class PropertyCallbackInfo<v8::Integer> :$/;"	c
+PropertyCallbackInfoBase	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  explicit inline PropertyCallbackInfoBase($/;"	f	class:PropertyCallbackInfoBase
+PropertyCallbackInfoBase	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^class PropertyCallbackInfoBase {$/;"	c
+PropertyDeleterCallback	app/node_modules/nan/nan_callbacks.h	/^typedef void(*PropertyDeleterCallback)($/;"	t	typeref:typename:void (*)(v8::Local<v8::String>,const PropertyCallbackInfo<v8::Boolean> &)
+PropertyDeleterCallbackWrapper	app/node_modules/nan/nan_callbacks_12_inl.h	/^void PropertyDeleterCallbackWrapper($/;"	f	namespace:imp	typeref:typename:void
+PropertyDeleterCallbackWrapper	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^v8::Handle<v8::Boolean> PropertyDeleterCallbackWrapper($/;"	f	namespace:imp	typeref:typename:v8::Handle<v8::Boolean>
+PropertyEnumeratorCallback	app/node_modules/nan/nan_callbacks.h	/^typedef void(*PropertyEnumeratorCallback)$/;"	t	typeref:typename:void (*)(const PropertyCallbackInfo<v8::Array> &)
+PropertyEnumeratorCallbackWrapper	app/node_modules/nan/nan_callbacks_12_inl.h	/^void PropertyEnumeratorCallbackWrapper($/;"	f	namespace:imp	typeref:typename:void
+PropertyEnumeratorCallbackWrapper	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^v8::Handle<v8::Array> PropertyEnumeratorCallbackWrapper($/;"	f	namespace:imp	typeref:typename:v8::Handle<v8::Array>
+PropertyGetterCallback	app/node_modules/nan/nan_callbacks.h	/^typedef void(*PropertyGetterCallback)($/;"	t	typeref:typename:void (*)(v8::Local<v8::String>,const PropertyCallbackInfo<v8::Value> &)
+PropertyGetterCallbackWrapper	app/node_modules/nan/nan_callbacks_12_inl.h	/^void PropertyGetterCallbackWrapper($/;"	f	namespace:imp	typeref:typename:void
+PropertyGetterCallbackWrapper	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^v8::Handle<v8::Value> PropertyGetterCallbackWrapper($/;"	f	namespace:imp	typeref:typename:v8::Handle<v8::Value>
+PropertyQueryCallback	app/node_modules/nan/nan_callbacks.h	/^typedef void(*PropertyQueryCallback)($/;"	t	typeref:typename:void (*)(v8::Local<v8::String>,const PropertyCallbackInfo<v8::Integer> &)
+PropertyQueryCallbackWrapper	app/node_modules/nan/nan_callbacks_12_inl.h	/^void PropertyQueryCallbackWrapper($/;"	f	namespace:imp	typeref:typename:void
+PropertyQueryCallbackWrapper	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^v8::Handle<v8::Integer> PropertyQueryCallbackWrapper($/;"	f	namespace:imp	typeref:typename:v8::Handle<v8::Integer>
+PropertySetterCallback	app/node_modules/nan/nan_callbacks.h	/^typedef void(*PropertySetterCallback)($/;"	t	typeref:typename:void (*)(v8::Local<v8::String>,v8::Local<v8::Value>,const PropertyCallbackInfo<v8::Value> &)
+PropertySetterCallbackWrapper	app/node_modules/nan/nan_callbacks_12_inl.h	/^void PropertySetterCallbackWrapper($/;"	f	namespace:imp	typeref:typename:void
+PropertySetterCallbackWrapper	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^v8::Handle<v8::Value> PropertySetterCallbackWrapper($/;"	f	namespace:imp	typeref:typename:v8::Handle<v8::Value>
+RValue	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^    inline explicit RValue(Global* obj) : object(obj) {}$/;"	f	struct:Global::RValue
+RValue	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  struct RValue {$/;"	s	class:Global
+ReThrow	app/node_modules/nan/nan.h	/^  inline v8::Local<v8::Value> ReThrow() {$/;"	f	class:Nan::TryCatch	typeref:typename:v8::Local<v8::Value>
+Ref	app/node_modules/nan/nan_object_wrap.h	/^  virtual void Ref() {$/;"	f	class:ObjectWrap	typeref:typename:void
+RemoveGCEpilogueCallback	app/node_modules/nan/nan.h	/^  inline void RemoveGCEpilogueCallback($/;"	f	namespace:Nan	typeref:typename:void
+RemoveGCPrologueCallback	app/node_modules/nan/nan.h	/^  inline void RemoveGCPrologueCallback($/;"	f	namespace:Nan	typeref:typename:void
+Reset	app/node_modules/nan/nan.h	/^  inline void Reset() { try_catch_.Reset(); }$/;"	f	class:Nan::TryCatch	typeref:typename:void
+Reset	app/node_modules/nan/nan.h	/^  inline void Reset() {$/;"	f	class:Nan::Callback	typeref:typename:void
+Reset	app/node_modules/nan/nan.h	/^  inline void Reset(const v8::Local<v8::Function> &fn) {$/;"	f	class:Nan::Callback	typeref:typename:void
+Reset	app/node_modules/nan/nan_persistent_12_inl.h	/^  inline void Reset() { v8::PersistentBase<T>::Reset(); }$/;"	f	class:Global	typeref:typename:void
+Reset	app/node_modules/nan/nan_persistent_12_inl.h	/^  inline void Reset() { v8::PersistentBase<T>::Reset(); }$/;"	f	class:Persistent	typeref:typename:void
+Reset	app/node_modules/nan/nan_persistent_12_inl.h	/^  inline void Reset(const v8::Local<S> &other) {$/;"	f	class:Global	typeref:typename:void
+Reset	app/node_modules/nan/nan_persistent_12_inl.h	/^  inline void Reset(const v8::Local<S> &other) {$/;"	f	class:Persistent	typeref:typename:void
+Reset	app/node_modules/nan/nan_persistent_12_inl.h	/^  inline void Reset(const v8::PersistentBase<S> &other) {$/;"	f	class:Global	typeref:typename:void
+Reset	app/node_modules/nan/nan_persistent_12_inl.h	/^  inline void Reset(const v8::PersistentBase<S> &other) {$/;"	f	class:Persistent	typeref:typename:void
+Reset	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline void Reset() {$/;"	f	class:PersistentBase	typeref:typename:void
+Reset	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline void Reset(const PersistentBase<S> &other) {$/;"	f	class:PersistentBase	typeref:typename:void
+Reset	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline void Reset(const v8::Local<S> &other) {$/;"	f	class:PersistentBase	typeref:typename:void
+ReturnValue	app/node_modules/nan/nan_callbacks_12_inl.h	/^  explicit inline ReturnValue(const ReturnValue<S>& that)$/;"	f	class:ReturnValue
+ReturnValue	app/node_modules/nan/nan_callbacks_12_inl.h	/^  explicit inline ReturnValue(const v8::ReturnValue<S> &value) :$/;"	f	class:ReturnValue
+ReturnValue	app/node_modules/nan/nan_callbacks_12_inl.h	/^class ReturnValue {$/;"	c
+ReturnValue	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  explicit inline ReturnValue(const ReturnValue<S>& that)$/;"	f	class:ReturnValue
+ReturnValue	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  explicit inline ReturnValue(v8::Isolate *isolate, v8::Persistent<S> *p) :$/;"	f	class:ReturnValue
+ReturnValue	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^class ReturnValue {$/;"	c
+ReturnValueImp	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  explicit ReturnValueImp(ReturnValue<T> that) :$/;"	f	class:imp::ReturnValueImp
+ReturnValueImp	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^class ReturnValueImp : public ReturnValue<T> {$/;"	c	namespace:imp
+RunScript	app/node_modules/nan/nan.h	/^  MaybeLocal<v8::Value> RunScript(v8::Local<v8::Script> script) {$/;"	f	namespace:Nan	typeref:typename:MaybeLocal<v8::Value>
+RunScript	app/node_modules/nan/nan.h	/^  inline MaybeLocal<v8::Value> RunScript($/;"	f	namespace:Nan	typeref:typename:MaybeLocal<v8::Value>
+SHELL	app/node_modules/body-parser/node_modules/debug/Makefile	/^SHELL := \/bin\/bash$/;"	m
+SHELL	app/node_modules/compression/node_modules/debug/Makefile	/^SHELL := \/bin\/bash$/;"	m
+SHELL	app/node_modules/delayed-stream/Makefile	/^SHELL := \/bin\/bash$/;"	m
+SHELL	app/node_modules/expand-brackets/node_modules/debug/Makefile	/^SHELL := \/bin\/bash$/;"	m
+SHELL	app/node_modules/express/node_modules/debug/Makefile	/^SHELL := \/bin\/bash$/;"	m
+SHELL	app/node_modules/finalhandler/node_modules/debug/Makefile	/^SHELL := \/bin\/bash$/;"	m
+SHELL	app/node_modules/retry/Makefile	/^SHELL := \/bin\/bash$/;"	m
+SHELL	app/node_modules/send/node_modules/debug/Makefile	/^SHELL := \/bin\/bash$/;"	m
+SHELL	app/node_modules/serve-index/node_modules/debug/Makefile	/^SHELL := \/bin\/bash$/;"	m
+SHELL	app/node_modules/snapdragon/node_modules/debug/Makefile	/^SHELL := \/bin\/bash$/;"	m
+SaveToPersistent	app/node_modules/nan/nan.h	/^  inline void SaveToPersistent($/;"	f	class:Nan::AsyncWorker	typeref:typename:void
+Send	app/node_modules/nan/nan.h	/^    void Send(const T* data, size_t count) const {$/;"	f	class:Nan::AsyncBareProgressQueueWorker::ExecutionProgress	typeref:typename:void
+Send	app/node_modules/nan/nan.h	/^    void Send(const T* data, size_t count) const {$/;"	f	class:Nan::AsyncBareProgressWorker::ExecutionProgress	typeref:typename:void
+SendProgress_	app/node_modules/nan/nan.h	/^  void SendProgress_(const T *data, size_t count) {$/;"	f	class:Nan::AsyncProgressQueueWorker	typeref:typename:void
+SendProgress_	app/node_modules/nan/nan.h	/^  void SendProgress_(const T *data, size_t count) {$/;"	f	class:Nan::AsyncProgressWorkerBase	typeref:typename:void
+Set	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline void Set(S *whatever) { TYPE_CHECK(S*, v8::Primitive); }$/;"	f	class:ReturnValue	typeref:typename:void
+Set	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline void Set(bool value) {$/;"	f	class:ReturnValue	typeref:typename:void
+Set	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline void Set(double i) {$/;"	f	class:ReturnValue	typeref:typename:void
+Set	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline void Set(int32_t i) {$/;"	f	class:ReturnValue	typeref:typename:void
+Set	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline void Set(uint32_t i) {$/;"	f	class:ReturnValue	typeref:typename:void
+Set	app/node_modules/nan/nan_callbacks_12_inl.h	/^  template <typename S> inline void Set(const Global<S> &handle) {$/;"	f	class:ReturnValue	typeref:typename:void
+Set	app/node_modules/nan/nan_callbacks_12_inl.h	/^  template <typename S> inline void Set(const v8::Local<S> &handle) {$/;"	f	class:ReturnValue	typeref:typename:void
+Set	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline void Set(S *whatever) { TYPE_CHECK(S*, v8::Primitive); }$/;"	f	class:ReturnValue	typeref:typename:void
+Set	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline void Set(bool value) {$/;"	f	class:ReturnValue	typeref:typename:void
+Set	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline void Set(double i) {$/;"	f	class:ReturnValue	typeref:typename:void
+Set	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline void Set(int32_t i) {$/;"	f	class:ReturnValue	typeref:typename:void
+Set	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline void Set(uint32_t i) {$/;"	f	class:ReturnValue	typeref:typename:void
+Set	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  template <typename S> inline void Set(const Global<S> &handle) {$/;"	f	class:ReturnValue	typeref:typename:void
+Set	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  template <typename S> inline void Set(const v8::Local<S> &handle) {$/;"	f	class:ReturnValue	typeref:typename:void
+Set	app/node_modules/nan/nan_maybe_43_inl.h	/^inline Maybe<bool> Set($/;"	f	typeref:typename:Maybe<bool>
+Set	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline Maybe<bool> Set($/;"	f	typeref:typename:Maybe<bool>
+SetAccessor	app/node_modules/nan/nan.h	/^inline bool SetAccessor($/;"	f	namespace:Nan	typeref:typename:bool
+SetAccessor	app/node_modules/nan/nan.h	/^inline void SetAccessor($/;"	f	namespace:Nan	typeref:typename:void
+SetAddHistogramSampleFunction	app/node_modules/nan/nan.h	/^  void SetAddHistogramSampleFunction(v8::AddHistogramSampleCallback cb) {$/;"	f	namespace:Nan	typeref:typename:void
+SetCallAsFunctionHandler	app/node_modules/nan/nan.h	/^inline void SetCallAsFunctionHandler($/;"	f	namespace:Nan	typeref:typename:void
+SetCallHandler	app/node_modules/nan/nan.h	/^inline void SetCallHandler($/;"	f	namespace:Nan	typeref:typename:void
+SetCaptureMessage	app/node_modules/nan/nan.h	/^  inline void SetCaptureMessage(bool value) {$/;"	f	class:Nan::TryCatch	typeref:typename:void
+SetCounterFunction	app/node_modules/nan/nan.h	/^  void SetCounterFunction(v8::CounterLookupCallback cb) {$/;"	f	namespace:Nan	typeref:typename:void
+SetCreateHistogramFunction	app/node_modules/nan/nan.h	/^  void SetCreateHistogramFunction(v8::CreateHistogramCallback cb) {$/;"	f	namespace:Nan	typeref:typename:void
+SetEmptyString	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline void SetEmptyString() {$/;"	f	class:ReturnValue	typeref:typename:void
+SetEmptyString	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline void SetEmptyString() {$/;"	f	class:ReturnValue	typeref:typename:void
+SetErrorMessage	app/node_modules/nan/nan.h	/^  void SetErrorMessage(const char *msg) {$/;"	f	class:Nan::AsyncWorker	typeref:typename:void
+SetFunction	app/node_modules/nan/nan.h	/^  inline void SetFunction(const v8::Local<v8::Function> &fn) {$/;"	f	class:Nan::Callback	typeref:typename:void
+SetIndexedPropertyHandler	app/node_modules/nan/nan.h	/^inline void SetIndexedPropertyHandler($/;"	f	namespace:Nan	typeref:typename:void
+SetInstanceTemplate	app/node_modules/nan/nan.h	/^inline void SetInstanceTemplate($/;"	f	namespace:Nan	typeref:typename:void
+SetInternalFieldPointer	app/node_modules/nan/nan.h	/^  inline void SetInternalFieldPointer($/;"	f	namespace:Nan	typeref:typename:void
+SetIsolateData	app/node_modules/nan/nan.h	/^  inline void SetIsolateData($/;"	f	namespace:Nan	typeref:typename:void
+SetMethod	app/node_modules/nan/nan.h	/^inline void SetMethod($/;"	f	namespace:Nan	typeref:typename:void
+SetMethodAux	app/node_modules/nan/nan.h	/^SetMethodAux(T recv,$/;"	f	namespace:Nan::imp	typeref:typename:void
+SetNamedPropertyHandler	app/node_modules/nan/nan.h	/^inline void SetNamedPropertyHandler($/;"	f	namespace:Nan	typeref:typename:void
+SetNull	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline void SetNull() {$/;"	f	class:ReturnValue	typeref:typename:void
+SetNull	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline void SetNull() {$/;"	f	class:ReturnValue	typeref:typename:void
+SetPrivate	app/node_modules/nan/nan_private.h	/^inline Maybe<bool> SetPrivate($/;"	f	typeref:typename:Maybe<bool>
+SetPrototype	app/node_modules/nan/nan_maybe_43_inl.h	/^inline Maybe<bool> SetPrototype($/;"	f	typeref:typename:Maybe<bool>
+SetPrototype	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^inline Maybe<bool> SetPrototype($/;"	f	typeref:typename:Maybe<bool>
+SetPrototypeMethod	app/node_modules/nan/nan.h	/^inline void SetPrototypeMethod($/;"	f	namespace:Nan	typeref:typename:void
+SetPrototypeTemplate	app/node_modules/nan/nan.h	/^inline void SetPrototypeTemplate($/;"	f	namespace:Nan	typeref:typename:void
+SetTemplate	app/node_modules/nan/nan.h	/^  inline void SetTemplate($/;"	f	namespace:Nan	typeref:typename:void
+SetUndefined	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline void SetUndefined() {$/;"	f	class:ReturnValue	typeref:typename:void
+SetUndefined	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline void SetUndefined() {$/;"	f	class:ReturnValue	typeref:typename:void
+SetVerbose	app/node_modules/nan/nan.h	/^  inline void SetVerbose(bool value) { try_catch_.SetVerbose(value); }$/;"	f	class:Nan::TryCatch	typeref:typename:void
+SetWeak	app/node_modules/nan/nan_persistent_12_inl.h	/^  inline void SetWeak($/;"	f	class:Global	typeref:typename:void
+SetWeak	app/node_modules/nan/nan_weak.h	/^inline void Persistent<T, M>::SetWeak($/;"	f	class:Persistent	typeref:typename:void
+SetWeak	app/node_modules/nan/nan_weak.h	/^inline void PersistentBase<T>::SetWeak($/;"	f	class:PersistentBase	typeref:typename:void
+SetterCallback	app/node_modules/nan/nan_callbacks.h	/^typedef void(*SetterCallback)($/;"	t	typeref:typename:void (*)(v8::Local<v8::String>,v8::Local<v8::Value>,const PropertyCallbackInfo<void> &)
+SetterCallbackWrapper	app/node_modules/nan/nan_callbacks_12_inl.h	/^void SetterCallbackWrapper($/;"	f	namespace:imp	typeref:typename:void
+SetterCallbackWrapper	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^void SetterCallbackWrapper($/;"	f	namespace:imp	typeref:typename:void
+Sig	app/node_modules/nan/nan_callbacks.h	/^typedef v8::Local<v8::AccessorSignature> Sig;$/;"	t	namespace:imp	typeref:typename:v8::Local<v8::AccessorSignature>
+Signal	app/node_modules/nan/nan.h	/^    void Signal() const {$/;"	f	class:Nan::AsyncBareProgressWorker::ExecutionProgress	typeref:typename:void
+StackTrace	app/node_modules/nan/nan.h	/^  inline MaybeLocal<v8::Value> StackTrace() const {$/;"	f	class:Nan::TryCatch	typeref:typename:MaybeLocal<v8::Value>
+StackTrace	app/node_modules/nan/nan.h	/^  inline v8::MaybeLocal<v8::Value> StackTrace() const {$/;"	f	class:Nan::TryCatch	typeref:typename:v8::MaybeLocal<v8::Value>
+Stringify	app/node_modules/nan/nan_json.h	/^  Nan::MaybeLocal<v8::String> Stringify(v8::Local<v8::Object> json_object) {$/;"	f	class:JSON	typeref:typename:Nan::MaybeLocal<v8::String>
+Stringify	app/node_modules/nan/nan_json.h	/^  Nan::MaybeLocal<v8::String> Stringify(v8::Local<v8::Object> json_object,$/;"	f	class:JSON	typeref:typename:Nan::MaybeLocal<v8::String>
+TAPE	app/node_modules/chrome-trace-event/Makefile	/^TAPE = .\/node_modules\/.bin\/tape$/;"	m
+TEST_OPTS	app/node_modules/json-stringify-safe/Makefile	/^TEST_OPTS =$/;"	m
+THIS_DIR	app/node_modules/body-parser/node_modules/debug/Makefile	/^THIS_DIR:=$(shell cd $(dir $(THIS_MAKEFILE_PATH));pwd)$/;"	m
+THIS_DIR	app/node_modules/compression/node_modules/debug/Makefile	/^THIS_DIR:=$(shell cd $(dir $(THIS_MAKEFILE_PATH));pwd)$/;"	m
+THIS_DIR	app/node_modules/expand-brackets/node_modules/debug/Makefile	/^THIS_DIR:=$(shell cd $(dir $(THIS_MAKEFILE_PATH));pwd)$/;"	m
+THIS_DIR	app/node_modules/express/node_modules/debug/Makefile	/^THIS_DIR:=$(shell cd $(dir $(THIS_MAKEFILE_PATH));pwd)$/;"	m
+THIS_DIR	app/node_modules/finalhandler/node_modules/debug/Makefile	/^THIS_DIR:=$(shell cd $(dir $(THIS_MAKEFILE_PATH));pwd)$/;"	m
+THIS_DIR	app/node_modules/send/node_modules/debug/Makefile	/^THIS_DIR:=$(shell cd $(dir $(THIS_MAKEFILE_PATH));pwd)$/;"	m
+THIS_DIR	app/node_modules/serve-index/node_modules/debug/Makefile	/^THIS_DIR:=$(shell cd $(dir $(THIS_MAKEFILE_PATH));pwd)$/;"	m
+THIS_DIR	app/node_modules/snapdragon/node_modules/debug/Makefile	/^THIS_DIR:=$(shell cd $(dir $(THIS_MAKEFILE_PATH));pwd)$/;"	m
+THIS_MAKEFILE_PATH	app/node_modules/body-parser/node_modules/debug/Makefile	/^THIS_MAKEFILE_PATH:=$(word $(words $(MAKEFILE_LIST)),$(MAKEFILE_LIST))$/;"	m
+THIS_MAKEFILE_PATH	app/node_modules/compression/node_modules/debug/Makefile	/^THIS_MAKEFILE_PATH:=$(word $(words $(MAKEFILE_LIST)),$(MAKEFILE_LIST))$/;"	m
+THIS_MAKEFILE_PATH	app/node_modules/expand-brackets/node_modules/debug/Makefile	/^THIS_MAKEFILE_PATH:=$(word $(words $(MAKEFILE_LIST)),$(MAKEFILE_LIST))$/;"	m
+THIS_MAKEFILE_PATH	app/node_modules/express/node_modules/debug/Makefile	/^THIS_MAKEFILE_PATH:=$(word $(words $(MAKEFILE_LIST)),$(MAKEFILE_LIST))$/;"	m
+THIS_MAKEFILE_PATH	app/node_modules/finalhandler/node_modules/debug/Makefile	/^THIS_MAKEFILE_PATH:=$(word $(words $(MAKEFILE_LIST)),$(MAKEFILE_LIST))$/;"	m
+THIS_MAKEFILE_PATH	app/node_modules/send/node_modules/debug/Makefile	/^THIS_MAKEFILE_PATH:=$(word $(words $(MAKEFILE_LIST)),$(MAKEFILE_LIST))$/;"	m
+THIS_MAKEFILE_PATH	app/node_modules/serve-index/node_modules/debug/Makefile	/^THIS_MAKEFILE_PATH:=$(word $(words $(MAKEFILE_LIST)),$(MAKEFILE_LIST))$/;"	m
+THIS_MAKEFILE_PATH	app/node_modules/snapdragon/node_modules/debug/Makefile	/^THIS_MAKEFILE_PATH:=$(word $(words $(MAKEFILE_LIST)),$(MAKEFILE_LIST))$/;"	m
+TYPE_CHECK	app/node_modules/nan/nan.h	/^#define TYPE_CHECK(/;"	d
+Tap	app/node_modules/nan/nan.h	/^  explicit Tap(v8::Local<v8::Value> t) : t_() {$/;"	f	struct:Nan::Tap
+Tap	app/node_modules/nan/nan.h	/^struct Tap {$/;"	s	namespace:Nan
+This	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline v8::Local<v8::Object> This() const { return info_.This(); }$/;"	f	class:FunctionCallbackInfo	typeref:typename:v8::Local<v8::Object>
+This	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline v8::Local<v8::Object> This() const { return info_.This(); }$/;"	f	class:PropertyCallbackInfo	typeref:typename:v8::Local<v8::Object>
+This	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline v8::Local<v8::Object> This() const { return args_.This(); }$/;"	f	class:FunctionCallbackInfo	typeref:typename:v8::Local<v8::Object>
+This	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline v8::Local<v8::Object> This() const { return info_.This(); }$/;"	f	class:PropertyCallbackInfoBase	typeref:typename:v8::Local<v8::Object>
+To	app/node_modules/nan/nan.h	/^  inline bool To(T* out) const {$/;"	f	class:Nan::Maybe	typeref:typename:bool
+To	app/node_modules/nan/nan_converters.h	/^typename imp::ToFactory<T>::return_t To(v8::Local<v8::Value> val) {$/;"	f	typeref:typename:imp::ToFactory<T>::return_t
+To	app/node_modules/nan/nan_new.h	/^To<v8::Int32>(v8::Local<v8::Integer> i) {$/;"	f	namespace:imp	typeref:typename:v8::Local<v8::Int32>
+To	app/node_modules/nan/nan_new.h	/^To<v8::Integer>(v8::Local<v8::Integer> i) {$/;"	f	namespace:imp	typeref:typename:v8::Local<v8::Integer>
+To	app/node_modules/nan/nan_new.h	/^To<v8::Uint32>(v8::Local<v8::Integer> i) {$/;"	f	namespace:imp	typeref:typename:v8::Local<v8::Uint32>
+ToArrayIndex	app/node_modules/nan/nan_maybe_43_inl.h	/^MaybeLocal<v8::Uint32> ToArrayIndex(v8::Local<v8::Value> val) {$/;"	f	typeref:typename:MaybeLocal<v8::Uint32>
+ToArrayIndex	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^MaybeLocal<v8::Uint32> ToArrayIndex(v8::Handle<v8::Value> val) {$/;"	f	typeref:typename:MaybeLocal<v8::Uint32>
+ToChecked	app/node_modules/nan/nan.h	/^  inline T ToChecked() const { return FromJust(); }$/;"	f	class:Nan::Maybe	typeref:typename:T
+ToDetailString	app/node_modules/nan/nan_maybe_43_inl.h	/^MaybeLocal<v8::String> ToDetailString(v8::Local<v8::Value> val) {$/;"	f	typeref:typename:MaybeLocal<v8::String>
+ToDetailString	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^MaybeLocal<v8::String> ToDetailString(v8::Handle<v8::Value> val) {$/;"	f	typeref:typename:MaybeLocal<v8::String>
+ToFactory	app/node_modules/nan/nan_converters.h	/^struct ToFactory<v8::Function> : ToFactoryBase<v8::Function> {$/;"	s	namespace:imp
+ToFactoryBase	app/node_modules/nan/nan_converters.h	/^template<typename T> struct ToFactoryBase {$/;"	s	namespace:imp
+ToLocal	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^  inline bool ToLocal(v8::Local<S> *out) const {$/;"	f	class:MaybeLocal	typeref:typename:bool
+ToLocalChecked	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^  inline v8::Local<T> ToLocalChecked() const {$/;"	f	class:MaybeLocal	typeref:typename:v8::Local<T>
+True	app/node_modules/nan/nan.h	/^  inline v8::Local<v8::Boolean> True() {$/;"	f	namespace:Nan	typeref:typename:v8::Local<v8::Boolean>
+TryCatch	app/node_modules/nan/nan.h	/^  TryCatch() : try_catch_(v8::Isolate::GetCurrent()) {}$/;"	f	class:Nan::TryCatch
+TryCatch	app/node_modules/nan/nan.h	/^class TryCatch {$/;"	c	namespace:Nan
+TypedArrayContents	app/node_modules/nan/nan_typedarray_contents.h	/^  inline explicit TypedArrayContents(v8::Local<v8::Value> from) :$/;"	f	class:TypedArrayContents
+TypedArrayContents	app/node_modules/nan/nan_typedarray_contents.h	/^class TypedArrayContents {$/;"	c
+UCS2	app/node_modules/nan/nan.h	/^enum Encoding {ASCII, UTF8, BASE64, UCS2, BINARY, HEX, BUFFER};$/;"	e	enum:Nan::Encoding
+UTF8	app/node_modules/nan/nan.h	/^enum Encoding {ASCII, UTF8, BASE64, UCS2, BINARY, HEX, BUFFER};$/;"	e	enum:Nan::Encoding
+UTILS	app/node_modules/es-to-primitive/Makefile	/^UTILS := semver$/;"	m
+UTILS	app/node_modules/is-symbol/Makefile	/^UTILS := semver$/;"	m
+UTIL_CHECK	app/node_modules/es-to-primitive/Makefile	/^UTIL_CHECK := $(or $(shell PATH="$(PATH)" which $(UTILS) >\/dev\/null && echo 'ok'),$(error Did /;"	m
+UTIL_CHECK	app/node_modules/is-symbol/Makefile	/^UTIL_CHECK := $(or $(shell PATH="$(PATH)" which $(UTILS) >\/dev\/null && echo 'ok'),$(error Did /;"	m
+UV_VERSION_PATCH	app/node_modules/nan/nan.h	/^#  define UV_VERSION_PATCH /;"	d
+UnboundScript	app/node_modules/nan/nan.h	/^typedef v8::Script             UnboundScript;$/;"	t	namespace:Nan	typeref:typename:v8::Script
+UnboundScript	app/node_modules/nan/nan.h	/^typedef v8::UnboundScript      UnboundScript;$/;"	t	namespace:Nan	typeref:typename:v8::UnboundScript
+Uncompilable	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  template<typename O> inline static void Uncompilable() {$/;"	f	class:NonCopyablePersistentTraits	typeref:typename:void
+Undefined	app/node_modules/nan/nan.h	/^  inline v8::Local<v8::Primitive> Undefined() {$/;"	f	namespace:Nan	typeref:typename:v8::Local<v8::Primitive>
+Unref	app/node_modules/nan/nan_object_wrap.h	/^  virtual void Unref() {$/;"	f	class:ObjectWrap	typeref:typename:void
+Unwrap	app/node_modules/nan/nan_object_wrap.h	/^  static inline T* Unwrap(v8::Local<v8::Object> object) {$/;"	f	class:ObjectWrap	typeref:typename:T *
+Utf8String	app/node_modules/nan/nan.h	/^  inline explicit Utf8String(v8::Local<v8::Value> from) :$/;"	f	class:Nan::Utf8String
+Utf8String	app/node_modules/nan/nan.h	/^class Utf8String {$/;"	c	namespace:Nan
+VERSIONED_FILES	app/node_modules/es-to-primitive/Makefile	/^VERSIONED_FILES := *.js *.json README*$/;"	m
+VERSIONED_FILES	app/node_modules/is-symbol/Makefile	/^VERSIONED_FILES := *.js *.json README*$/;"	m
+Value	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline v8::Handle<T> Value() {$/;"	f	class:imp::ReturnValueImp	typeref:typename:v8::Handle<T>
+ValueFactoryBase	app/node_modules/nan/nan_converters.h	/^template<typename T> struct ValueFactoryBase { typedef Maybe<T> return_t; };$/;"	s	namespace:imp
+WeakCallbackInfo	app/node_modules/nan/nan_weak.h	/^  WeakCallbackInfo($/;"	f	class:WeakCallbackInfo
+WeakCallbackInfo	app/node_modules/nan/nan_weak.h	/^class WeakCallbackInfo {$/;"	c
+WeakCallbackType	app/node_modules/nan/nan.h	/^  WeakCallbackType(E other) : type(other) {}  \/\/ NOLINT(runtime\/explicit)$/;"	f	struct:Nan::WeakCallbackType
+WeakCallbackType	app/node_modules/nan/nan.h	/^  typedef v8::WeakCallbackType WeakCallbackType;$/;"	t	namespace:Nan	typeref:typename:v8::WeakCallbackType
+WeakCallbackType	app/node_modules/nan/nan.h	/^struct WeakCallbackType {$/;"	s	namespace:Nan
+WorkComplete	app/node_modules/nan/nan.h	/^  virtual void WorkComplete() {$/;"	f	class:Nan::AsyncWorker	typeref:typename:void
+WorkComplete	app/node_modules/nan/nan.h	/^  void WorkComplete() {$/;"	f	class:Nan::AsyncProgressQueueWorker	typeref:typename:void
+WorkProgress	app/node_modules/nan/nan.h	/^  void WorkProgress() {$/;"	f	class:Nan::AsyncProgressQueueWorker	typeref:typename:void
+WorkProgress	app/node_modules/nan/nan.h	/^  void WorkProgress() {$/;"	f	class:Nan::AsyncProgressWorkerBase	typeref:typename:void
+Wrap	app/node_modules/nan/nan_object_wrap.h	/^  inline void Wrap(v8::Local<v8::Object> object) {$/;"	f	class:ObjectWrap	typeref:typename:void
+X	app/node_modules/nan/nan.h	/^  X(RangeError)$/;"	f	namespace:Nan	typeref:typename:Error
+X	app/node_modules/nan/nan.h	/^# define X(/;"	d
+X	app/node_modules/nan/nan_converters.h	/^#define X(/;"	d
+X	app/node_modules/nan/nan_converters_43_inl.h	/^#define X(/;"	d
+X	app/node_modules/nan/nan_converters_pre_43_inl.h	/^#define X(/;"	d
+YARN	app/node_modules/body-parser/node_modules/debug/Makefile	/^YARN ?= $(shell which yarn)$/;"	m
+YARN	app/node_modules/compression/node_modules/debug/Makefile	/^YARN ?= $(shell which yarn)$/;"	m
+YARN	app/node_modules/expand-brackets/node_modules/debug/Makefile	/^YARN ?= $(shell which yarn)$/;"	m
+YARN	app/node_modules/express/node_modules/debug/Makefile	/^YARN ?= $(shell which yarn)$/;"	m
+YARN	app/node_modules/finalhandler/node_modules/debug/Makefile	/^YARN ?= $(shell which yarn)$/;"	m
+YARN	app/node_modules/send/node_modules/debug/Makefile	/^YARN ?= $(shell which yarn)$/;"	m
+YARN	app/node_modules/serve-index/node_modules/debug/Makefile	/^YARN ?= $(shell which yarn)$/;"	m
+YARN	app/node_modules/snapdragon/node_modules/debug/Makefile	/^YARN ?= $(shell which yarn)$/;"	m
+__anon45b812810208	app/node_modules/nan/nan.h	/^typedef struct {$/;"	s	namespace:Nan
+_ensure-changelog	app/node_modules/es-to-primitive/Makefile	/^_ensure-changelog:$/;"	t
+_ensure-changelog	app/node_modules/is-symbol/Makefile	/^_ensure-changelog:$/;"	t
+_ensure-clean	app/node_modules/es-to-primitive/Makefile	/^_ensure-clean:$/;"	t
+_ensure-clean	app/node_modules/is-symbol/Makefile	/^_ensure-clean:$/;"	t
+_ensure-tag	app/node_modules/es-to-primitive/Makefile	/^_ensure-tag:$/;"	t
+_ensure-tag	app/node_modules/is-symbol/Makefile	/^_ensure-tag:$/;"	t
+_no-target-specified	app/node_modules/es-to-primitive/Makefile	/^_no-target-specified:$/;"	t
+_no-target-specified	app/node_modules/is-symbol/Makefile	/^_no-target-specified:$/;"	t
+all	app/node_modules/chrome-trace-event/Makefile	/^all $(TAPE):$/;"	t
+args_	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  const v8::Arguments &args_;$/;"	m	class:FunctionCallbackInfo	typeref:typename:const v8::Arguments &
+async	app/node_modules/nan/nan.h	/^  uv_async_t async;$/;"	m	class:Nan::AsyncBareProgressWorkerBase	typeref:typename:uv_async_t
+async	app/node_modules/watchpack-chokidar2/node_modules/fsevents/fsevents.cc	/^    uv_async_t async;$/;"	m	class:fse::FSEvents	typeref:typename:uv_async_t	file:
+async	app/node_modules/webpack-dev-server/node_modules/fsevents/fsevents.cc	/^    uv_async_t async;$/;"	m	class:fse::FSEvents	typeref:typename:uv_async_t	file:
+asyncStart	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/async.cc	/^void FSEvents::asyncStart() {$/;"	f	class:FSEvents	typeref:typename:void
+asyncStart	app/node_modules/webpack-dev-server/node_modules/fsevents/src/async.cc	/^void FSEvents::asyncStart() {$/;"	f	class:FSEvents	typeref:typename:void
+asyncStop	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/async.cc	/^void FSEvents::asyncStop() {$/;"	f	class:FSEvents	typeref:typename:void
+asyncStop	app/node_modules/webpack-dev-server/node_modules/fsevents/src/async.cc	/^void FSEvents::asyncStop() {$/;"	f	class:FSEvents	typeref:typename:void
+asyncTrigger	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/async.cc	/^void FSEvents::asyncTrigger() {$/;"	f	class:FSEvents	typeref:typename:void
+asyncTrigger	app/node_modules/webpack-dev-server/node_modules/fsevents/src/async.cc	/^void FSEvents::asyncTrigger() {$/;"	f	class:FSEvents	typeref:typename:void
+async_lock	app/node_modules/nan/nan.h	/^  uv_mutex_t async_lock;$/;"	m	class:Nan::AsyncBareProgressWorker	typeref:typename:uv_mutex_t
+async_lock	app/node_modules/nan/nan.h	/^  uv_mutex_t async_lock;$/;"	m	class:Nan::AsyncProgressQueueWorker	typeref:typename:uv_mutex_t
+async_propagate	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/async.cc	/^void async_propagate(uv_async_t *async) {$/;"	f	typeref:typename:void
+async_propagate	app/node_modules/webpack-dev-server/node_modules/fsevents/src/async.cc	/^void async_propagate(uv_async_t *async) {$/;"	f	typeref:typename:void
+async_resource	app/node_modules/nan/nan.h	/^  AsyncResource *async_resource;$/;"	m	class:Nan::AsyncWorker	typeref:typename:AsyncResource *
+async_resource	app/node_modules/watchpack-chokidar2/node_modules/fsevents/fsevents.cc	/^    Nan::AsyncResource async_resource;$/;"	m	class:fse::FSEvents	typeref:typename:Nan::AsyncResource	file:
+async_resource	app/node_modules/webpack-dev-server/node_modules/fsevents/fsevents.cc	/^    Nan::AsyncResource async_resource;$/;"	m	class:fse::FSEvents	typeref:typename:Nan::AsyncResource	file:
+asyncdata_	app/node_modules/nan/nan.h	/^  T *asyncdata_;$/;"	m	class:Nan::AsyncProgressWorkerBase	typeref:typename:T *
+asyncdata_	app/node_modules/nan/nan.h	/^  std::queue<std::pair<T*, size_t> > asyncdata_;$/;"	m	class:Nan::AsyncProgressQueueWorker	typeref:typename:std::queue<std::pair<T *,size_t>>
+asyncsize_	app/node_modules/nan/nan.h	/^  size_t asyncsize_;$/;"	m	class:Nan::AsyncProgressWorkerBase	typeref:typename:size_t
+autospec	app/node_modules/json-stringify-safe/Makefile	/^autospec:$/;"	t
+autotest	app/node_modules/json-stringify-safe/Makefile	/^autotest:$/;"	t
+base64_encode	app/node_modules/nan/nan_string_bytes.h	/^static size_t base64_encode(const char* src,$/;"	f	namespace:imp	typeref:typename:size_t
+base64_encoded_size	app/node_modules/nan/nan_string_bytes.h	/^#define base64_encoded_size(/;"	d
+build	app/node_modules/toposort/Makefile	/^build: components index.js$/;"	t
+callback	app/node_modules/nan/nan.h	/^  Callback *callback;$/;"	m	class:Nan::AsyncWorker	typeref:typename:Callback *
+check	app/node_modules/chrome-trace-event/Makefile	/^check: check-jsstyle$/;"	t
+check	app/node_modules/extsprintf/Makefile	/^check:$/;"	t
+check-jsstyle	app/node_modules/chrome-trace-event/Makefile	/^check-jsstyle: $(JSSTYLE_FILES)$/;"	t
+clean	app/node_modules/chrome-trace-event/Makefile	/^clean:$/;"	t
+clean	app/node_modules/json-stringify-safe/Makefile	/^clean:$/;"	t
+clean	app/node_modules/toposort/Makefile	/^clean:$/;"	t
+components	app/node_modules/toposort/Makefile	/^components: component.json$/;"	t
+contains_non_ascii	app/node_modules/nan/nan_string_bytes.h	/^static bool contains_non_ascii(const char* src, size_t len) {$/;"	f	namespace:imp	typeref:typename:bool
+contains_non_ascii_slow	app/node_modules/nan/nan_string_bytes.h	/^static bool contains_non_ascii_slow(const char* buf, size_t len) {$/;"	f	namespace:imp	typeref:typename:bool
+convert	app/node_modules/nan/nan.h	/^  inline static MaybeLocal<T> convert(MaybeLocal<T> v) {$/;"	f	namespace:Nan	typeref:struct:Maybefier
+convert	app/node_modules/nan/nan.h	/^  inline static MaybeLocal<T> convert(v8::Local<T> v) {$/;"	f	namespace:Nan::imp	typeref:struct:Maybefier
+convert	app/node_modules/nan/nan_converters.h	/^  static inline return_t convert(v8::Local<v8::Value> val) {$/;"	f	struct:imp::ToFactory	typeref:typename:return_t
+coverage	app/node_modules/svgo/Makefile	/^coverage: lib-cov$/;"	t
+coveralls	app/node_modules/body-parser/node_modules/debug/Makefile	/^coveralls:$/;"	t
+coveralls	app/node_modules/compression/node_modules/debug/Makefile	/^coveralls:$/;"	t
+coveralls	app/node_modules/expand-brackets/node_modules/debug/Makefile	/^coveralls:$/;"	t
+coveralls	app/node_modules/express/node_modules/debug/Makefile	/^coveralls:$/;"	t
+coveralls	app/node_modules/finalhandler/node_modules/debug/Makefile	/^coveralls:$/;"	t
+coveralls	app/node_modules/send/node_modules/debug/Makefile	/^coveralls:$/;"	t
+coveralls	app/node_modules/serve-index/node_modules/debug/Makefile	/^coveralls:$/;"	t
+coveralls	app/node_modules/snapdragon/node_modules/debug/Makefile	/^coveralls:$/;"	t
+coveralls	app/node_modules/svgo/Makefile	/^coveralls: lib-cov$/;"	t
+cutarelease	app/node_modules/chrome-trace-event/Makefile	/^cutarelease: versioncheck$/;"	t
+data_	app/node_modules/nan/nan_callbacks_12_inl.h	/^  const v8::Local<v8::Value> data_;$/;"	m	class:FunctionCallbackInfo	typeref:typename:const v8::Local<v8::Value>
+data_	app/node_modules/nan/nan_callbacks_12_inl.h	/^  const v8::Local<v8::Value> data_;$/;"	m	class:PropertyCallbackInfo	typeref:typename:const v8::Local<v8::Value>
+data_	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  const v8::Local<v8::Value> data_;$/;"	m	class:PropertyCallbackInfoBase	typeref:typename:const v8::Local<v8::Value>
+data_	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  v8::Local<v8::Value> data_;$/;"	m	class:FunctionCallbackInfo	typeref:typename:v8::Local<v8::Value>
+data_	app/node_modules/nan/nan_typedarray_contents.h	/^  T*      data_;$/;"	m	class:TypedArrayContents	typeref:typename:T *
+distclean	app/node_modules/chrome-trace-event/Makefile	/^distclean: clean$/;"	t
+emitEvent	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/methods.cc	/^void FSEvents::emitEvent(const char *path, UInt32 flags, UInt64 id) {$/;"	f	class:FSEvents	typeref:typename:void
+emitEvent	app/node_modules/webpack-dev-server/node_modules/fsevents/src/methods.cc	/^void FSEvents::emitEvent(const char *path, UInt32 flags, UInt64 id) {$/;"	f	class:FSEvents	typeref:typename:void
+end	app/node_modules/nan/nan.h	/^  inline void end() {$/;"	f	struct:Nan::Tap	typeref:typename:void
+events	app/node_modules/watchpack-chokidar2/node_modules/fsevents/fsevents.cc	/^    std::vector<fse_event*> events;$/;"	m	class:fse::FSEvents	typeref:typename:std::vector<fse_event * >	file:
+events	app/node_modules/webpack-dev-server/node_modules/fsevents/fsevents.cc	/^    std::vector<fse_event*> events;$/;"	m	class:fse::FSEvents	typeref:typename:std::vector<fse_event * >	file:
+flags	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/storage.cc	/^  UInt32 flags;$/;"	m	struct:fse_event	typeref:typename:UInt32	file:
+flags	app/node_modules/webpack-dev-server/node_modules/fsevents/src/storage.cc	/^  UInt32 flags;$/;"	m	struct:fse_event	typeref:typename:UInt32	file:
+force_ascii	app/node_modules/nan/nan_string_bytes.h	/^static void force_ascii(const char* src, char* dst, size_t len) {$/;"	f	namespace:imp	typeref:typename:void
+force_ascii_slow	app/node_modules/nan/nan_string_bytes.h	/^static void force_ascii_slow(const char* src, char* dst, size_t len) {$/;"	f	namespace:imp	typeref:typename:void
+fse	app/node_modules/watchpack-chokidar2/node_modules/fsevents/fsevents.cc	/^namespace fse {$/;"	n	file:
+fse	app/node_modules/webpack-dev-server/node_modules/fsevents/fsevents.cc	/^namespace fse {$/;"	n	file:
+fse_event	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/storage.cc	/^  fse_event(CFStringRef eventPath, UInt32 eventFlag, UInt64 eventId) {$/;"	f	struct:fse_event	file:
+fse_event	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/storage.cc	/^struct fse_event {$/;"	s	file:
+fse_event	app/node_modules/webpack-dev-server/node_modules/fsevents/src/storage.cc	/^  fse_event(CFStringRef eventPath, UInt32 eventFlag, UInt64 eventId) {$/;"	f	struct:fse_event	file:
+fse_event	app/node_modules/webpack-dev-server/node_modules/fsevents/src/storage.cc	/^struct fse_event {$/;"	s	file:
+git-hooks	app/node_modules/chrome-trace-event/Makefile	/^git-hooks:$/;"	t
+handle	app/node_modules/nan/nan_object_wrap.h	/^  inline v8::Local<v8::Object> handle() const {$/;"	f	class:ObjectWrap	typeref:typename:v8::Local<v8::Object>
+handle_	app/node_modules/nan/nan_object_wrap.h	/^  Persistent<v8::Object> handle_;$/;"	m	class:ObjectWrap	typeref:typename:Persistent<v8::Object>
+has_value_	app/node_modules/nan/nan.h	/^  bool has_value_;$/;"	m	class:Nan::Maybe	typeref:typename:bool
+hex_encode	app/node_modules/nan/nan_string_bytes.h	/^static size_t hex_encode(const char* src, size_t slen, char* dst, size_t dlen) {$/;"	f	namespace:imp	typeref:typename:size_t
+id	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/storage.cc	/^  UInt64 id;$/;"	m	struct:fse_event	typeref:typename:UInt64	file:
+id	app/node_modules/webpack-dev-server/node_modules/fsevents/src/storage.cc	/^  UInt64 id;$/;"	m	struct:fse_event	typeref:typename:UInt64	file:
+imp	app/node_modules/nan/nan.h	/^namespace imp {$/;"	n	namespace:Nan
+imp	app/node_modules/nan/nan_callbacks.h	/^namespace imp {$/;"	n
+imp	app/node_modules/nan/nan_callbacks_12_inl.h	/^namespace imp {$/;"	n
+imp	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^namespace imp {$/;"	n
+imp	app/node_modules/nan/nan_converters.h	/^namespace imp {$/;"	n
+imp	app/node_modules/nan/nan_define_own_property_helper.h	/^namespace imp {$/;"	n
+imp	app/node_modules/nan/nan_implementation_12_inl.h	/^namespace imp {$/;"	n
+imp	app/node_modules/nan/nan_implementation_pre_12_inl.h	/^namespace imp {$/;"	n
+imp	app/node_modules/nan/nan_new.h	/^namespace imp {  \/\/ scnr$/;"	n
+imp	app/node_modules/nan/nan_new.h	/^namespace imp {$/;"	n
+imp	app/node_modules/nan/nan_string_bytes.h	/^namespace imp {$/;"	n
+info_	app/node_modules/nan/nan_callbacks_12_inl.h	/^  const v8::FunctionCallbackInfo<T> &info_;$/;"	m	class:FunctionCallbackInfo	typeref:typename:const v8::FunctionCallbackInfo<T> &
+info_	app/node_modules/nan/nan_callbacks_12_inl.h	/^  const v8::PropertyCallbackInfo<T> &info_;$/;"	m	class:PropertyCallbackInfo	typeref:typename:const v8::PropertyCallbackInfo<T> &
+info_	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  const v8::AccessorInfo &info_;$/;"	m	class:PropertyCallbackInfoBase	typeref:typename:const v8::AccessorInfo &
+install	app/node_modules/body-parser/node_modules/debug/Makefile	/^install: node_modules$/;"	t
+install	app/node_modules/compression/node_modules/debug/Makefile	/^install: node_modules$/;"	t
+install	app/node_modules/expand-brackets/node_modules/debug/Makefile	/^install: node_modules$/;"	t
+install	app/node_modules/express/node_modules/debug/Makefile	/^install: node_modules$/;"	t
+install	app/node_modules/finalhandler/node_modules/debug/Makefile	/^install: node_modules$/;"	t
+install	app/node_modules/send/node_modules/debug/Makefile	/^install: node_modules$/;"	t
+install	app/node_modules/serve-index/node_modules/debug/Makefile	/^install: node_modules$/;"	t
+install	app/node_modules/snapdragon/node_modules/debug/Makefile	/^install: node_modules$/;"	t
+internal_fields_	app/node_modules/nan/nan_weak.h	/^  void *internal_fields_[kInternalFieldsInWeakCallback];$/;"	m	class:WeakCallbackInfo	typeref:typename:void * []
+invoke	app/node_modules/nan/nan_weak.h	/^void WeakCallbackInfo<T>::invoke(NAN_WEAK_CALLBACK_SIG_ data) {$/;"	f	class:WeakCallbackInfo	typeref:typename:void
+invokeparameter	app/node_modules/nan/nan_weak.h	/^WeakCallbackInfo<T>::invokeparameter(NAN_WEAK_PARAMETER_CALLBACK_SIG_ data) {$/;"	f	class:WeakCallbackInfo	typeref:typename:void
+invoketwofield	app/node_modules/nan/nan_weak.h	/^WeakCallbackInfo<T>::invoketwofield(NAN_WEAK_TWOFIELD_CALLBACK_SIG_ data) {$/;"	f	class:WeakCallbackInfo	typeref:typename:void
+isolate_	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  v8::Isolate *isolate_;$/;"	m	class:ReturnValue	typeref:typename:v8::Isolate *
+isolate_	app/node_modules/nan/nan_weak.h	/^  v8::Isolate *isolate_;$/;"	m	class:WeakCallbackInfo	typeref:typename:v8::Isolate *
+kAccessorFieldCount	app/node_modules/nan/nan_callbacks.h	/^static const int kAccessorFieldCount =           3;$/;"	v	namespace:imp	typeref:typename:const int
+kArgsLength	app/node_modules/nan/nan_callbacks_12_inl.h	/^  static const int kArgsLength = 6;$/;"	m	class:PropertyCallbackInfo	typeref:typename:const int
+kArgsLength	app/node_modules/nan/nan_callbacks_12_inl.h	/^  static const int kArgsLength = 7;$/;"	m	class:FunctionCallbackInfo	typeref:typename:const int
+kArgsLength	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  static const int kArgsLength = 6;$/;"	m	class:PropertyCallbackInfoBase	typeref:typename:const int
+kArgsLength	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  static const int kArgsLength = 7;$/;"	m	class:FunctionCallbackInfo	typeref:typename:const int
+kCalleeIndex	app/node_modules/nan/nan_callbacks_12_inl.h	/^  static const int kCalleeIndex = 5;$/;"	m	class:FunctionCallbackInfo	typeref:typename:const int
+kCalleeIndex	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  static const int kCalleeIndex = 5;$/;"	m	class:FunctionCallbackInfo	typeref:typename:const int
+kContextSaveIndex	app/node_modules/nan/nan_callbacks_12_inl.h	/^  static const int kContextSaveIndex = 6;$/;"	m	class:FunctionCallbackInfo	typeref:typename:const int
+kContextSaveIndex	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  static const int kContextSaveIndex = 6;$/;"	m	class:FunctionCallbackInfo	typeref:typename:const int
+kDataIndex	app/node_modules/nan/nan_callbacks.h	/^static const int kDataIndex =                    0;$/;"	v	namespace:imp	typeref:typename:const int
+kDataIndex	app/node_modules/nan/nan_callbacks_12_inl.h	/^  static const int kDataIndex = 4;$/;"	m	class:FunctionCallbackInfo	typeref:typename:const int
+kDataIndex	app/node_modules/nan/nan_callbacks_12_inl.h	/^  static const int kDataIndex = 4;$/;"	m	class:PropertyCallbackInfo	typeref:typename:const int
+kDataIndex	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  static const int kDataIndex = 4;$/;"	m	class:FunctionCallbackInfo	typeref:typename:const int
+kDataIndex	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  static const int kDataIndex = 4;$/;"	m	class:PropertyCallbackInfoBase	typeref:typename:const int
+kFSEventStreamCreateFlagFileEvents	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/thread.cc	/^#define kFSEventStreamCreateFlagFileEvents /;"	d	file:
+kFSEventStreamCreateFlagFileEvents	app/node_modules/webpack-dev-server/node_modules/fsevents/src/thread.cc	/^#define kFSEventStreamCreateFlagFileEvents /;"	d	file:
+kFSEventStreamCreateFlagIgnoreSelf	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/thread.cc	/^#define kFSEventStreamCreateFlagIgnoreSelf /;"	d	file:
+kFSEventStreamCreateFlagIgnoreSelf	app/node_modules/webpack-dev-server/node_modules/fsevents/src/thread.cc	/^#define kFSEventStreamCreateFlagIgnoreSelf /;"	d	file:
+kFSEventStreamCreateFlagNoDefer	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/thread.cc	/^#define kFSEventStreamCreateFlagNoDefer /;"	d	file:
+kFSEventStreamCreateFlagNoDefer	app/node_modules/webpack-dev-server/node_modules/fsevents/src/thread.cc	/^#define kFSEventStreamCreateFlagNoDefer /;"	d	file:
+kFSEventStreamCreateFlagNone	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/thread.cc	/^#define kFSEventStreamCreateFlagNone /;"	d	file:
+kFSEventStreamCreateFlagNone	app/node_modules/webpack-dev-server/node_modules/fsevents/src/thread.cc	/^#define kFSEventStreamCreateFlagNone /;"	d	file:
+kFSEventStreamCreateFlagUseCFTypes	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/thread.cc	/^#define kFSEventStreamCreateFlagUseCFTypes /;"	d	file:
+kFSEventStreamCreateFlagUseCFTypes	app/node_modules/webpack-dev-server/node_modules/fsevents/src/thread.cc	/^#define kFSEventStreamCreateFlagUseCFTypes /;"	d	file:
+kFSEventStreamCreateFlagWatchRoot	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/thread.cc	/^#define kFSEventStreamCreateFlagWatchRoot /;"	d	file:
+kFSEventStreamCreateFlagWatchRoot	app/node_modules/webpack-dev-server/node_modules/fsevents/src/thread.cc	/^#define kFSEventStreamCreateFlagWatchRoot /;"	d	file:
+kFSEventStreamEventFlagEventIdsWrapped	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagEventIdsWrapped /;"	d	file:
+kFSEventStreamEventFlagEventIdsWrapped	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagEventIdsWrapped /;"	d	file:
+kFSEventStreamEventFlagHistoryDone	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagHistoryDone /;"	d	file:
+kFSEventStreamEventFlagHistoryDone	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagHistoryDone /;"	d	file:
+kFSEventStreamEventFlagItemChangeOwner	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemChangeOwner /;"	d	file:
+kFSEventStreamEventFlagItemChangeOwner	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemChangeOwner /;"	d	file:
+kFSEventStreamEventFlagItemCreated	app/node_modules/watchpack-chokidar2/node_modules/fsevents/fsevents.cc	/^#define kFSEventStreamEventFlagItemCreated /;"	d	file:
+kFSEventStreamEventFlagItemCreated	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemCreated /;"	d	file:
+kFSEventStreamEventFlagItemCreated	app/node_modules/webpack-dev-server/node_modules/fsevents/fsevents.cc	/^#define kFSEventStreamEventFlagItemCreated /;"	d	file:
+kFSEventStreamEventFlagItemCreated	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemCreated /;"	d	file:
+kFSEventStreamEventFlagItemFinderInfoMod	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemFinderInfoMod /;"	d	file:
+kFSEventStreamEventFlagItemFinderInfoMod	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemFinderInfoMod /;"	d	file:
+kFSEventStreamEventFlagItemInodeMetaMod	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemInodeMetaMod /;"	d	file:
+kFSEventStreamEventFlagItemInodeMetaMod	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemInodeMetaMod /;"	d	file:
+kFSEventStreamEventFlagItemIsDir	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemIsDir /;"	d	file:
+kFSEventStreamEventFlagItemIsDir	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemIsDir /;"	d	file:
+kFSEventStreamEventFlagItemIsFile	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemIsFile /;"	d	file:
+kFSEventStreamEventFlagItemIsFile	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemIsFile /;"	d	file:
+kFSEventStreamEventFlagItemIsSymlink	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemIsSymlink /;"	d	file:
+kFSEventStreamEventFlagItemIsSymlink	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemIsSymlink /;"	d	file:
+kFSEventStreamEventFlagItemModified	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemModified /;"	d	file:
+kFSEventStreamEventFlagItemModified	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemModified /;"	d	file:
+kFSEventStreamEventFlagItemRemoved	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemRemoved /;"	d	file:
+kFSEventStreamEventFlagItemRemoved	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemRemoved /;"	d	file:
+kFSEventStreamEventFlagItemRenamed	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemRenamed /;"	d	file:
+kFSEventStreamEventFlagItemRenamed	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemRenamed /;"	d	file:
+kFSEventStreamEventFlagItemXattrMod	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemXattrMod /;"	d	file:
+kFSEventStreamEventFlagItemXattrMod	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagItemXattrMod /;"	d	file:
+kFSEventStreamEventFlagKernelDropped	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagKernelDropped /;"	d	file:
+kFSEventStreamEventFlagKernelDropped	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagKernelDropped /;"	d	file:
+kFSEventStreamEventFlagMount	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagMount /;"	d	file:
+kFSEventStreamEventFlagMount	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagMount /;"	d	file:
+kFSEventStreamEventFlagMustScanSubDirs	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagMustScanSubDirs /;"	d	file:
+kFSEventStreamEventFlagMustScanSubDirs	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagMustScanSubDirs /;"	d	file:
+kFSEventStreamEventFlagNone	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagNone /;"	d	file:
+kFSEventStreamEventFlagNone	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagNone /;"	d	file:
+kFSEventStreamEventFlagRootChanged	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagRootChanged /;"	d	file:
+kFSEventStreamEventFlagRootChanged	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagRootChanged /;"	d	file:
+kFSEventStreamEventFlagUnmount	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagUnmount /;"	d	file:
+kFSEventStreamEventFlagUnmount	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagUnmount /;"	d	file:
+kFSEventStreamEventFlagUserDropped	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagUserDropped /;"	d	file:
+kFSEventStreamEventFlagUserDropped	app/node_modules/webpack-dev-server/node_modules/fsevents/src/constants.cc	/^#define kFSEventStreamEventFlagUserDropped /;"	d	file:
+kFunctionFieldCount	app/node_modules/nan/nan_callbacks.h	/^static const int kFunctionFieldCount =           2;$/;"	v	namespace:imp	typeref:typename:const int
+kFunctionIndex	app/node_modules/nan/nan_callbacks.h	/^static const int kFunctionIndex =                1;$/;"	v	namespace:imp	typeref:typename:const int
+kGetterIndex	app/node_modules/nan/nan_callbacks.h	/^static const int kGetterIndex =                  1;$/;"	v	namespace:imp	typeref:typename:const int
+kHolderIndex	app/node_modules/nan/nan_callbacks_12_inl.h	/^  static const int kHolderIndex = 0;$/;"	m	class:FunctionCallbackInfo	typeref:typename:const int
+kHolderIndex	app/node_modules/nan/nan_callbacks_12_inl.h	/^  static const int kHolderIndex = 0;$/;"	m	class:PropertyCallbackInfo	typeref:typename:const int
+kHolderIndex	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  static const int kHolderIndex = 0;$/;"	m	class:FunctionCallbackInfo	typeref:typename:const int
+kHolderIndex	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  static const int kHolderIndex = 0;$/;"	m	class:PropertyCallbackInfoBase	typeref:typename:const int
+kIndexPropertyDeleterIndex	app/node_modules/nan/nan_callbacks.h	/^static const int kIndexPropertyDeleterIndex =    4;$/;"	v	namespace:imp	typeref:typename:const int
+kIndexPropertyEnumeratorIndex	app/node_modules/nan/nan_callbacks.h	/^static const int kIndexPropertyEnumeratorIndex = 3;$/;"	v	namespace:imp	typeref:typename:const int
+kIndexPropertyFieldCount	app/node_modules/nan/nan_callbacks.h	/^static const int kIndexPropertyFieldCount =      6;$/;"	v	namespace:imp	typeref:typename:const int
+kIndexPropertyGetterIndex	app/node_modules/nan/nan_callbacks.h	/^static const int kIndexPropertyGetterIndex =     1;$/;"	v	namespace:imp	typeref:typename:const int
+kIndexPropertyQueryIndex	app/node_modules/nan/nan_callbacks.h	/^static const int kIndexPropertyQueryIndex =      5;$/;"	v	namespace:imp	typeref:typename:const int
+kIndexPropertySetterIndex	app/node_modules/nan/nan_callbacks.h	/^static const int kIndexPropertySetterIndex =     2;$/;"	v	namespace:imp	typeref:typename:const int
+kInternalFields	app/node_modules/nan/nan.h	/^  enum E {kParameter, kInternalFields};$/;"	e	enum:Nan::WeakCallbackType::E
+kInternalFieldsInWeakCallback	app/node_modules/nan/nan_weak.h	/^static const int kInternalFieldsInWeakCallback = 2;$/;"	v	typeref:typename:const int
+kIsolateIndex	app/node_modules/nan/nan_callbacks_12_inl.h	/^  static const int kIsolateIndex = 1;$/;"	m	class:FunctionCallbackInfo	typeref:typename:const int
+kIsolateIndex	app/node_modules/nan/nan_callbacks_12_inl.h	/^  static const int kIsolateIndex = 1;$/;"	m	class:PropertyCallbackInfo	typeref:typename:const int
+kIsolateIndex	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  static const int kIsolateIndex = 1;$/;"	m	class:FunctionCallbackInfo	typeref:typename:const int
+kIsolateIndex	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  static const int kIsolateIndex = 1;$/;"	m	class:PropertyCallbackInfoBase	typeref:typename:const int
+kMaxLength	app/node_modules/nan/nan.h	/^  static const size_t kMaxLength = 0x3fffffff;$/;"	v	namespace:Nan::imp	typeref:typename:const size_t
+kNoInternalFieldIndex	app/node_modules/nan/nan_weak.h	/^static const int kNoInternalFieldIndex = -1;$/;"	v	typeref:typename:const int
+kParameter	app/node_modules/nan/nan.h	/^  enum E {kParameter, kInternalFields};$/;"	e	enum:Nan::WeakCallbackType::E
+kPropertyDeleterIndex	app/node_modules/nan/nan_callbacks.h	/^static const int kPropertyDeleterIndex =         4;$/;"	v	namespace:imp	typeref:typename:const int
+kPropertyEnumeratorIndex	app/node_modules/nan/nan_callbacks.h	/^static const int kPropertyEnumeratorIndex =      3;$/;"	v	namespace:imp	typeref:typename:const int
+kPropertyFieldCount	app/node_modules/nan/nan_callbacks.h	/^static const int kPropertyFieldCount =           6;$/;"	v	namespace:imp	typeref:typename:const int
+kPropertyGetterIndex	app/node_modules/nan/nan_callbacks.h	/^static const int kPropertyGetterIndex =          1;$/;"	v	namespace:imp	typeref:typename:const int
+kPropertyQueryIndex	app/node_modules/nan/nan_callbacks.h	/^static const int kPropertyQueryIndex =           5;$/;"	v	namespace:imp	typeref:typename:const int
+kPropertySetterIndex	app/node_modules/nan/nan_callbacks.h	/^static const int kPropertySetterIndex =          2;$/;"	v	namespace:imp	typeref:typename:const int
+kReplaceInvalidUtf8	app/node_modules/nan/nan.h	/^  static const unsigned kReplaceInvalidUtf8 = 0;$/;"	v	namespace:Nan::imp	typeref:typename:const unsigned
+kReplaceInvalidUtf8	app/node_modules/nan/nan.h	/^  static const unsigned kReplaceInvalidUtf8 = v8::String::REPLACE_INVALID_UTF8;$/;"	v	namespace:Nan::imp	typeref:typename:const unsigned
+kResetInDestructor	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  static const bool kResetInDestructor = false;$/;"	m	class:NonCopyablePersistentTraits	typeref:typename:const bool
+kResetInDestructor	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  static const bool kResetInDestructor = true;$/;"	m	struct:CopyablePersistentTraits	typeref:typename:const bool
+kReturnValueDefaultValueIndex	app/node_modules/nan/nan_callbacks_12_inl.h	/^  static const int kReturnValueDefaultValueIndex = 2;$/;"	m	class:FunctionCallbackInfo	typeref:typename:const int
+kReturnValueDefaultValueIndex	app/node_modules/nan/nan_callbacks_12_inl.h	/^  static const int kReturnValueDefaultValueIndex = 2;$/;"	m	class:PropertyCallbackInfo	typeref:typename:const int
+kReturnValueDefaultValueIndex	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  static const int kReturnValueDefaultValueIndex = 2;$/;"	m	class:FunctionCallbackInfo	typeref:typename:const int
+kReturnValueDefaultValueIndex	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  static const int kReturnValueDefaultValueIndex = 2;$/;"	m	class:PropertyCallbackInfoBase	typeref:typename:const int
+kReturnValueIndex	app/node_modules/nan/nan_callbacks_12_inl.h	/^  static const int kReturnValueIndex = 3;$/;"	m	class:FunctionCallbackInfo	typeref:typename:const int
+kReturnValueIndex	app/node_modules/nan/nan_callbacks_12_inl.h	/^  static const int kReturnValueIndex = 3;$/;"	m	class:PropertyCallbackInfo	typeref:typename:const int
+kReturnValueIndex	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  static const int kReturnValueIndex = 3;$/;"	m	class:FunctionCallbackInfo	typeref:typename:const int
+kReturnValueIndex	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  static const int kReturnValueIndex = 3;$/;"	m	class:PropertyCallbackInfoBase	typeref:typename:const int
+kSetterIndex	app/node_modules/nan/nan_callbacks.h	/^static const int kSetterIndex =                  2;$/;"	v	namespace:imp	typeref:typename:const int
+kThisIndex	app/node_modules/nan/nan_callbacks_12_inl.h	/^  static const int kThisIndex = 5;$/;"	m	class:PropertyCallbackInfo	typeref:typename:const int
+kThisIndex	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  static const int kThisIndex = 5;$/;"	m	class:PropertyCallbackInfoBase	typeref:typename:const int
+length	app/node_modules/nan/nan.h	/^  inline int length() const {$/;"	f	class:Nan::Utf8String	typeref:typename:int
+length	app/node_modules/nan/nan_typedarray_contents.h	/^  inline size_t length() const      { return length_; }$/;"	f	class:TypedArrayContents	typeref:typename:size_t
+length_	app/node_modules/nan/nan_typedarray_contents.h	/^  size_t  length_;$/;"	m	class:TypedArrayContents	typeref:typename:size_t
+lib-cov	app/node_modules/svgo/Makefile	/^lib-cov:$/;"	t
+lint	app/node_modules/body-parser/node_modules/debug/Makefile	/^lint: .FORCE$/;"	t
+lint	app/node_modules/compression/node_modules/debug/Makefile	/^lint: .FORCE$/;"	t
+lint	app/node_modules/expand-brackets/node_modules/debug/Makefile	/^lint: .FORCE$/;"	t
+lint	app/node_modules/express/node_modules/debug/Makefile	/^lint: .FORCE$/;"	t
+lint	app/node_modules/finalhandler/node_modules/debug/Makefile	/^lint: .FORCE$/;"	t
+lint	app/node_modules/send/node_modules/debug/Makefile	/^lint: .FORCE$/;"	t
+lint	app/node_modules/serve-index/node_modules/debug/Makefile	/^lint: .FORCE$/;"	t
+lint	app/node_modules/snapdragon/node_modules/debug/Makefile	/^lint: .FORCE$/;"	t
+lint	app/node_modules/svgo/Makefile	/^lint:$/;"	t
+list	app/node_modules/es-to-primitive/Makefile	/^list:$/;"	t
+list	app/node_modules/is-symbol/Makefile	/^list:$/;"	t
+love	app/node_modules/json-stringify-safe/Makefile	/^love:$/;"	t
+mutex	app/node_modules/watchpack-chokidar2/node_modules/fsevents/fsevents.cc	/^    uv_mutex_t mutex;$/;"	m	class:fse::FSEvents	typeref:typename:uv_mutex_t	file:
+mutex	app/node_modules/webpack-dev-server/node_modules/fsevents/fsevents.cc	/^    uv_mutex_t mutex;$/;"	m	class:fse::FSEvents	typeref:typename:uv_mutex_t	file:
+nauv_key_create	app/node_modules/nan/nan.h	/^inline int nauv_key_create(nauv_key_t *key) {$/;"	f	namespace:Nan	typeref:typename:int
+nauv_key_create	app/node_modules/nan/nan.h	/^inline int nauv_key_create(nauv_key_t* key) {$/;"	f	namespace:Nan	typeref:typename:int
+nauv_key_delete	app/node_modules/nan/nan.h	/^inline void nauv_key_delete(nauv_key_t *key) {$/;"	f	namespace:Nan	typeref:typename:void
+nauv_key_delete	app/node_modules/nan/nan.h	/^inline void nauv_key_delete(nauv_key_t* key) {$/;"	f	namespace:Nan	typeref:typename:void
+nauv_key_get	app/node_modules/nan/nan.h	/^inline void* nauv_key_get(nauv_key_t *key) {$/;"	f	namespace:Nan	typeref:typename:void *
+nauv_key_get	app/node_modules/nan/nan.h	/^inline void* nauv_key_get(nauv_key_t* key) {$/;"	f	namespace:Nan	typeref:typename:void *
+nauv_key_set	app/node_modules/nan/nan.h	/^inline void nauv_key_set(nauv_key_t *key, void *value) {$/;"	f	namespace:Nan	typeref:typename:void
+nauv_key_set	app/node_modules/nan/nan.h	/^inline void nauv_key_set(nauv_key_t* key, void* value) {$/;"	f	namespace:Nan	typeref:typename:void
+nauv_key_t	app/node_modules/nan/nan.h	/^typedef pthread_key_t nauv_key_t;$/;"	t	namespace:Nan	typeref:typename:pthread_key_t
+nauv_key_t	app/node_modules/nan/nan.h	/^typedef uv_key_t nauv_key_t;$/;"	t	namespace:Nan	typeref:typename:uv_key_t
+nauv_key_t	app/node_modules/nan/nan.h	/^} nauv_key_t;$/;"	t	namespace:Nan	typeref:struct:Nan::__anon45b812810208
+node_modules	app/node_modules/body-parser/node_modules/debug/Makefile	/^node_modules: package.json$/;"	t
+node_modules	app/node_modules/compression/node_modules/debug/Makefile	/^node_modules: package.json$/;"	t
+node_modules	app/node_modules/expand-brackets/node_modules/debug/Makefile	/^node_modules: package.json$/;"	t
+node_modules	app/node_modules/express/node_modules/debug/Makefile	/^node_modules: package.json$/;"	t
+node_modules	app/node_modules/finalhandler/node_modules/debug/Makefile	/^node_modules: package.json$/;"	t
+node_modules	app/node_modules/send/node_modules/debug/Makefile	/^node_modules: package.json$/;"	t
+node_modules	app/node_modules/serve-index/node_modules/debug/Makefile	/^node_modules: package.json$/;"	t
+node_modules	app/node_modules/snapdragon/node_modules/debug/Makefile	/^node_modules: package.json$/;"	t
+object	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^    Global* object;$/;"	m	struct:Global::RValue	typeref:typename:Global *
+ok	app/node_modules/nan/nan.h	/^  inline void ok(bool isOk, const char *msg = NULL) {$/;"	f	struct:Nan::Tap	typeref:typename:void
+operator !=	app/node_modules/nan/nan.h	/^  bool operator!=(const Callback &other) const {$/;"	f	class:Nan::Callback	typeref:typename:bool
+operator !=	app/node_modules/nan/nan.h	/^  inline bool operator!=(E other) { return !operator==(other); }$/;"	f	struct:Nan::WeakCallbackType	typeref:typename:bool
+operator !=	app/node_modules/nan/nan.h	/^  inline bool operator!=(const Maybe &other) const {$/;"	f	class:Nan::Maybe	typeref:typename:bool
+operator !=	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline bool operator!=(const PersistentBase<S> &that) const {$/;"	f	class:PersistentBase	typeref:typename:bool
+operator !=	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline bool operator!=(const v8::Local<S> &that) const {$/;"	f	class:PersistentBase	typeref:typename:bool
+operator ()	app/node_modules/nan/nan.h	/^  NAN_DEPRECATED inline v8::Local<v8::Value> operator()($/;"	f	class:Nan::Callback	typeref:typename:NAN_DEPRECATED v8::Local<v8::Value>
+operator ()	app/node_modules/nan/nan.h	/^  inline MaybeLocal<v8::Value> operator()($/;"	f	class:Nan::Callback	typeref:typename:MaybeLocal<v8::Value>
+operator *	app/node_modules/nan/nan.h	/^  inline char* operator*() { return str_; }$/;"	f	class:Nan::Utf8String	typeref:typename:char *
+operator *	app/node_modules/nan/nan.h	/^  inline const char* operator*() const { return str_; }$/;"	f	class:Nan::Utf8String	typeref:typename:const char *
+operator *	app/node_modules/nan/nan.h	/^  v8::Local<v8::Function> operator*() const { return GetFunction(); }$/;"	f	class:Nan::Callback	typeref:typename:v8::Local<v8::Function>
+operator *	app/node_modules/nan/nan_persistent_12_inl.h	/^  inline T *operator*() const { return *PersistentBase<T>::persistent; }$/;"	f	class:Persistent	typeref:typename:T *
+operator *	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline T *operator*() const { return *PersistentBase<T>::persistent; }$/;"	f	class:Persistent	typeref:typename:T *
+operator *	app/node_modules/nan/nan_typedarray_contents.h	/^  inline T* operator*()             { return data_;   }$/;"	f	class:TypedArrayContents	typeref:typename:T *
+operator *	app/node_modules/nan/nan_typedarray_contents.h	/^  inline const T* operator*() const { return data_;   }$/;"	f	class:TypedArrayContents	typeref:typename:const T *
+operator =	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline Global &operator=(Global<S> rhs) {$/;"	f	class:Global	typeref:typename:Global &
+operator =	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline Persistent &operator=(const Persistent &that) {$/;"	f	class:Persistent	typeref:typename:Persistent &
+operator =	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline Persistent &operator=(const Persistent<S, M2> &that) {$/;"	f	class:Persistent	typeref:typename:Persistent &
+operator ==	app/node_modules/nan/nan.h	/^  bool operator==(const Callback &other) const {$/;"	f	class:Nan::Callback	typeref:typename:bool
+operator ==	app/node_modules/nan/nan.h	/^  inline bool operator==(E other) { return other == this->type; }$/;"	f	struct:Nan::WeakCallbackType	typeref:typename:bool
+operator ==	app/node_modules/nan/nan.h	/^  inline bool operator==(const Maybe &other) const {$/;"	f	class:Nan::Maybe	typeref:typename:bool
+operator ==	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline bool operator==(const PersistentBase<S> &that) const {$/;"	f	class:PersistentBase	typeref:typename:bool
+operator ==	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline bool operator==(const v8::Local<S> &that) const {$/;"	f	class:PersistentBase	typeref:typename:bool
+operator RValue	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline operator RValue() { return RValue(this); }$/;"	f	class:Global
+operator []	app/node_modules/nan/nan_callbacks_12_inl.h	/^  inline v8::Local<v8::Value> operator[](int i) const { return info_[i]; }$/;"	f	class:FunctionCallbackInfo	typeref:typename:v8::Local<v8::Value>
+operator []	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline v8::Local<v8::Value> operator[](int i) const { return args_[i]; }$/;"	f	class:FunctionCallbackInfo	typeref:typename:v8::Local<v8::Value>
+operator delete	app/node_modules/nan/nan.h	/^  void operator delete(void *, size_t) {$/;"	f	class:Nan::EscapableHandleScope	typeref:typename:void
+operator delete	app/node_modules/nan/nan.h	/^  void operator delete(void *, size_t) {$/;"	f	class:Nan::HandleScope	typeref:typename:void
+operator delete	app/node_modules/nan/nan_typedarray_contents.h	/^  void operator delete(void *, size_t) {$/;"	f	class:TypedArrayContents	typeref:typename:void
+pack	app/node_modules/json-stringify-safe/Makefile	/^pack:$/;"	t
+parameter_	app/node_modules/nan/nan_weak.h	/^  void *parameter_;$/;"	m	class:WeakCallbackInfo	typeref:typename:void *
+parse	app/node_modules/nan/nan_json.h	/^  inline v8::Local<v8::Value> parse(v8::Local<v8::Value> arg) {$/;"	f	class:JSON	typeref:typename:v8::Local<v8::Value>
+pass	app/node_modules/nan/nan.h	/^  inline void pass(const char * msg = NULL) {$/;"	f	struct:Nan::Tap	typeref:typename:void
+path	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/storage.cc	/^  CFStringRef path;$/;"	m	struct:fse_event	typeref:typename:CFStringRef	file:
+path	app/node_modules/webpack-dev-server/node_modules/fsevents/src/storage.cc	/^  CFStringRef path;$/;"	m	struct:fse_event	typeref:typename:CFStringRef	file:
+paths	app/node_modules/watchpack-chokidar2/node_modules/fsevents/fsevents.cc	/^    CFArrayRef paths;$/;"	m	class:fse::FSEvents	typeref:typename:CFArrayRef	file:
+paths	app/node_modules/webpack-dev-server/node_modules/fsevents/fsevents.cc	/^    CFArrayRef paths;$/;"	m	class:fse::FSEvents	typeref:typename:CFArrayRef	file:
+persistent	app/node_modules/nan/nan_object_wrap.h	/^  inline Persistent<v8::Object>& persistent() {$/;"	f	class:ObjectWrap	typeref:typename:Persistent<v8::Object> &
+persistent	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  v8::Persistent<T> persistent;$/;"	m	class:PersistentBase	typeref:typename:v8::Persistent<T>
+persistentHandle	app/node_modules/nan/nan.h	/^  Persistent<v8::Object> persistentHandle;$/;"	m	class:Nan::AsyncWorker	typeref:typename:Persistent<v8::Object>
+persistent_	app/node_modules/nan/nan_weak.h	/^  v8::Persistent<v8::Value> persistent_;$/;"	m	class:WeakCallbackInfo	typeref:typename:v8::Persistent<v8::Value>
+plan	app/node_modules/nan/nan.h	/^  inline void plan(int i) {$/;"	f	struct:Nan::Tap	typeref:typename:void
+publish	app/node_modules/json-stringify-safe/Makefile	/^publish:$/;"	t
+refs_	app/node_modules/nan/nan_object_wrap.h	/^  int refs_;  \/\/ ro$/;"	m	class:ObjectWrap	typeref:typename:int
+release	app/node_modules/es-to-primitive/Makefile	/^release: _ensure-tag _ensure-changelog _ensure-clean$/;"	t
+release	app/node_modules/is-symbol/Makefile	/^release: _ensure-tag _ensure-changelog _ensure-clean$/;"	t
+release-major	app/node_modules/retry/Makefile	/^release-major: test$/;"	t
+release-minor	app/node_modules/retry/Makefile	/^release-minor: test$/;"	t
+release-patch	app/node_modules/retry/Makefile	/^release-patch: test$/;"	t
+request	app/node_modules/nan/nan.h	/^  uv_work_t request;$/;"	m	class:Nan::AsyncWorker	typeref:typename:uv_work_t
+return_t	app/node_modules/nan/nan_converters.h	/^  typedef MaybeLocal<T> return_t;$/;"	t	struct:imp::ToFactoryBase	typeref:typename:MaybeLocal<T>
+return_t	app/node_modules/nan/nan_converters.h	/^template<typename T> struct ValueFactoryBase { typedef Maybe<T> return_t; };$/;"	t	struct:imp::ValueFactoryBase	typeref:typename:Maybe<T>
+return_t	app/node_modules/nan/nan_new.h	/^  typedef MaybeLocal<T> return_t;$/;"	t	struct:imp::MaybeFactoryBase	typeref:typename:MaybeLocal<T>
+return_t	app/node_modules/nan/nan_new.h	/^  typedef typename FactoryBase<T>::return_t return_t;$/;"	t	struct:imp::IntegerFactory	typeref:typename:FactoryBase<T>::return_t
+return_t	app/node_modules/nan/nan_new.h	/^  typedef v8::Local<T> return_t;$/;"	t	struct:imp::FactoryBase	typeref:typename:v8::Local<T>
+return_value_	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  ReturnValue<T> return_value_;$/;"	m	class:FunctionCallbackInfo	typeref:typename:ReturnValue<T>
+return_value_	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  ReturnValue<T> return_value_;$/;"	m	class:PropertyCallbackInfo	typeref:typename:ReturnValue<T>
+return_value_	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  ReturnValue<v8::Array> return_value_;$/;"	m	class:PropertyCallbackInfo	typeref:typename:ReturnValue<v8::Array>
+return_value_	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  ReturnValue<v8::Boolean> return_value_;$/;"	m	class:PropertyCallbackInfo	typeref:typename:ReturnValue<v8::Boolean>
+return_value_	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  ReturnValue<v8::Integer> return_value_;$/;"	m	class:PropertyCallbackInfo	typeref:typename:ReturnValue<v8::Integer>
+retval_	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  v8::Persistent<T> retval_;$/;"	m	class:FunctionCallbackInfo	typeref:typename:v8::Persistent<T>
+retval_	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  v8::Persistent<T> retval_;$/;"	m	class:PropertyCallbackInfo	typeref:typename:v8::Persistent<T>
+retval_	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  v8::Persistent<v8::Array> retval_;$/;"	m	class:PropertyCallbackInfo	typeref:typename:v8::Persistent<v8::Array>
+retval_	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  v8::Persistent<v8::Boolean> retval_;$/;"	m	class:PropertyCallbackInfo	typeref:typename:v8::Persistent<v8::Boolean>
+retval_	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  v8::Persistent<v8::Integer> retval_;$/;"	m	class:PropertyCallbackInfo	typeref:typename:v8::Persistent<v8::Integer>
+runInAsyncScope	app/node_modules/nan/nan.h	/^  inline MaybeLocal<v8::Value> runInAsyncScope($/;"	f	class:Nan::AsyncResource	typeref:typename:MaybeLocal<v8::Value>
+scope	app/node_modules/nan/nan.h	/^  v8::EscapableHandleScope scope;$/;"	m	class:Nan::EscapableHandleScope	typeref:typename:v8::EscapableHandleScope
+scope	app/node_modules/nan/nan.h	/^  v8::HandleScope scope;$/;"	m	class:Nan::HandleScope	typeref:typename:v8::HandleScope
+spec	app/node_modules/json-stringify-safe/Makefile	/^spec:$/;"	t
+str_	app/node_modules/nan/nan.h	/^  char *str_;$/;"	m	class:Nan::Utf8String	typeref:typename:char *
+str_st_	app/node_modules/nan/nan.h	/^  char str_st_[1024];$/;"	m	class:Nan::Utf8String	typeref:typename:char[1024]
+stringify	app/node_modules/nan/nan_json.h	/^  inline v8::Local<v8::Value> stringify(v8::Local<v8::Value> arg) {$/;"	f	class:JSON	typeref:typename:v8::Local<v8::Value>
+stringify	app/node_modules/nan/nan_json.h	/^  inline v8::Local<v8::Value> stringify(v8::Local<v8::Value> arg,$/;"	f	class:JSON	typeref:typename:v8::Local<v8::Value>
+stringify_cb_	app/node_modules/nan/nan_json.h	/^  Nan::Callback stringify_cb_;$/;"	m	class:JSON	typeref:typename:Nan::Callback
+t_	app/node_modules/nan/nan.h	/^  Persistent<v8::Object> t_;$/;"	m	struct:Nan::Tap	typeref:typename:Persistent<v8::Object>
+tag	app/node_modules/json-stringify-safe/Makefile	/^tag:$/;"	t
+test	app/node_modules/batch/Makefile	/^test:$/;"	t
+test	app/node_modules/body-parser/node_modules/debug/Makefile	/^test: .FORCE$/;"	t
+test	app/node_modules/chrome-trace-event/Makefile	/^test: | $(TAPE)$/;"	t
+test	app/node_modules/compression/node_modules/debug/Makefile	/^test: .FORCE$/;"	t
+test	app/node_modules/delayed-stream/Makefile	/^test:$/;"	t
+test	app/node_modules/es-to-primitive/Makefile	/^test:$/;"	t
+test	app/node_modules/expand-brackets/node_modules/debug/Makefile	/^test: .FORCE$/;"	t
+test	app/node_modules/express/node_modules/debug/Makefile	/^test: .FORCE$/;"	t
+test	app/node_modules/finalhandler/node_modules/debug/Makefile	/^test: .FORCE$/;"	t
+test	app/node_modules/is-symbol/Makefile	/^test:$/;"	t
+test	app/node_modules/isarray/Makefile	/^test:$/;"	t
+test	app/node_modules/json-stringify-safe/Makefile	/^test:$/;"	t
+test	app/node_modules/progress/Makefile	/^test: $(EXAMPLES)$/;"	t
+test	app/node_modules/send/node_modules/debug/Makefile	/^test: .FORCE$/;"	t
+test	app/node_modules/serve-index/node_modules/debug/Makefile	/^test: .FORCE$/;"	t
+test	app/node_modules/snapdragon/node_modules/debug/Makefile	/^test: .FORCE$/;"	t
+test	app/node_modules/svgo/Makefile	/^test:$/;"	t
+test-browser	app/node_modules/body-parser/node_modules/debug/Makefile	/^test-browser: .FORCE$/;"	t
+test-browser	app/node_modules/compression/node_modules/debug/Makefile	/^test-browser: .FORCE$/;"	t
+test-browser	app/node_modules/expand-brackets/node_modules/debug/Makefile	/^test-browser: .FORCE$/;"	t
+test-browser	app/node_modules/express/node_modules/debug/Makefile	/^test-browser: .FORCE$/;"	t
+test-browser	app/node_modules/finalhandler/node_modules/debug/Makefile	/^test-browser: .FORCE$/;"	t
+test-browser	app/node_modules/send/node_modules/debug/Makefile	/^test-browser: .FORCE$/;"	t
+test-browser	app/node_modules/serve-index/node_modules/debug/Makefile	/^test-browser: .FORCE$/;"	t
+test-browser	app/node_modules/snapdragon/node_modules/debug/Makefile	/^test-browser: .FORCE$/;"	t
+test-node	app/node_modules/body-parser/node_modules/debug/Makefile	/^test-node: .FORCE$/;"	t
+test-node	app/node_modules/compression/node_modules/debug/Makefile	/^test-node: .FORCE$/;"	t
+test-node	app/node_modules/expand-brackets/node_modules/debug/Makefile	/^test-node: .FORCE$/;"	t
+test-node	app/node_modules/express/node_modules/debug/Makefile	/^test-node: .FORCE$/;"	t
+test-node	app/node_modules/finalhandler/node_modules/debug/Makefile	/^test-node: .FORCE$/;"	t
+test-node	app/node_modules/send/node_modules/debug/Makefile	/^test-node: .FORCE$/;"	t
+test-node	app/node_modules/serve-index/node_modules/debug/Makefile	/^test-node: .FORCE$/;"	t
+test-node	app/node_modules/snapdragon/node_modules/debug/Makefile	/^test-node: .FORCE$/;"	t
+thread	app/node_modules/watchpack-chokidar2/node_modules/fsevents/fsevents.cc	/^    uv_thread_t thread;$/;"	m	class:fse::FSEvents	typeref:typename:uv_thread_t	file:
+thread	app/node_modules/webpack-dev-server/node_modules/fsevents/fsevents.cc	/^    uv_thread_t thread;$/;"	m	class:fse::FSEvents	typeref:typename:uv_thread_t	file:
+threadRun	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/thread.cc	/^void FSEvents::threadRun(void *ctx) {$/;"	f	class:FSEvents	typeref:typename:void
+threadRun	app/node_modules/webpack-dev-server/node_modules/fsevents/src/thread.cc	/^void FSEvents::threadRun(void *ctx) {$/;"	f	class:FSEvents	typeref:typename:void
+threadStart	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/thread.cc	/^void FSEvents::threadStart() {$/;"	f	class:FSEvents	typeref:typename:void
+threadStart	app/node_modules/webpack-dev-server/node_modules/fsevents/src/thread.cc	/^void FSEvents::threadStart() {$/;"	f	class:FSEvents	typeref:typename:void
+threadStop	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/thread.cc	/^void FSEvents::threadStop() {$/;"	f	class:FSEvents	typeref:typename:void
+threadStop	app/node_modules/webpack-dev-server/node_modules/fsevents/src/thread.cc	/^void FSEvents::threadStop() {$/;"	f	class:FSEvents	typeref:typename:void
+threadloop	app/node_modules/watchpack-chokidar2/node_modules/fsevents/fsevents.cc	/^    CFRunLoopRef threadloop;$/;"	m	class:fse::FSEvents	typeref:typename:CFRunLoopRef	file:
+threadloop	app/node_modules/webpack-dev-server/node_modules/fsevents/fsevents.cc	/^    CFRunLoopRef threadloop;$/;"	m	class:fse::FSEvents	typeref:typename:CFRunLoopRef	file:
+tls_index	app/node_modules/nan/nan.h	/^  DWORD tls_index;$/;"	m	struct:Nan::__anon45b812810208	typeref:typename:DWORD
+travis	app/node_modules/svgo/Makefile	/^travis: lint test coveralls$/;"	t
+try_catch_	app/node_modules/nan/nan.h	/^  v8::TryCatch try_catch_;$/;"	m	class:Nan::TryCatch	typeref:typename:v8::TryCatch
+type	app/node_modules/nan/nan.h	/^  E type;$/;"	m	struct:Nan::WeakCallbackType	typeref:typename:E
+unwrap	app/node_modules/nan/nan_weak.h	/^WeakCallbackInfo<T> *WeakCallbackInfo<T>::unwrap($/;"	f	class:WeakCallbackInfo	typeref:typename:WeakCallbackInfo<T> *
+unwrapparameter	app/node_modules/nan/nan_weak.h	/^WeakCallbackInfo<T> *WeakCallbackInfo<T>::unwrapparameter($/;"	f	class:WeakCallbackInfo	typeref:typename:WeakCallbackInfo<T> *
+unwraptwofield	app/node_modules/nan/nan_weak.h	/^WeakCallbackInfo<T> *WeakCallbackInfo<T>::unwraptwofield($/;"	f	class:WeakCallbackInfo	typeref:typename:WeakCallbackInfo<T> *
+val_	app/node_modules/nan/nan_maybe_pre_43_inl.h	/^  v8::Local<T> val_;$/;"	m	class:MaybeLocal	typeref:typename:v8::Local<T>
+value_	app/node_modules/nan/nan.h	/^  T value_;$/;"	m	class:Nan::Maybe	typeref:typename:T
+value_	app/node_modules/nan/nan_callbacks_12_inl.h	/^  v8::ReturnValue<T> value_;$/;"	m	class:ReturnValue	typeref:typename:v8::ReturnValue<T>
+value_	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  v8::Persistent<T> *value_;$/;"	m	class:ReturnValue	typeref:typename:v8::Persistent<T> *
+versioncheck	app/node_modules/chrome-trace-event/Makefile	/^versioncheck:$/;"	t
+widenString	app/node_modules/nan/nan.h	/^widenString(std::vector<uint16_t> *ws, const uint8_t *s, int l) {$/;"	f	namespace:Nan::imp	typeref:typename:void
+~AsyncBareProgressQueueWorker	app/node_modules/nan/nan.h	/^  virtual ~AsyncBareProgressQueueWorker() {$/;"	f	class:Nan::AsyncBareProgressQueueWorker
+~AsyncBareProgressWorker	app/node_modules/nan/nan.h	/^  virtual ~AsyncBareProgressWorker() {$/;"	f	class:Nan::AsyncBareProgressWorker
+~AsyncBareProgressWorkerBase	app/node_modules/nan/nan.h	/^  virtual ~AsyncBareProgressWorkerBase() {$/;"	f	class:Nan::AsyncBareProgressWorkerBase
+~AsyncProgressQueueWorker	app/node_modules/nan/nan.h	/^  virtual ~AsyncProgressQueueWorker() {$/;"	f	class:Nan::AsyncProgressQueueWorker
+~AsyncProgressWorkerBase	app/node_modules/nan/nan.h	/^  virtual ~AsyncProgressWorkerBase() {$/;"	f	class:Nan::AsyncProgressWorkerBase
+~AsyncResource	app/node_modules/nan/nan.h	/^  ~AsyncResource() {$/;"	f	class:Nan::AsyncResource
+~AsyncWorker	app/node_modules/nan/nan.h	/^  virtual ~AsyncWorker() {$/;"	f	class:Nan::AsyncWorker
+~Callback	app/node_modules/nan/nan.h	/^  ~Callback() {$/;"	f	class:Nan::Callback
+~FSEvents	app/node_modules/watchpack-chokidar2/node_modules/fsevents/fsevents.cc	/^FSEvents::~FSEvents() {$/;"	f	class:FSEvents
+~FSEvents	app/node_modules/webpack-dev-server/node_modules/fsevents/fsevents.cc	/^FSEvents::~FSEvents() {$/;"	f	class:FSEvents
+~FunctionCallbackInfo	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline ~FunctionCallbackInfo() {$/;"	f	class:FunctionCallbackInfo
+~Global	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline ~Global() { this->Reset(); }$/;"	f	class:Global
+~ObjectWrap	app/node_modules/nan/nan_object_wrap.h	/^  virtual ~ObjectWrap() {$/;"	f	class:ObjectWrap
+~Persistent	app/node_modules/nan/nan_persistent_pre_12_inl.h	/^  inline ~Persistent() {$/;"	f	class:Persistent
+~PropertyCallbackInfo	app/node_modules/nan/nan_callbacks_pre_12_inl.h	/^  inline ~PropertyCallbackInfo() {$/;"	f	class:PropertyCallbackInfo
+~Tap	app/node_modules/nan/nan.h	/^  ~Tap() { t_.Reset(); }  \/\/ not sure if necessary$/;"	f	struct:Nan::Tap
+~Utf8String	app/node_modules/nan/nan.h	/^  inline ~Utf8String() {$/;"	f	class:Nan::Utf8String
+~fse_event	app/node_modules/watchpack-chokidar2/node_modules/fsevents/src/storage.cc	/^  ~fse_event() {$/;"	f	struct:fse_event	file:
+~fse_event	app/node_modules/webpack-dev-server/node_modules/fsevents/src/storage.cc	/^  ~fse_event() {$/;"	f	struct:fse_event	file:

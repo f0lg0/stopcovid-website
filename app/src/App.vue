@@ -19,6 +19,13 @@
     --main-color: #473f97;
 }
 
+@media screen and (min-width: 600px) {
+    body {
+        max-width: 599px;
+        margin: auto;
+    }
+}
+
 #app {
     font-family: "Poppins", sans-serif;
     -webkit-font-smoothing: antialiased;
