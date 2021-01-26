@@ -21,7 +21,11 @@
                         <p class="amt">{{ data.deceduti }}</p>
                     </div>
 
-                    <div class="card" id="incidenza">
+                    <div
+                        class="card"
+                        id="incidenza"
+                        @click="changeChart('Incidenza')"
+                    >
                         <p class="name">Incidenza</p>
                         <p class="amt">{{ data.incidenza }}</p>
                     </div>
@@ -223,14 +227,7 @@ export default {
                             this.sample[i],
                             this.sample[i - 1]
                         );
-                        // console.log(
-                        //     "doing ",
-                        //     i,
-                        //     this.sample[i],
-                        //     " with ",
-                        //     i - 1,
-                        //     this.sample[i - 1]
-                        // );
+
                         tmp_buf.push(tmp);
                     }
 
@@ -240,11 +237,27 @@ export default {
 
                     final.datasets[0].data = tmp_buf;
 
+                    // clearing for future use
+                    tmp_buf = [];
+
                     final.datasets[0].borderColor = "#4cb5ff";
                     final.datasets[0].pointBackgroundColor = "#4cb5ff";
                     break;
+                case "Incidenza":
+                    for (let i = 0; i < nuovi_pos_per_week.length; i++) {
+                        final.labels.push(nuovi_pos_per_week[i].week);
+                        final.datasets[0].data.push(
+                            this.calculateIncidenza(
+                                nuovi_pos_per_week[i].positivi
+                            )
+                        );
+                    }
+
+                    final.datasets[0].borderColor = "#4cd97b";
+                    final.datasets[0].pointBackgroundColor = "#4cd97b";
+                    break;
                 default:
-                    console.log("wrong");
+                    console.error("The provided option doesn't exist");
                     break;
             }
 
