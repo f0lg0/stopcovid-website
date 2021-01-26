@@ -16,7 +16,11 @@
                 </div>
 
                 <div class="cards">
-                    <div class="card" id="deceduti">
+                    <div
+                        class="card"
+                        id="deceduti"
+                        @click="changeChart('Deceduti')"
+                    >
                         <p class="name">Deceduti</p>
                         <p class="amt">{{ data.deceduti }}</p>
                     </div>
@@ -107,12 +111,19 @@ export default {
             this.sample = result;
 
             let nuovi_pos_per_week = [];
+            let deceduti_per_week = [];
+
             this.sample.forEach(week => {
                 // we avoid pushing the non-finished week
                 if (week.length == 7) {
-                    let tmp = 0;
+                    // pos
+                    let tmp_pos = 0;
+                    let tmp_dec = 0;
                     for (let i = 0; i < week.length; i++) {
-                        tmp += week[i].nuovi_positivi;
+                        tmp_pos += week[i].nuovi_positivi;
+                        if (i != 0) {
+                            tmp_dec += week[i].deceduti - week[i - 1].deceduti;
+                        }
                     }
                     nuovi_pos_per_week.push({
                         week: `${week[0].data.substring(
@@ -125,7 +136,20 @@ export default {
                             8,
                             10
                         )}/${week[6].data.substring(5, 7)}`,
-                        positivi: tmp
+                        positivi: tmp_pos
+                    });
+                    deceduti_per_week.push({
+                        week: `${week[0].data.substring(
+                            8,
+                            10
+                        )}/${week[0].data.substring(
+                            5,
+                            7
+                        )}-${week[6].data.substring(
+                            8,
+                            10
+                        )}/${week[6].data.substring(5, 7)}`,
+                        deceduti: tmp_dec
                     });
                 }
             });
@@ -255,6 +279,17 @@ export default {
 
                     final.datasets[0].borderColor = "#4cd97b";
                     final.datasets[0].pointBackgroundColor = "#4cd97b";
+                    break;
+                case "Deceduti":
+                    for (let i = 1; i < deceduti_per_week.length; i++) {
+                        final.labels.push(deceduti_per_week[i].week);
+                        final.datasets[0].data.push(
+                            deceduti_per_week[i].deceduti
+                        );
+                    }
+
+                    final.datasets[0].borderColor = "#ff5959";
+                    final.datasets[0].pointBackgroundColor = "#ff5959";
                     break;
                 default:
                     console.error("The provided option doesn't exist");
@@ -395,7 +430,6 @@ export default {
     margin-bottom: 20px;
     border-radius: 14px;
     color: #f2f2f2;
-    cursor: pointer;
 }
 
 .card:hover {
