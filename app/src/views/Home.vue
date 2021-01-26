@@ -302,9 +302,11 @@ export default {
             }
         },
         changeChart(c) {
-            this.active = c;
-            this.change += 1;
-            this.init();
+            if (this.active != c) {
+                this.active = c;
+                this.change += 1;
+                this.init();
+            }
         }
     },
     async mounted() {
@@ -380,6 +382,11 @@ export default {
     margin-bottom: 20px;
     border-radius: 14px;
     color: #f2f2f2;
+    cursor: pointer;
+}
+
+.card:hover {
+    border: 2px solid transparent;
 }
 
 .card p {
