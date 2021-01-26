@@ -3,7 +3,9 @@
         <div class="banner flex-col-cent">
             <div class="banner-container">
                 <h1>Covid-19</h1>
-                <h2>Settimanale</h2>
+                <h2>
+                    Settimana <span>{{ latestWeek }}</span>
+                </h2>
 
                 <div class="switcher-container">
                     <Switcher
@@ -81,6 +83,7 @@ export default {
             },
             rawData: undefined,
             sample: undefined,
+            latestWeek: undefined,
             nuovi_pos_per_week: undefined,
             pop_ita: 60234639,
             active: "Nuovi positivi",
@@ -101,6 +104,7 @@ export default {
 
             let nuovi_pos_per_week = [];
             this.sample.forEach(week => {
+                // we avoid pushing the non-finished week
                 if (week.length == 7) {
                     let tmp = 0;
                     for (let i = 0; i < week.length; i++) {
@@ -125,6 +129,8 @@ export default {
             this.nuovi_pos_per_week = nuovi_pos_per_week;
             const sample_len = this.sample.length;
 
+            this.latestWeek =
+                nuovi_pos_per_week[nuovi_pos_per_week.length - 1].week;
             if (this.sample[sample_len - 1].length == 7) {
                 this.formatLatestWeek(
                     this.sample[sample_len - 1],
@@ -144,7 +150,7 @@ export default {
                 this.formatLatestWeek(
                     this.sample[sample_len - 2],
                     this.sample[sample_len - 3],
-                    nuovi_pos_per_week[nuovi_pos_per_week.length - 2].positivi
+                    nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
                 );
 
                 this.data.vpp = this.calculatePosPerc(
@@ -153,7 +159,7 @@ export default {
                 );
 
                 this.data.incidenza = this.calculateIncidenza(
-                    nuovi_pos_per_week[nuovi_pos_per_week.length - 2].positivi
+                    nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
                 );
             }
 
@@ -196,7 +202,7 @@ export default {
 
             switch (this.active) {
                 case "Nuovi positivi":
-                    for (let i = 0; i < nuovi_pos_per_week.length - 1; i++) {
+                    for (let i = 0; i < nuovi_pos_per_week.length; i++) {
                         final.labels.push(nuovi_pos_per_week[i].week);
                         final.datasets[0].data.push(
                             nuovi_pos_per_week[i].positivi
@@ -208,16 +214,14 @@ export default {
 
                     break;
                 case "Variazione percentuale positivi":
-                    for (let i = 0; i < nuovi_pos_per_week.length - 1; i++) {
+                    for (let i = 2; i < nuovi_pos_per_week.length; i++) {
                         final.labels.push(nuovi_pos_per_week[i].week);
                     }
 
                     for (let i = sample_len - 1; i > 0; i--) {
-                        let tmp = Math.abs(
-                            this.calculatePosPerc(
-                                this.sample[sample_len - 2],
-                                this.sample[i - 1]
-                            )
+                        let tmp = this.calculatePosPerc(
+                            this.sample[i],
+                            this.sample[i - 1]
                         );
                         // console.log(
                         //     "doing ",
@@ -230,7 +234,11 @@ export default {
                         tmp_buf.push(tmp);
                     }
 
-                    final.datasets[0].data = tmp_buf.reverse();
+                    tmp_buf.pop();
+                    tmp_buf.reverse();
+                    tmp_buf.pop();
+
+                    final.datasets[0].data = tmp_buf;
 
                     final.datasets[0].borderColor = "#4cb5ff";
                     final.datasets[0].pointBackgroundColor = "#4cb5ff";
@@ -285,7 +293,7 @@ export default {
                         this.sample[this.sample.length - 2],
                         this.sample[this.sample.length - 3],
                         this.nuovi_pos_per_week[
-                            this.nuovi_pos_per_week.length - 2
+                            this.nuovi_pos_per_week.length - 1
                         ].positivi
                     );
                 }
@@ -347,6 +355,10 @@ export default {
     margin-top: 20px;
     font-size: 20px;
     font-weight: 200;
+}
+
+.banner-container h2 span {
+    font-weight: 400;
 }
 
 .switcher-container {
