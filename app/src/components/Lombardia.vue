@@ -65,7 +65,7 @@ export default {
             sample: undefined,
             latestWeek: undefined,
             nuovi_pos_per_week: undefined,
-            pop_ita: 60234639,
+            pop_lom: 10002615,
             active: "Nuovi positivi",
             change: 0
         };
@@ -294,7 +294,7 @@ export default {
             return Math.round((diff * 100) / pos1);
         },
         calculateIncidenza(pos_latest_week) {
-            return Math.round((pos_latest_week * 100000) / this.pop_ita);
+            return Math.round((pos_latest_week * 100000) / this.pop_lom);
         },
         formatTotale(rawData) {
             console.log(rawData);
