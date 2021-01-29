@@ -139,28 +139,10 @@ export default {
                     this.sample[sample_len - 2],
                     nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
                 );
-
-                this.data.vpp = this.calculatePosPerc(
-                    this.sample[sample_len - 1],
-                    this.sample[sample_len - 2]
-                );
-
-                this.data.incidenza = this.calculateIncidenza(
-                    nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
-                );
             } else {
                 this.formatLatestWeek(
                     this.sample[sample_len - 2],
                     this.sample[sample_len - 3],
-                    nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
-                );
-
-                this.data.vpp = this.calculatePosPerc(
-                    this.sample[sample_len - 2],
-                    this.sample[sample_len - 3]
-                );
-
-                this.data.incidenza = this.calculateIncidenza(
                     nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
                 );
             }

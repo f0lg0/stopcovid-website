@@ -48,7 +48,7 @@ import LineChart from "./Charts/Line.vue";
 
 export default {
     components: {
-        LineChart
+        LineChart,
     },
     data() {
         return {
@@ -59,7 +59,7 @@ export default {
                 deceduti: 0,
                 incidenza: 0,
                 nuovi_positivi: 0,
-                vpp: 0
+                vpp: 0,
             },
             rawData: undefined,
             sample: undefined,
@@ -67,7 +67,7 @@ export default {
             nuovi_pos_per_week: undefined,
             pop_ita: 60234639,
             active: "Nuovi positivi",
-            change: 0
+            change: 0,
         };
     },
     methods: {
@@ -85,7 +85,7 @@ export default {
             let nuovi_pos_per_week = [];
             let deceduti_per_week = [];
 
-            this.sample.forEach(week => {
+            this.sample.forEach((week) => {
                 // we avoid pushing the non-finished week
                 if (week.length == 7) {
                     // pos
@@ -108,7 +108,7 @@ export default {
                             8,
                             10
                         )}/${week[6].data.substring(5, 7)}`,
-                        positivi: tmp_pos
+                        positivi: tmp_pos,
                     });
                     deceduti_per_week.push({
                         week: `${week[0].data.substring(
@@ -121,7 +121,7 @@ export default {
                             8,
                             10
                         )}/${week[6].data.substring(5, 7)}`,
-                        deceduti: tmp_dec
+                        deceduti: tmp_dec,
                     });
                 }
             });
@@ -138,28 +138,10 @@ export default {
                     this.sample[sample_len - 2],
                     nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
                 );
-
-                this.data.vpp = this.calculatePosPerc(
-                    this.sample[sample_len - 1],
-                    this.sample[sample_len - 2]
-                );
-
-                this.data.incidenza = this.calculateIncidenza(
-                    nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
-                );
             } else {
                 this.formatLatestWeek(
                     this.sample[sample_len - 2],
                     this.sample[sample_len - 3],
-                    nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
-                );
-
-                this.data.vpp = this.calculatePosPerc(
-                    this.sample[sample_len - 2],
-                    this.sample[sample_len - 3]
-                );
-
-                this.data.incidenza = this.calculateIncidenza(
                     nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
                 );
             }
@@ -170,9 +152,9 @@ export default {
                     {
                         pointRadius: 5,
                         fill: false,
-                        data: []
-                    }
-                ]
+                        data: [],
+                    },
+                ],
             };
 
             this.options = {
@@ -182,21 +164,21 @@ export default {
                     xAxes: [
                         {
                             gridLines: {
-                                color: "rgba(0, 0, 0, 0)"
-                            }
-                        }
+                                color: "rgba(0, 0, 0, 0)",
+                            },
+                        },
                     ],
                     yAxes: [
                         {
                             gridLines: {
-                                color: "rgba(0, 0, 0, 0)"
-                            }
-                        }
-                    ]
+                                color: "rgba(0, 0, 0, 0)",
+                            },
+                        },
+                    ],
                 },
                 legend: {
-                    display: false
-                }
+                    display: false,
+                },
             };
 
             let tmp_buf = [];
@@ -306,7 +288,7 @@ export default {
                 this.change += 1;
                 this.init();
             }
-        }
+        },
     },
     async mounted() {
         try {
@@ -321,7 +303,7 @@ export default {
         } catch (err) {
             console.error(err);
         }
-    }
+    },
 };
 </script>
 
