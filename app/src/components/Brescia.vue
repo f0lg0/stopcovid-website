@@ -59,7 +59,7 @@ export default {
             sample: undefined,
             latestWeek: undefined,
             nuovi_pos_per_week: undefined,
-            pop_lom: 10002615,
+            pop_bre: 1255437,
             active: "Nuovi positivi",
             change: 0,
         };
@@ -103,146 +103,102 @@ export default {
             });
 
             this.nuovi_pos_per_week = nuovi_pos_per_week;
-            const sample_len = this.sample.length;
 
             this.latestWeek =
                 nuovi_pos_per_week[nuovi_pos_per_week.length - 1].week;
             this.$emit("gotWeek", this.latestWeek);
 
-            if (this.sample[sample_len - 1].length == 7) {
-                this.formatLatestWeek(
-                    this.sample[sample_len - 1],
-                    this.sample[sample_len - 2],
-                    nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
-                );
+            this.formatLatestWeek(
+                this.nuovi_pos_per_week[nuovi_pos_per_week.length - 1],
+                this.nuovi_pos_per_week[nuovi_pos_per_week.length - 2],
+                nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
+            );
 
-                // TODO: % pos
+            const final = {
+                labels: [],
+                datasets: [
+                    {
+                        pointRadius: 5,
+                        fill: false,
+                        data: [],
+                    },
+                ],
+            };
 
-                this.data.vpp = this.calculatePosPerc(
-                    this.nuovi_pos_per_week[nuovi_pos_per_week.length - 1],
-                    this.sample[nuovi_pos_per_week.length - 2]
-                );
-
-                this.data.incidenza = this.calculateIncidenza(
-                    nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
-                );
-            } else {
-                this.formatLatestWeek(
-                    this.sample[sample_len - 2],
-                    this.sample[sample_len - 3],
-                    nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
-                );
-
-                this.data.vpp = this.calculatePosPerc(
-                    this.nuovi_pos_per_week.length[
-                        nuovi_pos_per_week.length - 2
+            this.options = {
+                responsive: true,
+                maintainAspectRatio: true,
+                scales: {
+                    xAxes: [
+                        {
+                            gridLines: {
+                                color: "rgba(0, 0, 0, 0)",
+                            },
+                        },
                     ],
-                    this.nuovi_pos_per_week.length[
-                        nuovi_pos_per_week.length - 3
-                    ]
-                );
+                    yAxes: [
+                        {
+                            gridLines: {
+                                color: "rgba(0, 0, 0, 0)",
+                            },
+                        },
+                    ],
+                },
+                legend: {
+                    display: false,
+                },
+            };
 
-                this.data.incidenza = this.calculateIncidenza(
-                    nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
-                );
+            switch (this.active) {
+                case "Nuovi positivi":
+                    for (let i = 0; i < nuovi_pos_per_week.length; i++) {
+                        final.labels.push(nuovi_pos_per_week[i].week);
+                        final.datasets[0].data.push(
+                            nuovi_pos_per_week[i].positivi
+                        );
+                    }
+
+                    final.datasets[0].borderColor = "#ffb259";
+                    final.datasets[0].pointBackgroundColor = "#ffb259";
+
+                    break;
+                case "Variazione percentuale positivi":
+                    for (let i = 2; i < nuovi_pos_per_week.length; i++) {
+                        final.labels.push(nuovi_pos_per_week[i].week);
+                    }
+
+                    for (let i = 2; i < nuovi_pos_per_week.length; i++) {
+                        final.datasets[0].data.push(
+                            this.calculatePosPerc(
+                                nuovi_pos_per_week[i],
+                                nuovi_pos_per_week[i - 1]
+                            )
+                        );
+                    }
+
+                    final.datasets[0].borderColor = "#4cb5ff";
+                    final.datasets[0].pointBackgroundColor = "#4cb5ff";
+                    break;
+                case "Incidenza":
+                    for (let i = 0; i < nuovi_pos_per_week.length; i++) {
+                        final.labels.push(nuovi_pos_per_week[i].week);
+                        final.datasets[0].data.push(
+                            this.calculateIncidenza(
+                                nuovi_pos_per_week[i].positivi
+                            )
+                        );
+                    }
+
+                    final.datasets[0].borderColor = "#4cd97b";
+                    final.datasets[0].pointBackgroundColor = "#4cd97b";
+                    break;
+                default:
+                    console.error("The provided option doesn't exist");
+                    break;
             }
 
-            // const final = {
-            //     labels: [],
-            //     datasets: [
-            //         {
-            //             pointRadius: 5,
-            //             fill: false,
-            //             data: [],
-            //         },
-            //     ],
-            // };
-
-            // this.options = {
-            //     responsive: true,
-            //     maintainAspectRatio: true,
-            //     scales: {
-            //         xAxes: [
-            //             {
-            //                 gridLines: {
-            //                     color: "rgba(0, 0, 0, 0)",
-            //                 },
-            //             },
-            //         ],
-            //         yAxes: [
-            //             {
-            //                 gridLines: {
-            //                     color: "rgba(0, 0, 0, 0)",
-            //                 },
-            //             },
-            //         ],
-            //     },
-            //     legend: {
-            //         display: false,
-            //     },
-            // };
-
-            // let tmp_buf = [];
-
-            // switch (this.active) {
-            //     case "Nuovi positivi":
-            //         for (let i = 0; i < nuovi_pos_per_week.length; i++) {
-            //             final.labels.push(nuovi_pos_per_week[i].week);
-            //             final.datasets[0].data.push(
-            //                 nuovi_pos_per_week[i].positivi
-            //             );
-            //         }
-
-            //         final.datasets[0].borderColor = "#ffb259";
-            //         final.datasets[0].pointBackgroundColor = "#ffb259";
-
-            //         break;
-            //     case "Variazione percentuale positivi":
-            //         for (let i = 2; i < nuovi_pos_per_week.length; i++) {
-            //             final.labels.push(nuovi_pos_per_week[i].week);
-            //         }
-
-            //         for (let i = sample_len - 1; i > 0; i--) {
-            //             let tmp = this.calculatePosPerc(
-            //                 this.sample[i],
-            //                 this.sample[i - 1]
-            //             );
-
-            //             tmp_buf.push(tmp);
-            //         }
-
-            //         tmp_buf.pop();
-            //         tmp_buf.reverse();
-            //         tmp_buf.pop();
-
-            //         final.datasets[0].data = tmp_buf;
-
-            //         // clearing for future use
-            //         tmp_buf = [];
-
-            //         final.datasets[0].borderColor = "#4cb5ff";
-            //         final.datasets[0].pointBackgroundColor = "#4cb5ff";
-            //         break;
-            //     case "Incidenza":
-            //         for (let i = 0; i < nuovi_pos_per_week.length; i++) {
-            //             final.labels.push(nuovi_pos_per_week[i].week);
-            //             final.datasets[0].data.push(
-            //                 this.calculateIncidenza(
-            //                     nuovi_pos_per_week[i].positivi
-            //                 )
-            //             );
-            //         }
-
-            //         final.datasets[0].borderColor = "#4cd97b";
-            //         final.datasets[0].pointBackgroundColor = "#4cd97b";
-            //         break;
-            //     default:
-            //         console.error("The provided option doesn't exist");
-            //         break;
-            // }
-
-            // this.chartdata = final;
-            // this.loaded = true;
+            this.chartdata = final;
+            this.loaded = true;
         },
         formatLatestWeek(latestWeek, weekBefore, totPos) {
             this.data.nuovi_positivi = totPos;
@@ -250,23 +206,14 @@ export default {
             this.data.incidenza = this.calculateIncidenza(totPos);
         },
         calculatePosPerc(week0, week1) {
-            console.log(week0, week1);
-            let pos0 = 0;
-            let pos1 = 0;
-
-            for (let i = 0; i < week0.length; i++) {
-                pos0 += week0[i].nuovi_positivi;
-                pos1 += week1[i].nuovi_positivi;
-            }
+            let pos0 = week0.positivi;
+            let pos1 = week1.positivi;
 
             const diff = pos0 - pos1;
             return Math.round((diff * 100) / pos1);
         },
         calculateIncidenza(pos_latest_week) {
-            return Math.round((pos_latest_week * 100000) / this.pop_lom);
-        },
-        formatTotale(rawData) {
-            console.log(rawData);
+            return Math.round((pos_latest_week * 100000) / this.pop_bre);
         },
 
         changeChart(c) {
