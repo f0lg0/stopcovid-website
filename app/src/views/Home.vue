@@ -10,6 +10,7 @@
                     <Switcher
                         op1="Italia"
                         op2="Lombardia"
+                        op3="Brescia"
                         v-on:switched="switched($event)"
                     />
                 </div>
@@ -23,6 +24,11 @@
                 v-if="selected == 'Lombardia'"
                 v-on:gotWeek="latestWeek = $event"
             />
+
+            <Brescia
+                v-if="selected == 'Brescia'"
+                v-on:gotWeek="latestWeek = $event"
+            />
         </div>
     </div>
 </template>
@@ -31,18 +37,20 @@
 import Switcher from "../components/Switcher.vue";
 import Italia from "../components/Italia.vue";
 import Lombardia from "../components/Lombardia.vue";
+import Brescia from "../components/Brescia.vue";
 
 export default {
     name: "Home",
     components: {
         Switcher,
         Italia,
-        Lombardia
+        Lombardia,
+        Brescia,
     },
     data() {
         return {
             latestWeek: "...",
-            selected: "Italia"
+            selected: "Italia",
         };
     },
     methods: {
@@ -51,9 +59,11 @@ export default {
                 this.selected = "Italia";
             } else if (op == 2 && this.selected != "Lombardia") {
                 this.selected = "Lombardia";
+            } else if (op == 3 && this.selected != "Brescia") {
+                this.selected = "Brescia";
             }
-        }
-    }
+        },
+    },
 };
 </script>
 <style scoped>

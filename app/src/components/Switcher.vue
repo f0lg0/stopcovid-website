@@ -14,6 +14,13 @@
         >
             <p>{{ op2 }}</p>
         </div>
+        <div
+            class="option"
+            @click="setActive(3)"
+            :class="{ activeOp: active3 }"
+        >
+            <p>{{ op3 }}</p>
+        </div>
     </div>
 </template>
 
@@ -22,34 +29,47 @@ export default {
     data() {
         return {
             active1: true,
-            active2: false
+            active2: false,
+            active3: false,
         };
     },
     props: {
         op1: {
             type: String,
-            default: "Option 1"
+            default: "Option 1",
         },
         op2: {
             type: String,
-            default: "Option 2"
-        }
+            default: "Option 2",
+        },
+        op3: {
+            type: String,
+            default: "Option 2",
+        },
     },
     methods: {
         setActive(op) {
             if (op == 1 && this.active1 == false) {
                 this.active1 = true;
                 this.active2 = false;
+                this.active3 = false;
 
                 this.$emit("switched", op);
             } else if (op == 2 && this.active2 == false) {
                 this.active1 = false;
                 this.active2 = true;
+                this.active3 = false;
+
+                this.$emit("switched", op);
+            } else if (op == 3 && this.active3 == false) {
+                this.active1 = false;
+                this.active2 = false;
+                this.active3 = true;
 
                 this.$emit("switched", op);
             }
-        }
-    }
+        },
+    },
 };
 </script>
 
@@ -67,7 +87,7 @@ export default {
 
 .option {
     padding: 10px;
-    width: 46%;
+    width: 30%;
     border-radius: 40px;
 }
 
