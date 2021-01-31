@@ -7,7 +7,7 @@
             </div>
 
             <div class="card" id="incidenza" @click="changeChart('Incidenza')">
-                <p class="name">Incidenza</p>
+                <p class="name">Incidenza <span>(Oggi)</span></p>
                 <p class="amt">{{ data.incidenza }}</p>
             </div>
 
@@ -65,6 +65,8 @@ export default {
             sample: undefined,
             latestWeek: undefined,
             nuovi_pos_per_week: undefined,
+            latestSevenDays: undefined,
+            posLatestSevenDays: undefined,
             pop_ita: 60234639,
             active: "Nuovi positivi",
             change: 0,
@@ -132,6 +134,7 @@ export default {
             this.latestWeek =
                 nuovi_pos_per_week[nuovi_pos_per_week.length - 1].week;
             this.$emit("gotWeek", this.latestWeek);
+
             if (this.sample[sample_len - 1].length == 7) {
                 this.formatLatestWeek(
                     this.sample[sample_len - 1],
@@ -139,10 +142,25 @@ export default {
                     nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
                 );
             } else {
+                this.latestSevenDays = this.sample[sample_len - 2].slice(
+                    this.sample[sample_len - 1].length,
+                    7
+                );
+                for (let i = 0; i < this.sample[sample_len - 1].length; i++) {
+                    this.latestSevenDays.push(this.sample[sample_len - 1][i]);
+                }
+
+                this.posLatestSevenDays = 0;
+                for (let i = 0; i < 7; i++) {
+                    this.posLatestSevenDays += this.latestSevenDays[
+                        i
+                    ].nuovi_positivi;
+                }
+
                 this.formatLatestWeek(
                     this.sample[sample_len - 2],
                     this.sample[sample_len - 3],
-                    nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
+                    this.posLatestSevenDays
                 );
             }
 
@@ -334,6 +352,11 @@ export default {
 
 .name {
     font-weight: 600;
+}
+
+.name span {
+    font-size: 12px;
+    font-weight: 300;
 }
 
 .amt {
