@@ -273,10 +273,10 @@ export default {
             }
 
             const diff = pos0 - pos1;
-            return Math.round((diff * 100) / pos1);
+            return ((diff * 100) / pos1).toFixed(2);
         },
         calculateIncidenza(pos_latest_week) {
-            return Math.round((pos_latest_week * 100000) / this.pop_ita);
+            return ((pos_latest_week * 100000) / this.pop_ita).toFixed(2);
         },
         formatTotale(rawData) {
             console.log(rawData);
