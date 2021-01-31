@@ -12,6 +12,11 @@ const routes = [
         component: Home,
     },
     {
+        path: "/about",
+        name: "About",
+        component: () => import("../views/About.vue"),
+    },
+    {
         path: "*",
         name: "404",
         component: NotFound,
