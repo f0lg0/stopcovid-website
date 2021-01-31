@@ -210,10 +210,10 @@ export default {
             let pos1 = week1.positivi;
 
             const diff = pos0 - pos1;
-            return Math.round((diff * 100) / pos1);
+            return ((diff * 100) / pos1).toFixed(2);
         },
         calculateIncidenza(pos_latest_week) {
-            return Math.round((pos_latest_week * 100000) / this.pop_bre);
+            return ((pos_latest_week * 100000) / this.pop_bre).toFixed(2);
         },
 
         changeChart(c) {
