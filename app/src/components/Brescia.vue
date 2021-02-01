@@ -2,7 +2,7 @@
     <div id="brescia">
         <div class="cards">
             <div class="card" id="incidenza" @click="changeChart('Incidenza')">
-                <p class="name">Incidenza</p>
+                <p class="name">Incidenza <span>(Oggi)</span></p>
                 <p class="amt">{{ data.incidenza }}</p>
             </div>
 
@@ -59,6 +59,8 @@ export default {
             sample: undefined,
             latestWeek: undefined,
             nuovi_pos_per_week: undefined,
+            latestSevenDays: undefined,
+            posLatestSevenDays: undefined,
             pop_bre: 1255437,
             active: "Nuovi positivi",
             change: 0,
@@ -103,6 +105,26 @@ export default {
             });
 
             this.nuovi_pos_per_week = nuovi_pos_per_week;
+            this.latestSevenDays = this.sample[this.sample.length - 2].slice(
+                this.sample[this.sample.length - 1].length,
+                7
+            );
+
+            for (
+                let i = 0;
+                i < this.sample[this.sample.length - 1].length;
+                i++
+            ) {
+                this.latestSevenDays.push(
+                    this.sample[this.sample.length - 1][i]
+                );
+            }
+            this.posLatestSevenDays = 0;
+            for (let i = 0; i < 6; i++) {
+                this.posLatestSevenDays +=
+                    this.latestSevenDays[i + 1].totale_casi -
+                    this.latestSevenDays[i].totale_casi;
+            }
 
             this.latestWeek =
                 nuovi_pos_per_week[nuovi_pos_per_week.length - 1].week;
@@ -111,7 +133,7 @@ export default {
             this.formatLatestWeek(
                 this.nuovi_pos_per_week[nuovi_pos_per_week.length - 1],
                 this.nuovi_pos_per_week[nuovi_pos_per_week.length - 2],
-                nuovi_pos_per_week[nuovi_pos_per_week.length - 1].positivi
+                this.posLatestSevenDays
             );
 
             const final = {
@@ -277,6 +299,11 @@ export default {
 
 .name {
     font-weight: 600;
+}
+
+.name span {
+    font-size: 12px;
+    font-weight: 300;
 }
 
 .amt {
