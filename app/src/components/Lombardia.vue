@@ -2,7 +2,7 @@
     <div id="lombardia">
         <div class="cards">
             <div class="card" id="deceduti" @click="changeChart('Deceduti')">
-                <p class="name">Deceduti</p>
+                <p class="name">Media deceduti</p>
                 <p class="amt">{{ data.deceduti }}</p>
             </div>
 
@@ -16,7 +16,7 @@
                 id="nuovipos"
                 @click="changeChart('Nuovi positivi')"
             >
-                <p class="name">Positivi</p>
+                <p class="name">Media positivi</p>
                 <p class="amt">{{ data.nuovi_positivi }}</p>
             </div>
 
@@ -78,8 +78,7 @@ export default {
             const sample_len = this.sample.length;
 
             const cloned = [...this.sample];
-            const sample_rev = [...cloned.reverse()];
-
+            const sample_rev = [...cloned].reverse();
             const chunks = 7;
 
             const grouped = new Array(Math.ceil(sample_rev.length / chunks))

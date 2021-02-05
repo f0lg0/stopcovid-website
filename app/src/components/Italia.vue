@@ -76,9 +76,8 @@ export default {
             this.sample = this.rawData.slice(280, this.rawData.length);
             const sample_len = this.sample.length;
 
-            const cloned = [...this.sample];
-            const sample_rev = [...cloned.reverse()];
-
+            let cloned = [...this.sample];
+            const sample_rev = [...cloned].reverse();
             const chunks = 7;
 
             const grouped = new Array(Math.ceil(sample_rev.length / chunks))
