@@ -141,7 +141,7 @@ export default {
             let skip = true;
             switch (this.active) {
                 case "Nuovi positivi":
-                    for (let i = 1; i < sample_len; i++) {
+                    for (let i = 35; i < sample_len; i++) {
                         final.labels.push(this.sample[i].data.substring(5, 10));
                         final.datasets[0].data.push(
                             this.sample[i].totale_casi -

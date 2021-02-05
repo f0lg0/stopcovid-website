@@ -145,7 +145,7 @@ export default {
 
             switch (this.active) {
                 case "Nuovi positivi":
-                    for (let i = 0; i < sample_len; i++) {
+                    for (let i = 35; i < sample_len; i++) {
                         final.labels.push(this.sample[i].data.substring(5, 10));
                         final.datasets[0].data.push(
                             this.sample[i].nuovi_positivi
@@ -219,7 +219,7 @@ export default {
                     final.datasets[0].pointBackgroundColor = "#4cd97b";
                     break;
                 case "Deceduti":
-                    for (let i = 1; i < sample_len; i++) {
+                    for (let i = 35; i < sample_len; i++) {
                         final.labels.push(this.sample[i].data.substring(5, 10));
                         final.datasets[0].data.push(
                             this.sample[i].deceduti -
