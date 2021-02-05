@@ -66,7 +66,6 @@ export default {
             latestSevenDays: undefined,
             posLatestSevenDays: undefined,
             weekBefore: undefined,
-            extraDay: undefined,
             pop_ita: 60234639,
             active: "Nuovi positivi",
             change: 0,
@@ -97,7 +96,6 @@ export default {
                 sample_len - 14,
                 sample_len - 7
             );
-            this.extraDay = this.sample[sample_len - 8];
 
             this.$emit(
                 "gotWeek",
@@ -283,9 +281,6 @@ export default {
         },
         calculateIncidenza(pos_latest_week) {
             return ((pos_latest_week * 100000) / this.pop_ita).toFixed(2);
-        },
-        formatTotale(rawData) {
-            console.log(rawData);
         },
 
         changeChart(c) {
