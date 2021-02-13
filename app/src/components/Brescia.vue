@@ -72,6 +72,7 @@ export default {
 
             const cloned = [...this.sample];
             const sample_rev = [...cloned].reverse();
+            const sample_rev_copy = [...sample_rev];
 
             const chunks = 7;
 
@@ -139,6 +140,15 @@ export default {
             };
 
             let skip = true;
+
+            // this is super bad code but im not okay understand me pls
+            let tmp_8 = new Array(Math.ceil(sample_rev_copy.length / 8))
+                .fill()
+                .map(() => sample_rev_copy.splice(0, 8));
+
+            if (tmp_8[tmp_8.length - 1].length != 7) tmp_8.pop();
+            tmp_8.reverse();
+
             switch (this.active) {
                 case "Nuovi positivi":
                     for (let i = 35; i < sample_len; i++) {
@@ -203,10 +213,23 @@ export default {
                                 10
                             )}/${week[0].data.substring(5, 7)}`
                         );
+                    });
+                    tmp_8.forEach((week) => {
+                        let pos_per_day = [];
+                        let media_pos = 0;
 
-                        let tmp = week[0].totale_casi - week[6].totale_casi;
+                        week.reverse();
+
+                        for (let i = 1; i < 8; i++) {
+                            pos_per_day.push(
+                                week[i].totale_casi - week[i - 1].totale_casi
+                            );
+                        }
+
+                        media_pos = pos_per_day.reduce((a, b) => a + b, 0) / 7;
+
                         final.datasets[0].data.push(
-                            this.calculateIncidenza(tmp)
+                            this.calculateIncidenza(Math.round(media_pos * 7))
                         );
                     });
 
@@ -223,33 +246,24 @@ export default {
         },
         formatData() {
             let totPosPerDay_0 = [];
-            let totPosPerDay_1 = [];
 
             for (let i = 1; i < 8; i++) {
                 totPosPerDay_0.push(
                     this.latestSevenDays[i].totale_casi -
                         this.latestSevenDays[i - 1].totale_casi
                 );
-
-                totPosPerDay_1.push(
-                    this.weekBefore[i].totale_casi -
-                        this.weekBefore[i - 1].totale_casi
-                );
             }
 
-            this.data.nuovi_positivi = Math.round(
-                totPosPerDay_0.reduce((a, b) => a + b, 0) / 7
-            );
+            const media_pos = totPosPerDay_0.reduce((a, b) => a + b, 0) / 7;
+
+            this.data.nuovi_positivi = Math.round(media_pos);
 
             this.data.vpp = this.calculatePosPerc(
                 this.latestSevenDays[7].totale_casi -
                     this.latestSevenDays[1].totale_casi,
                 this.weekBefore[7].totale_casi - this.weekBefore[1].totale_casi
             );
-            this.data.incidenza = this.calculateIncidenza(
-                this.latestSevenDays[7].totale_casi -
-                    this.latestSevenDays[1].totale_casi
-            );
+            this.data.incidenza = this.calculateIncidenza(media_pos * 7);
         },
         calculatePosPerc(pos0, pos1) {
             const diff = pos0 - pos1;
