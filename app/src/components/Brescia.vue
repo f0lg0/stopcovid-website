@@ -198,21 +198,26 @@ export default {
                     final.datasets[0].pointBackgroundColor = "#4cb5ff";
 
                     grouped.reverse();
+                    skip = true;
                     break;
                 case "Incidenza":
                     grouped.forEach((week) => {
-                        final.labels.push(
-                            `${week[6].data.substring(
-                                8,
-                                10
-                            )}/${week[6].data.substring(
-                                5,
-                                7
-                            )}-${week[0].data.substring(
-                                8,
-                                10
-                            )}/${week[0].data.substring(5, 7)}`
-                        );
+                        if (!skip) {
+                            final.labels.push(
+                                `${week[6].data.substring(
+                                    8,
+                                    10
+                                )}/${week[6].data.substring(
+                                    5,
+                                    7
+                                )}-${week[0].data.substring(
+                                    8,
+                                    10
+                                )}/${week[0].data.substring(5, 7)}`
+                            );
+                        } else {
+                            skip = false;
+                        }
                     });
                     tmp_8.forEach((week) => {
                         let pos_per_day = [];
