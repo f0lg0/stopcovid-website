@@ -26,7 +26,9 @@
                 @click="changeChart('Variazione percentuale positivi')"
             >
                 <p class="name">% Positivi</p>
-                <p class="amt">{{ data.vpp }}%</p>
+                <p class="amt">
+                    <span v-if="data.vpp > 0">+</span>{{ data.vpp }}%
+                </p>
             </div>
         </div>
         <div class="chart">
