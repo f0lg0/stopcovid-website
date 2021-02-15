@@ -154,7 +154,6 @@ export default {
             switch (this.active) {
                 case "Media positivi":
                     grouped.forEach((week) => {
-                        console.log("w", week);
                         final.labels.push(
                             `${week[6].data.substring(
                                 8,
