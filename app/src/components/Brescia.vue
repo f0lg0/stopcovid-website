@@ -9,7 +9,7 @@
             <div
                 class="card"
                 id="nuovipos"
-                @click="changeChart('Nuovi positivi')"
+                @click="changeChart('Media positivi')"
             >
                 <p class="name">Media positivi</p>
                 <p class="amt">{{ data.nuovi_positivi }}</p>
@@ -63,7 +63,7 @@ export default {
             posLatestSevenDays: undefined,
             weekBefore: undefined,
             pop_bre: 1255437,
-            active: "Nuovi positivi",
+            active: "Media positivi",
             change: 0,
         };
     },
@@ -152,18 +152,44 @@ export default {
             tmp_8.reverse();
 
             switch (this.active) {
-                case "Nuovi positivi":
-                    for (let i = 35; i < sample_len; i++) {
-                        final.labels.push(this.sample[i].data.substring(5, 10));
-                        final.datasets[0].data.push(
-                            this.sample[i].totale_casi -
-                                this.sample[i - 1].totale_casi
+                case "Media positivi":
+                    grouped.forEach((week) => {
+                        console.log("w", week);
+                        final.labels.push(
+                            `${week[6].data.substring(
+                                8,
+                                10
+                            )}/${week[6].data.substring(
+                                5,
+                                7
+                            )}-${week[0].data.substring(
+                                8,
+                                10
+                            )}/${week[0].data.substring(5, 7)}`
                         );
-                    }
+
+                        let totPosPerDay = [];
+
+                        for (let i = 0; i < 7; i++) {
+                            if (i >= 1) {
+                                totPosPerDay.push(
+                                    week[i].totale_casi -
+                                        week[i - 1].totale_casi
+                                );
+                            }
+                        }
+
+                        final.datasets[0].data.push(
+                            Math.abs(
+                                Math.round(
+                                    totPosPerDay.reduce((a, b) => a + b, 0) / 7
+                                )
+                            )
+                        );
+                    });
 
                     final.datasets[0].borderColor = "#ffb259";
                     final.datasets[0].pointBackgroundColor = "#ffb259";
-
                     break;
                 case "Variazione percentuale positivi":
                     grouped.forEach((week) => {
@@ -255,10 +281,12 @@ export default {
             let totPosPerDay_0 = [];
 
             for (let i = 1; i < 8; i++) {
-                totPosPerDay_0.push(
-                    this.latestSevenDays[i].totale_casi -
-                        this.latestSevenDays[i - 1].totale_casi
-                );
+                if (i >= 2) {
+                    totPosPerDay_0.push(
+                        this.latestSevenDays[i].totale_casi -
+                            this.latestSevenDays[i - 1].totale_casi
+                    );
+                }
             }
 
             const media_pos = totPosPerDay_0.reduce((a, b) => a + b, 0) / 7;
