@@ -151,35 +151,31 @@ export default {
             switch (this.active) {
                 case "Media positivi":
                     grouped.forEach((week) => {
-                        if (!skip) {
-                            final.labels.push(
-                                `${week[6].data.substring(
-                                    8,
-                                    10
-                                )}/${week[6].data.substring(
-                                    5,
-                                    7
-                                )}-${week[0].data.substring(
-                                    8,
-                                    10
-                                )}/${week[0].data.substring(5, 7)}`
-                            );
+                        final.labels.push(
+                            `${week[6].data.substring(
+                                8,
+                                10
+                            )}/${week[6].data.substring(
+                                5,
+                                7
+                            )}-${week[0].data.substring(
+                                8,
+                                10
+                            )}/${week[0].data.substring(5, 7)}`
+                        );
 
-                            let totPosPerDay = [];
+                        let totPosPerDay = [];
 
-                            for (let i = 0; i < 7; i++) {
-                                totPosPerDay.push(week[i].nuovi_positivi);
-                                1;
-                            }
-
-                            final.datasets[0].data.push(
-                                Math.round(
-                                    totPosPerDay.reduce((a, b) => a + b, 0) / 7
-                                )
-                            );
-                        } else {
-                            skip = false;
+                        for (let i = 0; i < 7; i++) {
+                            totPosPerDay.push(week[i].nuovi_positivi);
+                            1;
                         }
+
+                        final.datasets[0].data.push(
+                            Math.round(
+                                totPosPerDay.reduce((a, b) => a + b, 0) / 7
+                            )
+                        );
                     });
 
                     final.datasets[0].borderColor = "#ffb259";
@@ -251,45 +247,38 @@ export default {
                     break;
                 case "Media deceduti": {
                     grouped.forEach((week) => {
-                        if (!skip) {
-                            final.labels.push(
-                                `${week[6].data.substring(
-                                    8,
-                                    10
-                                )}/${week[6].data.substring(
-                                    5,
-                                    7
-                                )}-${week[0].data.substring(
-                                    8,
-                                    10
-                                )}/${week[0].data.substring(5, 7)}`
-                            );
+                        final.labels.push(
+                            `${week[6].data.substring(
+                                8,
+                                10
+                            )}/${week[6].data.substring(
+                                5,
+                                7
+                            )}-${week[0].data.substring(
+                                8,
+                                10
+                            )}/${week[0].data.substring(5, 7)}`
+                        );
 
-                            let totDecPerDay = [];
+                        let totDecPerDay = [];
 
-                            for (let i = 0; i < 7; i++) {
-                                if (i >= 1) {
-                                    totDecPerDay.push(
-                                        week[i].deceduti - week[i - 1].deceduti
-                                    );
-                                }
+                        for (let i = 0; i < 7; i++) {
+                            if (i >= 1) {
+                                totDecPerDay.push(
+                                    week[i].deceduti - week[i - 1].deceduti
+                                );
                             }
-
-                            // abs because grouped is inversed (0 is latest, 1 is day before)
-                            // work smarter not harder xD
-                            final.datasets[0].data.push(
-                                Math.abs(
-                                    Math.round(
-                                        totDecPerDay.reduce(
-                                            (a, b) => a + b,
-                                            0
-                                        ) / 7
-                                    )
-                                )
-                            );
-                        } else {
-                            skip = false;
                         }
+
+                        // abs because grouped is inversed (0 is latest, 1 is day before)
+                        // work smarter not harder xD
+                        final.datasets[0].data.push(
+                            Math.abs(
+                                Math.round(
+                                    totDecPerDay.reduce((a, b) => a + b, 0) / 7
+                                )
+                            )
+                        );
                     });
 
                     final.datasets[0].borderColor = "#ff5959";
