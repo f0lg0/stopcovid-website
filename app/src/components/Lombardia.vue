@@ -181,7 +181,6 @@ export default {
 
                     final.datasets[0].borderColor = "#ffb259";
                     final.datasets[0].pointBackgroundColor = "#ffb259";
-                    skip = true;
                     break;
                 case "Variazione percentuale positivi":
                     grouped.forEach((week) => {
