@@ -155,6 +155,70 @@ export default {
                     break;
                 }
 
+                case "Variazione percentuale positivi": {
+                    let to_revert_labels = [];
+                    let to_revert_data = [];
+
+                    let pos_per_day = [];
+
+                    for (let i = 0; i < this.sample_reversed.length - 1; i++) {
+                        if (
+                            (i == 0 || i % 7 == 0) &&
+                            i + 6 < this.sample_reversed.length
+                        ) {
+                            to_revert_labels.push(
+                                `${this.sample_reversed[i + 6].data.substring(
+                                    8,
+                                    10
+                                )}/${this.sample_reversed[i + 6].data.substring(
+                                    5,
+                                    7
+                                )}-${this.sample_reversed[i].data.substring(
+                                    8,
+                                    10
+                                )}/${this.sample_reversed[i].data.substring(
+                                    5,
+                                    7
+                                )}`
+                            );
+                        }
+
+                        pos_per_day.push(
+                            this.sample_reversed[i].totale_casi -
+                                this.sample_reversed[i + 1].totale_casi
+                        );
+                    }
+                    let tmp = 0;
+                    for (let i = 0; i < pos_per_day.length; i++) {
+                        if (i % 7 == 0) {
+                            to_revert_data.push(Math.round(tmp / 7));
+                            tmp = 0;
+                        }
+                        tmp += pos_per_day[i];
+                    }
+
+                    to_revert_labels.pop();
+                    // %
+
+                    let asdf = [];
+                    for (let i = 0; i < to_revert_data.length - 1; i++) {
+                        asdf.push(
+                            this.calculatePosPerc(
+                                to_revert_data[i],
+                                to_revert_data[i + 1]
+                            )
+                        );
+                    }
+
+                    final.labels = to_revert_labels.reverse();
+                    final.datasets[0].data = asdf.reverse();
+
+                    final.datasets[0].borderColor = "#4cb5ff";
+                    final.datasets[0].pointBackgroundColor = "#4cb5ff";
+
+                    break;
+                }
+
                 default:
                     console.error("The provided option doesn't exist");
                     break;
@@ -164,24 +228,29 @@ export default {
             this.loaded = true;
         },
         formatData() {
-            let pos_per_day = [];
+            let pos_per_day_0 = [];
+            let pos_per_day_1 = [];
 
             for (let i = 0; i < 7; i++) {
-                pos_per_day.push(
+                pos_per_day_0.push(
                     this.sample_reversed[i].totale_casi -
                         this.sample_reversed[i + 1].totale_casi
                 );
             }
 
-            const media_pos = pos_per_day.reduce((a, b) => a + b, 0) / 7;
+            for (let i = 7; i < 14; i++) {
+                pos_per_day_1.push(
+                    this.sample_reversed[i].totale_casi -
+                        this.sample_reversed[i + 1].totale_casi
+                );
+            }
 
-            this.data.media_positivi = Math.round(media_pos);
+            const media_pos_0 = pos_per_day_0.reduce((a, b) => a + b, 0) / 7;
+            const media_pos_1 = pos_per_day_1.reduce((a, b) => a + b, 0) / 7;
 
-            // this.data.vpp = this.calculatePosPerc(
-            //     this.latestSevenDays[7].totale_casi -
-            //         this.latestSevenDays[1].totale_casi,
-            //     this.weekBefore[7].totale_casi - this.weekBefore[1].totale_casi
-            // );
+            this.data.media_positivi = Math.round(media_pos_0);
+
+            this.data.vpp = this.calculatePosPerc(media_pos_0, media_pos_1);
             // this.data.incidenza = this.calculateIncidenza(media_pos * 7);
         },
         calculatePosPerc(pos0, pos1) {
