@@ -148,6 +148,9 @@ export default {
                     }
 
                     final.labels = to_revert_labels.reverse();
+
+                    // TODO: don't know why I had to shift
+                    to_revert_data.shift();
                     final.datasets[0].data = to_revert_data.reverse();
 
                     final.datasets[0].borderColor = "#ffb259";
@@ -198,7 +201,6 @@ export default {
                     }
 
                     to_revert_labels.pop();
-                    // %
 
                     let asdf = [];
                     for (let i = 0; i < to_revert_data.length - 1; i++) {
@@ -211,11 +213,71 @@ export default {
                     }
 
                     final.labels = to_revert_labels.reverse();
+
+                    asdf.shift();
                     final.datasets[0].data = asdf.reverse();
 
                     final.datasets[0].borderColor = "#4cb5ff";
                     final.datasets[0].pointBackgroundColor = "#4cb5ff";
 
+                    break;
+                }
+
+                case "Incidenza": {
+                    let to_revert_labels = [];
+                    let to_revert_data = [];
+                    let pos_per_day = [];
+
+                    for (let i = 0; i < this.sample_reversed.length - 1; i++) {
+                        if (
+                            (i == 0 || i % 7 == 0) &&
+                            i + 6 < this.sample_reversed.length
+                        ) {
+                            to_revert_labels.push(
+                                `${this.sample_reversed[i + 6].data.substring(
+                                    8,
+                                    10
+                                )}/${this.sample_reversed[i + 6].data.substring(
+                                    5,
+                                    7
+                                )}-${this.sample_reversed[i].data.substring(
+                                    8,
+                                    10
+                                )}/${this.sample_reversed[i].data.substring(
+                                    5,
+                                    7
+                                )}`
+                            );
+                        }
+
+                        pos_per_day.push(
+                            this.sample_reversed[i].totale_casi -
+                                this.sample_reversed[i + 1].totale_casi
+                        );
+                    }
+
+                    let tmp = 0;
+                    for (let i = 0; i < pos_per_day.length; i++) {
+                        if (i % 7 == 0) {
+                            to_revert_data.push(Math.round(tmp));
+                            tmp = 0;
+                        }
+                        tmp += pos_per_day[i];
+                    }
+
+                    let asdf = [];
+                    for (let i = 0; i < to_revert_data.length - 1; i++) {
+                        asdf.push(this.calculateIncidenza(to_revert_data[i]));
+                    }
+
+                    to_revert_labels.pop();
+                    final.labels = to_revert_labels.reverse();
+
+                    asdf.shift();
+                    final.datasets[0].data = asdf.reverse();
+
+                    final.datasets[0].borderColor = "#4cd97b";
+                    final.datasets[0].pointBackgroundColor = "#4cd97b";
                     break;
                 }
 
@@ -251,7 +313,7 @@ export default {
             this.data.media_positivi = Math.round(media_pos_0);
 
             this.data.vpp = this.calculatePosPerc(media_pos_0, media_pos_1);
-            // this.data.incidenza = this.calculateIncidenza(media_pos * 7);
+            this.data.incidenza = this.calculateIncidenza(media_pos_0 * 7);
         },
         calculatePosPerc(pos0, pos1) {
             const diff = pos0 - pos1;
