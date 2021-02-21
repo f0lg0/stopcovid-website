@@ -349,7 +349,11 @@ export default {
             });
 
             this.rawData = tmp_buf;
-            this.sample = this.rawData.slice(280, this.rawData.length);
+
+            // TODO: review this
+            this.rawData.reverse();
+            this.sample = this.rawData.splice(0, 100);
+            this.sample.reverse();
             this.sample_reversed = [...this.sample];
             this.sample_reversed.reverse();
 
