@@ -5,7 +5,7 @@
             <p class="title">Autore:</p>
             <p>Leonardo Folgoni</p>
             <p class="title">GitHub:</p>
-            <p><i>Soon</i></p>
+            <p><a href="http://github.com/f0lg0/stopcovid-website" target="_blank" rel="noopener noreferrer">Stop Covid Website</a></p>
 
             <p class="title">Descrizione:</p>
             <p>
