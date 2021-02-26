@@ -415,6 +415,14 @@ export default {
 @media screen and (max-width: 365px) {
     .card {
         width: 140px;
+        height: 110px;
+    }
+
+    .name {
+        font-size: 14px;
+    }
+    .amt {
+        font-size: 23px;
     }
 }
 
