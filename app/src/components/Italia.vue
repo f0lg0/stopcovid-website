@@ -244,6 +244,48 @@ export default {
                     break;
                 }
                 case "Media deceduti": {
+                    let tmp = 0;
+                    let dec_per_day = [];
+
+                    for (let i = 0; i < this.sample_reversed.length - 1; i++) {
+                        if (
+                            (i == 0 || i % 7 == 0) &&
+                            i + 6 < this.sample_reversed.length
+                        ) {
+                            final.labels.push(
+                                `${this.sample_reversed[i].data.substring(
+                                    8,
+                                    10
+                                )}/${this.sample_reversed[i].data.substring(
+                                    5,
+                                    7
+                                )}-${this.sample_reversed[i + 6].data.substring(
+                                    8,
+                                    10
+                                )}/${this.sample_reversed[i + 6].data.substring(
+                                    5,
+                                    7
+                                )}`
+                            );
+                        }
+
+                        dec_per_day.push(
+                            this.sample_reversed[i + 1].deceduti -
+                                this.sample_reversed[i].deceduti
+                        );
+                    }
+
+                    for (let i = 0; i < dec_per_day.length; i++) {
+                        if (i % 7 == 0) {
+                            final.datasets[0].data.push(Math.round(tmp / 7));
+                            tmp = 0;
+                        }
+                        tmp += dec_per_day[i];
+                    }
+
+                    final.datasets[0].data.push(Math.round(tmp / 7));
+                    final.datasets[0].data.shift();
+
                     final.datasets[0].borderColor = "#ff5959";
                     final.datasets[0].pointBackgroundColor = "#ff5959";
                     break;
