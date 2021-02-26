@@ -204,10 +204,45 @@ export default {
                     final.datasets[0].pointBackgroundColor = "#4cb5ff";
                     break;
                 }
-                case "Incidenza":
+                case "Incidenza": {
+                    let tmp = 0;
+                    for (let i = 0; i < this.sample_reversed.length; i++) {
+                        if (
+                            (i == 0 || i % 7 == 0) &&
+                            i + 6 < this.sample_reversed.length
+                        ) {
+                            final.labels.push(
+                                `${this.sample_reversed[i].data.substring(
+                                    8,
+                                    10
+                                )}/${this.sample_reversed[i].data.substring(
+                                    5,
+                                    7
+                                )}-${this.sample_reversed[i + 6].data.substring(
+                                    8,
+                                    10
+                                )}/${this.sample_reversed[i + 6].data.substring(
+                                    5,
+                                    7
+                                )}`
+                            );
+                        }
+
+                        if (i != 0 && i % 7 == 0) {
+                            final.datasets[0].data.push(
+                                this.calculateIncidenza(tmp)
+                            );
+                            tmp = 0;
+                        }
+                        tmp += this.sample_reversed[i].nuovi_positivi;
+                    }
+
+                    final.datasets[0].data.push(this.calculateIncidenza(tmp));
+
                     final.datasets[0].borderColor = "#4cd97b";
                     final.datasets[0].pointBackgroundColor = "#4cd97b";
                     break;
+                }
                 case "Media deceduti": {
                     final.datasets[0].borderColor = "#ff5959";
                     final.datasets[0].pointBackgroundColor = "#ff5959";
