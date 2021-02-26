@@ -1,11 +1,7 @@
 <template>
     <div id="italia">
         <div class="cards">
-            <div
-                class="card"
-                id="deceduti"
-                @click="changeChart('Media deceduti')"
-            >
+            <div class="card" id="deceduti" @click="changeChart('Media deceduti')">
                 <p class="name">Media deceduti</p>
                 <p class="amt">{{ data.deceduti }}</p>
             </div>
@@ -15,35 +11,23 @@
                 <p class="amt">{{ data.incidenza }}</p>
             </div>
 
-            <div
-                class="card"
-                id="nuovipos"
-                @click="changeChart('Media positivi')"
-            >
+            <div class="card" id="nuovipos" @click="changeChart('Media positivi')">
                 <p class="name">Media positivi</p>
                 <p class="amt">{{ data.nuovi_positivi }}</p>
             </div>
 
-            <div
-                class="card"
-                id="varperpos"
-                @click="changeChart('Variazione percentuale positivi')"
-            >
+            <div class="card" id="varperpos" @click="changeChart('Variazione percentuale positivi')">
                 <p class="name">% Positivi</p>
                 <p class="amt">
-                    <span v-if="data.vpp > 0">+</span>{{ data.vpp }}%
+                    <span v-if="data.vpp > 0">+</span>
+                    {{ data.vpp }}%
                 </p>
             </div>
         </div>
         <div class="chart">
             <p>{{ active }}</p>
             <div class="chart-container">
-                <LineChart
-                    v-if="loaded"
-                    :chartdata="chartdata"
-                    :options="options"
-                    :key="change"
-                />
+                <LineChart v-if="loaded" :chartdata="chartdata" :options="options" :key="change" />
             </div>
         </div>
     </div>
@@ -69,9 +53,7 @@ export default {
             },
             rawData: undefined,
             sample: undefined,
-            latestSevenDays: undefined,
-            posLatestSevenDays: undefined,
-            weekBefore: undefined,
+            sample_reversed: undefined,
             pop_ita: 60234639,
             active: "Media positivi",
             change: 0,
@@ -79,36 +61,20 @@ export default {
     },
     methods: {
         init() {
-            this.sample = this.rawData.slice(280, this.rawData.length);
-            const sample_len = this.sample.length;
-
-            let cloned = [...this.sample];
-            const sample_rev = [...cloned].reverse();
-            const chunks = 7;
-
-            const grouped = new Array(Math.ceil(sample_rev.length / chunks))
-                .fill()
-                .map(() => sample_rev.splice(0, chunks));
-
-            if (grouped[grouped.length - 1].length != 7) grouped.pop();
-            grouped.reverse();
-
-            this.latestSevenDays = this.sample.slice(
-                sample_len - 7,
-                sample_len
-            );
-            this.weekBefore = this.sample.slice(
-                sample_len - 14,
-                sample_len - 7
-            );
-
             this.$emit(
                 "gotWeek",
-                `${this.latestSevenDays[0].data.substring(
-                    5,
+                `${this.sample[6].data.substring(
+                    8,
                     10
-                )}/${this.latestSevenDays[6].data.substring(5, 10)}`
+                )}/${this.sample[6].data.substring(
+                    5,
+                    7
+                )}-${this.sample[0].data.substring(
+                    8,
+                    10
+                )}/${this.sample[0].data.substring(5, 7)}`
             );
+
             this.formatData();
 
             const final = {
@@ -146,140 +112,59 @@ export default {
                 },
             };
 
-            let skip = true;
-
             switch (this.active) {
-                case "Media positivi":
-                    grouped.forEach((week) => {
-                        final.labels.push(
-                            `${week[6].data.substring(
-                                8,
-                                10
-                            )}/${week[6].data.substring(
-                                5,
-                                7
-                            )}-${week[0].data.substring(
-                                8,
-                                10
-                            )}/${week[0].data.substring(5, 7)}`
-                        );
+                case "Media positivi": {
+                    let tmp = 0;
 
-                        let totPosPerDay = [];
-
-                        for (let i = 0; i < 7; i++) {
-                            totPosPerDay.push(week[i].nuovi_positivi);
-                            1;
+                    for (let i = 0; i < this.sample_reversed.length; i++) {
+                        if (
+                            (i == 0 || i % 7 == 0) &&
+                            i + 6 < this.sample_reversed.length
+                        ) {
+                            final.labels.push(
+                                `${this.sample_reversed[i].data.substring(
+                                    8,
+                                    10
+                                )}/${this.sample_reversed[i].data.substring(
+                                    5,
+                                    7
+                                )}-${this.sample_reversed[i + 6].data.substring(
+                                    8,
+                                    10
+                                )}/${this.sample_reversed[i + 6].data.substring(
+                                    5,
+                                    7
+                                )}`
+                            );
                         }
 
-                        final.datasets[0].data.push(
-                            Math.round(
-                                totPosPerDay.reduce((a, b) => a + b, 0) / 7
-                            )
+                        if (i != 0 && i % 7 == 0) {
+                            console.log("pushing");
+                            final.datasets[0].data.push(Math.round(tmp / 7));
+                            tmp = 0;
+                        }
+                        tmp += this.sample_reversed[i].nuovi_positivi;
+                        console.log(
+                            this.sample_reversed[i].data,
+                            this.sample_reversed[i].nuovi_positivi,
+                            tmp
                         );
-                    });
+                    }
+                    final.datasets[0].data.push(Math.round(tmp / 7));
 
                     final.datasets[0].borderColor = "#ffb259";
                     final.datasets[0].pointBackgroundColor = "#ffb259";
                     break;
-
+                }
                 case "Variazione percentuale positivi":
-                    grouped.forEach((week) => {
-                        if (!skip) {
-                            final.labels.push(
-                                `${week[6].data.substring(
-                                    8,
-                                    10
-                                )}/${week[6].data.substring(
-                                    5,
-                                    7
-                                )}-${week[0].data.substring(
-                                    8,
-                                    10
-                                )}/${week[0].data.substring(5, 7)}`
-                            );
-                        } else {
-                            skip = false;
-                        }
-                    });
-
-                    for (let i = 1; i < grouped.length; i++) {
-                        let tmp = this.calculatePosPerc(
-                            grouped[i],
-                            grouped[i - 1]
-                        );
-
-                        final.datasets[0].data.push(tmp);
-                    }
-
                     final.datasets[0].borderColor = "#4cb5ff";
                     final.datasets[0].pointBackgroundColor = "#4cb5ff";
-
-                    grouped.reverse();
                     break;
                 case "Incidenza":
-                    grouped.forEach((week) => {
-                        final.labels.push(
-                            `${week[6].data.substring(
-                                8,
-                                10
-                            )}/${week[6].data.substring(
-                                5,
-                                7
-                            )}-${week[0].data.substring(
-                                8,
-                                10
-                            )}/${week[0].data.substring(5, 7)}`
-                        );
-
-                        let tmp = 0;
-                        week.forEach((day) => {
-                            tmp += day.nuovi_positivi;
-                        });
-
-                        final.datasets[0].data.push(
-                            this.calculateIncidenza(tmp)
-                        );
-                    });
-
                     final.datasets[0].borderColor = "#4cd97b";
                     final.datasets[0].pointBackgroundColor = "#4cd97b";
                     break;
                 case "Media deceduti": {
-                    grouped.forEach((week) => {
-                        final.labels.push(
-                            `${week[6].data.substring(
-                                8,
-                                10
-                            )}/${week[6].data.substring(
-                                5,
-                                7
-                            )}-${week[0].data.substring(
-                                8,
-                                10
-                            )}/${week[0].data.substring(5, 7)}`
-                        );
-
-                        let totDecPerDay = [];
-
-                        for (let i = 0; i < 7; i++) {
-                            if (i >= 1) {
-                                totDecPerDay.push(
-                                    week[i].deceduti - week[i - 1].deceduti
-                                );
-                            }
-                        }
-
-                        // abs because grouped is inversed (0 is latest, 1 is day before)
-                        // work smarter not harder xD
-                        final.datasets[0].data.push(
-                            Math.abs(
-                                Math.round(
-                                    totDecPerDay.reduce((a, b) => a + b, 0) / 7
-                                )
-                            )
-                        );
-                    });
-
                     final.datasets[0].borderColor = "#ff5959";
                     final.datasets[0].pointBackgroundColor = "#ff5959";
                     break;
@@ -293,43 +178,42 @@ export default {
             this.loaded = true;
         },
         formatData() {
-            let totPosPerDay = [];
-            let totDecPerDay = [];
+            let totPosPerDay_0 = [];
+            let totDecPerDay_0 = [];
+
+            let totPosPerDay_1 = [];
+            let totDecPerDay_1 = [];
 
             for (let i = 0; i < 7; i++) {
-                totPosPerDay.push(this.latestSevenDays[i].nuovi_positivi);
+                totPosPerDay_0.push(this.sample[i].nuovi_positivi);
                 if (i >= 1) {
-                    totDecPerDay.push(
-                        this.latestSevenDays[i].deceduti -
-                            this.latestSevenDays[i - 1].deceduti
+                    totDecPerDay_0.push(
+                        this.sample[i].deceduti - this.sample[i - 1].deceduti
                     );
                 }
             }
 
-            this.data.nuovi_positivi = Math.round(
-                totPosPerDay.reduce((a, b) => a + b, 0) / 7
-            );
-            this.data.deceduti = Math.round(
-                totDecPerDay.reduce((a, b) => a + b, 0) / 7
-            );
-
-            this.data.vpp = this.calculatePosPerc(
-                this.latestSevenDays,
-                this.weekBefore
-            );
-            this.data.incidenza = this.calculateIncidenza(
-                totPosPerDay.reduce((a, b) => a + b, 0)
-            );
-        },
-        calculatePosPerc(week0, week1) {
-            let pos0 = 0;
-            let pos1 = 0;
-
-            for (let i = 0; i < week0.length; i++) {
-                pos0 += week0[i].nuovi_positivi;
-                pos1 += week1[i].nuovi_positivi;
+            for (let i = 7; i < 14; i++) {
+                totPosPerDay_1.push(this.sample[i].nuovi_positivi);
+                if (i >= 1) {
+                    totDecPerDay_1.push(
+                        this.sample[i].deceduti - this.sample[i - 1].deceduti
+                    );
+                }
             }
 
+            const media_pos_0 = totPosPerDay_0.reduce((a, b) => a + b, 0) / 7;
+            const media_pos_1 = totPosPerDay_1.reduce((a, b) => a + b, 0) / 7;
+
+            this.data.nuovi_positivi = Math.round(media_pos_0);
+            this.data.deceduti = Math.abs(
+                Math.round(totDecPerDay_0.reduce((a, b) => a + b, 0) / 7)
+            );
+
+            this.data.vpp = this.calculatePosPerc(media_pos_0, media_pos_1);
+            this.data.incidenza = this.calculateIncidenza(media_pos_0 * 7);
+        },
+        calculatePosPerc(pos0, pos1) {
             const diff = pos0 - pos1;
             return ((diff * 100) / pos1).toFixed(2);
         },
@@ -353,6 +237,12 @@ export default {
 
             const json = await res.json();
             this.rawData = json;
+            this.rawData.reverse();
+
+            this.sample = this.rawData.splice(0, 98);
+
+            this.sample_reversed = [...this.sample];
+            this.sample_reversed.reverse();
 
             this.init();
         } catch (err) {
