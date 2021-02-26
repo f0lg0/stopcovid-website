@@ -1,40 +1,31 @@
 <template>
     <div id="home">
+        <div class="updates_container" v-if="!clicked">
+            <Updates text="Miglioramento delle prestazioni" />
+        </div>
         <div class="banner flex-col-cent">
             <div class="banner-container">
                 <h1>Covid-19</h1>
                 <h2>
-                    Settimana <span>{{ latestWeek }}</span>
+                    Settimana
+                    <span>{{ latestWeek }}</span>
                 </h2>
                 <div class="switcher-container">
-                    <Switcher
-                        op1="Italia"
-                        op2="Lombardia"
-                        op3="Brescia"
-                        v-on:switched="switched($event)"
-                    />
+                    <Switcher op1="Italia" op2="Lombardia" op3="Brescia" v-on:switched="switched($event)" />
                 </div>
             </div>
-            <Italia
-                v-if="selected == 'Italia'"
-                v-on:gotWeek="latestWeek = $event"
-            />
+            <Italia v-if="selected == 'Italia'" v-on:gotWeek="latestWeek = $event" />
 
-            <Lombardia
-                v-if="selected == 'Lombardia'"
-                v-on:gotWeek="latestWeek = $event"
-            />
+            <Lombardia v-if="selected == 'Lombardia'" v-on:gotWeek="latestWeek = $event" />
 
-            <Brescia
-                v-if="selected == 'Brescia'"
-                v-on:gotWeek="latestWeek = $event"
-            />
+            <Brescia v-if="selected == 'Brescia'" v-on:gotWeek="latestWeek = $event" />
         </div>
     </div>
 </template>
 
 <script>
 import Switcher from "../components/Switcher.vue";
+import Updates from "../components/Updates.vue";
 import Italia from "../components/Italia.vue";
 import Lombardia from "../components/Lombardia.vue";
 import Brescia from "../components/Brescia.vue";
@@ -43,6 +34,7 @@ export default {
     name: "Home",
     components: {
         Switcher,
+        Updates,
         Italia,
         Lombardia,
         Brescia,
@@ -51,6 +43,7 @@ export default {
         return {
             latestWeek: "...",
             selected: "Italia",
+            clicked: true,
         };
     },
     methods: {
@@ -72,6 +65,13 @@ export default {
     flex-direction: column;
     justify-content: center;
     background: var(--main-color);
+}
+
+.updates_container {
+    width: 80%;
+    height: 80px;
+    margin: auto;
+    margin-top: 50px;
 }
 
 .banner {
