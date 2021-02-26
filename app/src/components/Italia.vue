@@ -139,16 +139,10 @@ export default {
                         }
 
                         if (i != 0 && i % 7 == 0) {
-                            console.log("pushing");
                             final.datasets[0].data.push(Math.round(tmp / 7));
                             tmp = 0;
                         }
                         tmp += this.sample_reversed[i].nuovi_positivi;
-                        console.log(
-                            this.sample_reversed[i].data,
-                            this.sample_reversed[i].nuovi_positivi,
-                            tmp
-                        );
                     }
                     final.datasets[0].data.push(Math.round(tmp / 7));
 
@@ -156,10 +150,60 @@ export default {
                     final.datasets[0].pointBackgroundColor = "#ffb259";
                     break;
                 }
-                case "Variazione percentuale positivi":
+                case "Variazione percentuale positivi": {
+                    let pos_per_day = [];
+                    let tmp_buf = [];
+
+                    for (let i = 0; i < this.sample_reversed.length; i++) {
+                        if (
+                            (i == 0 || i % 7 == 0) &&
+                            i + 6 < this.sample_reversed.length
+                        ) {
+                            final.labels.push(
+                                `${this.sample_reversed[i].data.substring(
+                                    8,
+                                    10
+                                )}/${this.sample_reversed[i].data.substring(
+                                    5,
+                                    7
+                                )}-${this.sample_reversed[i + 6].data.substring(
+                                    8,
+                                    10
+                                )}/${this.sample_reversed[i + 6].data.substring(
+                                    5,
+                                    7
+                                )}`
+                            );
+                        }
+
+                        pos_per_day.push(
+                            this.sample_reversed[i].nuovi_positivi
+                        );
+                    }
+
+                    final.labels.shift();
+
+                    let tmp = 0;
+                    for (let i = 0; i < pos_per_day.length; i++) {
+                        if (i != 0 && i % 7 == 0) {
+                            tmp_buf.push(Math.round(tmp / 7));
+                            tmp = 0;
+                        }
+                        tmp += pos_per_day[i];
+                    }
+
+                    tmp_buf.push(Math.round(tmp / 7));
+
+                    for (let i = 1; i < tmp_buf.length; i++) {
+                        final.datasets[0].data.push(
+                            this.calculatePosPerc(tmp_buf[i], tmp_buf[i - 1])
+                        );
+                    }
+
                     final.datasets[0].borderColor = "#4cb5ff";
                     final.datasets[0].pointBackgroundColor = "#4cb5ff";
                     break;
+                }
                 case "Incidenza":
                     final.datasets[0].borderColor = "#4cd97b";
                     final.datasets[0].pointBackgroundColor = "#4cd97b";
