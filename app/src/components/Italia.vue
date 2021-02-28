@@ -116,35 +116,52 @@ export default {
                 case "Media positivi": {
                     let tmp = 0;
 
-                    for (let i = 0; i < this.sample_reversed.length; i++) {
-                        if (
-                            (i == 0 || i % 7 == 0) &&
-                            i + 6 < this.sample_reversed.length
-                        ) {
-                            final.labels.push(
-                                `${this.sample_reversed[i].data.substring(
-                                    8,
-                                    10
-                                )}/${this.sample_reversed[i].data.substring(
-                                    5,
-                                    7
-                                )}-${this.sample_reversed[i + 6].data.substring(
-                                    8,
-                                    10
-                                )}/${this.sample_reversed[i + 6].data.substring(
-                                    5,
-                                    7
-                                )}`
-                            );
+                    for (let i = 0; i < 92; i++) {
+                        for (let j = 0; j < 7; j++) {
+                            if (j == 6) {
+                                final.labels.push(
+                                    this.sample_reversed[i + j].data
+                                );
+                            }
+                            tmp += this.sample_reversed[i + j].nuovi_positivi;
                         }
 
-                        if (i != 0 && i % 7 == 0) {
-                            final.datasets[0].data.push(Math.round(tmp / 7));
-                            tmp = 0;
-                        }
-                        tmp += this.sample_reversed[i].nuovi_positivi;
+                        final.datasets[0].data.push(Math.round(tmp / 7));
+                        tmp = 0;
                     }
-                    final.datasets[0].data.push(Math.round(tmp / 7));
+
+                    final.labels.splice(0, 80);
+                    final.datasets[0].data.splice(0, 80);
+
+                    // for (let i = 0; i < this.sample_reversed.length; i++) {
+                    //     if (
+                    //         (i == 0 || i % 7 == 0) &&
+                    //         i + 6 < this.sample_reversed.length
+                    //     ) {
+                    //         final.labels.push(
+                    //             `${this.sample_reversed[i].data.substring(
+                    //                 8,
+                    //                 10
+                    //             )}/${this.sample_reversed[i].data.substring(
+                    //                 5,
+                    //                 7
+                    //             )}-${this.sample_reversed[i + 6].data.substring(
+                    //                 8,
+                    //                 10
+                    //             )}/${this.sample_reversed[i + 6].data.substring(
+                    //                 5,
+                    //                 7
+                    //             )}`
+                    //         );
+                    //     }
+
+                    //     if (i != 0 && i % 7 == 0) {
+                    //         final.datasets[0].data.push(Math.round(tmp / 7));
+                    //         tmp = 0;
+                    //     }
+                    //     tmp += this.sample_reversed[i].nuovi_positivi;
+                    // }
+                    // final.datasets[0].data.push(Math.round(tmp / 7));
 
                     final.datasets[0].borderColor = "#ffb259";
                     final.datasets[0].pointBackgroundColor = "#ffb259";
