@@ -6,35 +6,23 @@
                 <p class="amt">{{ data.incidenza }}</p>
             </div>
 
-            <div
-                class="card"
-                id="nuovipos"
-                @click="changeChart('Media positivi')"
-            >
+            <div class="card" id="nuovipos" @click="changeChart('Media positivi')">
                 <p class="name">Media positivi</p>
                 <p class="amt">{{ data.media_positivi }}</p>
             </div>
 
-            <div
-                class="card"
-                id="varperpos"
-                @click="changeChart('Variazione percentuale positivi')"
-            >
+            <div class="card" id="varperpos" @click="changeChart('Variazione percentuale positivi')">
                 <p class="name">% Positivi</p>
                 <p class="amt">
-                    <span v-if="data.vpp > 0">+</span>{{ data.vpp }}%
+                    <span v-if="data.vpp > 0">+</span>
+                    {{ data.vpp }}%
                 </p>
             </div>
         </div>
         <div class="chart">
             <p>{{ active }}</p>
             <div class="chart-container">
-                <LineChart
-                    v-if="loaded"
-                    :chartdata="chartdata"
-                    :options="options"
-                    :key="change"
-                />
+                <LineChart v-if="loaded" :chartdata="chartdata" :options="options" :key="change" />
             </div>
         </div>
     </div>
