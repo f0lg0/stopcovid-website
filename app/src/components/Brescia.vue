@@ -46,8 +46,10 @@ export default {
                 vpp: 0,
             },
             rawData: undefined,
-            sample: undefined,
-            sample_reversed: undefined,
+            sample: [],
+            sample_reversed: [],
+            standarized_data: [],
+            standarized_data_reversed: [],
             pop_bre: 1255437,
             active: "Media positivi",
             change: 0,
@@ -94,52 +96,28 @@ export default {
 
             switch (this.active) {
                 case "Media positivi": {
-                    let to_revert_labels = [];
-                    let to_revert_data = [];
-
-                    let pos_per_day = [];
-                    for (let i = 0; i < this.sample_reversed.length - 1; i++) {
-                        if (
-                            (i == 0 || i % 7 == 0) &&
-                            i + 6 < this.sample_reversed.length
-                        ) {
-                            to_revert_labels.push(
-                                `${this.sample_reversed[i + 6].data.substring(
-                                    8,
-                                    10
-                                )}/${this.sample_reversed[i + 6].data.substring(
-                                    5,
-                                    7
-                                )}-${this.sample_reversed[i].data.substring(
-                                    8,
-                                    10
-                                )}/${this.sample_reversed[i].data.substring(
-                                    5,
-                                    7
-                                )}`
-                            );
-                        }
-
-                        pos_per_day.push(
-                            this.sample_reversed[i].totale_casi -
-                                this.sample_reversed[i + 1].totale_casi
-                        );
-                    }
-
                     let tmp = 0;
-                    for (let i = 0; i < pos_per_day.length; i++) {
-                        if (i % 7 == 0) {
-                            to_revert_data.push(Math.round(tmp / 7));
-                            tmp = 0;
+
+                    for (let i = 0; i < 93; i++) {
+                        for (let j = 0; j < 7; j++) {
+                            if (j == 6) {
+                                final.labels.push(
+                                    this.standarized_data_reversed[
+                                        i + j
+                                    ].data.substring(5, 10)
+                                );
+                            }
+                            tmp += this.standarized_data_reversed[i + j]
+                                .nuovi_positivi;
                         }
-                        tmp += pos_per_day[i];
+
+                        final.datasets[0].data.push(Math.round(tmp / 7));
+                        tmp = 0;
                     }
 
-                    final.labels = to_revert_labels.reverse();
-
-                    // TODO: don't know why I had to shift
-                    to_revert_data.shift();
-                    final.datasets[0].data = to_revert_data.reverse();
+                    // reducing the amt of data displayed
+                    final.labels.splice(0, 60);
+                    final.datasets[0].data.splice(0, 60);
 
                     final.datasets[0].borderColor = "#ffb259";
                     final.datasets[0].pointBackgroundColor = "#ffb259";
@@ -147,122 +125,112 @@ export default {
                 }
 
                 case "Variazione percentuale positivi": {
-                    let to_revert_labels = [];
-                    let to_revert_data = [];
-
                     let pos_per_day = [];
+                    let tmp_buf = [];
 
-                    for (let i = 0; i < this.sample_reversed.length - 1; i++) {
+                    for (
+                        let i = 0;
+                        i < this.standarized_data_reversed.length;
+                        i++
+                    ) {
                         if (
                             (i == 0 || i % 7 == 0) &&
-                            i + 6 < this.sample_reversed.length
+                            i + 6 < this.standarized_data_reversed.length
                         ) {
-                            to_revert_labels.push(
-                                `${this.sample_reversed[i + 6].data.substring(
+                            final.labels.push(
+                                `${this.standarized_data_reversed[
+                                    i
+                                ].data.substring(
                                     8,
                                     10
-                                )}/${this.sample_reversed[i + 6].data.substring(
+                                )}/${this.standarized_data_reversed[
+                                    i
+                                ].data.substring(
                                     5,
                                     7
-                                )}-${this.sample_reversed[i].data.substring(
+                                )}-${this.standarized_data_reversed[
+                                    i + 6
+                                ].data.substring(
                                     8,
                                     10
-                                )}/${this.sample_reversed[i].data.substring(
-                                    5,
-                                    7
-                                )}`
+                                )}/${this.standarized_data_reversed[
+                                    i + 6
+                                ].data.substring(5, 7)}`
                             );
                         }
 
                         pos_per_day.push(
-                            this.sample_reversed[i].totale_casi -
-                                this.sample_reversed[i + 1].totale_casi
+                            this.standarized_data_reversed[i].nuovi_positivi
                         );
                     }
+
+                    final.labels.shift();
+
                     let tmp = 0;
                     for (let i = 0; i < pos_per_day.length; i++) {
-                        if (i % 7 == 0) {
-                            to_revert_data.push(Math.round(tmp / 7));
+                        if (i != 0 && i % 7 == 0) {
+                            tmp_buf.push(Math.round(tmp / 7));
                             tmp = 0;
                         }
                         tmp += pos_per_day[i];
                     }
 
-                    to_revert_labels.pop();
+                    tmp_buf.push(Math.round(tmp / 7));
 
-                    let asdf = [];
-                    for (let i = 0; i < to_revert_data.length - 1; i++) {
-                        asdf.push(
-                            this.calculatePosPerc(
-                                to_revert_data[i],
-                                to_revert_data[i + 1]
-                            )
+                    for (let i = 1; i < tmp_buf.length; i++) {
+                        final.datasets[0].data.push(
+                            this.calculatePosPerc(tmp_buf[i], tmp_buf[i - 1])
                         );
                     }
 
-                    final.labels = to_revert_labels.reverse();
-
-                    asdf.shift();
-                    final.datasets[0].data = asdf.reverse();
-
                     final.datasets[0].borderColor = "#4cb5ff";
                     final.datasets[0].pointBackgroundColor = "#4cb5ff";
-
                     break;
                 }
 
                 case "Incidenza": {
-                    let to_revert_labels = [];
-                    let to_revert_data = [];
-                    let pos_per_day = [];
-
-                    for (let i = 0; i < this.sample_reversed.length - 1; i++) {
+                    let tmp = 0;
+                    for (
+                        let i = 0;
+                        i < this.standarized_data_reversed.length;
+                        i++
+                    ) {
                         if (
                             (i == 0 || i % 7 == 0) &&
-                            i + 6 < this.sample_reversed.length
+                            i + 6 < this.standarized_data_reversed.length
                         ) {
-                            to_revert_labels.push(
-                                `${this.sample_reversed[i + 6].data.substring(
+                            final.labels.push(
+                                `${this.standarized_data_reversed[
+                                    i
+                                ].data.substring(
                                     8,
                                     10
-                                )}/${this.sample_reversed[i + 6].data.substring(
+                                )}/${this.standarized_data_reversed[
+                                    i
+                                ].data.substring(
                                     5,
                                     7
-                                )}-${this.sample_reversed[i].data.substring(
+                                )}-${this.standarized_data_reversed[
+                                    i + 6
+                                ].data.substring(
                                     8,
                                     10
-                                )}/${this.sample_reversed[i].data.substring(
-                                    5,
-                                    7
-                                )}`
+                                )}/${this.standarized_data_reversed[
+                                    i + 6
+                                ].data.substring(5, 7)}`
                             );
                         }
 
-                        pos_per_day.push(
-                            this.sample_reversed[i].totale_casi -
-                                this.sample_reversed[i + 1].totale_casi
-                        );
-                    }
-
-                    let tmp = 0;
-                    for (let i = 0; i < pos_per_day.length; i++) {
-                        if (i % 7 == 0) {
-                            to_revert_data.push(Math.round(tmp));
+                        if (i != 0 && i % 7 == 0) {
+                            final.datasets[0].data.push(
+                                this.calculateIncidenza(tmp)
+                            );
                             tmp = 0;
                         }
-                        tmp += pos_per_day[i];
+                        tmp += this.standarized_data_reversed[i].nuovi_positivi;
                     }
 
-                    let asdf = [];
-                    for (let i = 0; i < to_revert_data.length - 1; i++) {
-                        asdf.push(this.calculateIncidenza(to_revert_data[i]));
-                    }
-
-                    to_revert_labels.pop();
-                    final.labels = to_revert_labels.reverse();
-
-                    asdf.shift();
-                    final.datasets[0].data = asdf.reverse();
+                    final.datasets[0].data.push(this.calculateIncidenza(tmp));
 
                     final.datasets[0].borderColor = "#4cd97b";
                     final.datasets[0].pointBackgroundColor = "#4cd97b";
@@ -278,28 +246,21 @@ export default {
             this.loaded = true;
         },
         formatData() {
-            let pos_per_day_0 = [];
-            let pos_per_day_1 = [];
+            let totPosPerDay_0 = [];
+            let totPosPerDay_1 = [];
 
             for (let i = 0; i < 7; i++) {
-                pos_per_day_0.push(
-                    this.sample_reversed[i].totale_casi -
-                        this.sample_reversed[i + 1].totale_casi
-                );
+                totPosPerDay_0.push(this.standarized_data[i].nuovi_positivi);
             }
 
             for (let i = 7; i < 14; i++) {
-                pos_per_day_1.push(
-                    this.sample_reversed[i].totale_casi -
-                        this.sample_reversed[i + 1].totale_casi
-                );
+                totPosPerDay_1.push(this.standarized_data[i].nuovi_positivi);
             }
 
-            const media_pos_0 = pos_per_day_0.reduce((a, b) => a + b, 0) / 7;
-            const media_pos_1 = pos_per_day_1.reduce((a, b) => a + b, 0) / 7;
+            const media_pos_0 = totPosPerDay_0.reduce((a, b) => a + b, 0) / 7;
+            const media_pos_1 = totPosPerDay_1.reduce((a, b) => a + b, 0) / 7;
 
             this.data.media_positivi = Math.round(media_pos_0);
-
             this.data.vpp = this.calculatePosPerc(media_pos_0, media_pos_1);
             this.data.incidenza = this.calculateIncidenza(media_pos_0 * 7);
         },
@@ -337,13 +298,25 @@ export default {
             });
 
             this.rawData = tmp_buf;
-
-            // TODO: review this
             this.rawData.reverse();
+
             this.sample = this.rawData.splice(0, 100);
-            this.sample.reverse();
+
             this.sample_reversed = [...this.sample];
             this.sample_reversed.reverse();
+
+            // parse due to different data format
+            for (let i = 0; i < this.sample.length - 1; i++) {
+                this.standarized_data.push({
+                    data: this.sample[i].data,
+                    nuovi_positivi:
+                        this.sample[i].totale_casi -
+                        this.sample[i + 1].totale_casi,
+                });
+            }
+
+            this.standarized_data_reversed = [...this.standarized_data];
+            this.standarized_data_reversed.reverse();
 
             this.init();
         } catch (err) {
