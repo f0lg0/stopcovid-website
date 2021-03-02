@@ -161,8 +161,9 @@ export default {
                         tmp = 0;
                     }
 
-                    for (let i = 1; i < tmp_buf.length; i++) {
-                        console.log(i, tmp_buf[i], i - 1, tmp_buf[i - 1]);
+                    // TODO: this works but int the first 8 iterations there will be some undefined values
+                    // thanks JS for being stoopid
+                    for (let i = 0; i < tmp_buf.length; i++) {
                         final.datasets[0].data.push(
                             this.calculatePosPerc(tmp_buf[i], tmp_buf[i - 7])
                         );
