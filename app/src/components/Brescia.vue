@@ -162,48 +162,36 @@ export default {
                 }
 
                 case "Incidenza": {
+                    let tmp_buf = [];
                     let tmp = 0;
-                    for (
-                        let i = 0;
-                        i < this.standarized_data_reversed.length;
-                        i++
-                    ) {
-                        if (
-                            (i == 0 || i % 7 == 0) &&
-                            i + 6 < this.standarized_data_reversed.length
-                        ) {
-                            final.labels.push(
-                                `${this.standarized_data_reversed[
-                                    i
-                                ].data.substring(
-                                    8,
-                                    10
-                                )}/${this.standarized_data_reversed[
-                                    i
-                                ].data.substring(
-                                    5,
-                                    7
-                                )}-${this.standarized_data_reversed[
-                                    i + 6
-                                ].data.substring(
-                                    8,
-                                    10
-                                )}/${this.standarized_data_reversed[
-                                    i + 6
-                                ].data.substring(5, 7)}`
-                            );
-                        }
 
-                        if (i != 0 && i % 7 == 0) {
-                            final.datasets[0].data.push(
-                                this.calculateIncidenza(tmp)
-                            );
-                            tmp = 0;
+                    for (let i = 0; i < 92; i++) {
+                        for (let j = 0; j < 7; j++) {
+                            if (j == 6) {
+                                final.labels.push(
+                                    this.standarized_data_reversed[
+                                        i + j
+                                    ].data.substring(5, 10)
+                                );
+                            }
+                            tmp += this.standarized_data_reversed[i + j]
+                                .nuovi_positivi;
                         }
-                        tmp += this.standarized_data_reversed[i].nuovi_positivi;
+                        tmp_buf.push(Math.round(tmp));
+                        tmp = 0;
                     }
 
-                    final.datasets[0].data.push(this.calculateIncidenza(tmp));
+                    // TODO: this works but int the first 8 iterations there will be some undefined values
+                    // thanks JS for being stoopid
+                    for (let i = 0; i < tmp_buf.length; i++) {
+                        final.datasets[0].data.push(
+                            this.calculateIncidenza(tmp_buf[i], tmp_buf[i - 7])
+                        );
+                    }
+
+                    // reducing the amt of data displayed
+                    final.labels.splice(0, 60);
+                    final.datasets[0].data.splice(0, 60);
 
                     final.datasets[0].borderColor = "#4cd97b";
                     final.datasets[0].pointBackgroundColor = "#4cd97b";

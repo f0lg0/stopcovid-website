@@ -55,6 +55,8 @@ export default {
             rawData: undefined,
             sample: undefined,
             sample_reversed: undefined,
+            standarized_data: [],
+            standarized_data_reversed: [],
             pop_lom: 10002615,
             active: "Media positivi",
             change: 0,
@@ -165,39 +167,36 @@ export default {
                     break;
                 }
                 case "Incidenza": {
+                    let tmp_buf = [];
                     let tmp = 0;
-                    for (let i = 0; i < this.sample_reversed.length; i++) {
-                        if (
-                            (i == 0 || i % 7 == 0) &&
-                            i + 6 < this.sample_reversed.length
-                        ) {
-                            final.labels.push(
-                                `${this.sample_reversed[i].data.substring(
-                                    8,
-                                    10
-                                )}/${this.sample_reversed[i].data.substring(
-                                    5,
-                                    7
-                                )}-${this.sample_reversed[i + 6].data.substring(
-                                    8,
-                                    10
-                                )}/${this.sample_reversed[i + 6].data.substring(
-                                    5,
-                                    7
-                                )}`
-                            );
-                        }
 
-                        if (i != 0 && i % 7 == 0) {
-                            final.datasets[0].data.push(
-                                this.calculateIncidenza(tmp)
-                            );
-                            tmp = 0;
+                    for (let i = 0; i < 92; i++) {
+                        for (let j = 0; j < 7; j++) {
+                            if (j == 6) {
+                                final.labels.push(
+                                    this.sample_reversed[i + j].data.substring(
+                                        5,
+                                        10
+                                    )
+                                );
+                            }
+                            tmp += this.sample_reversed[i + j].nuovi_positivi;
                         }
-                        tmp += this.sample_reversed[i].nuovi_positivi;
+                        tmp_buf.push(Math.round(tmp));
+                        tmp = 0;
                     }
 
-                    final.datasets[0].data.push(this.calculateIncidenza(tmp));
+                    // TODO: this works but int the first 8 iterations there will be some undefined values
+                    // thanks JS for being stoopid
+                    for (let i = 0; i < tmp_buf.length; i++) {
+                        final.datasets[0].data.push(
+                            this.calculateIncidenza(tmp_buf[i], tmp_buf[i - 7])
+                        );
+                    }
+
+                    // reducing the amt of data displayed
+                    final.labels.splice(0, 60);
+                    final.datasets[0].data.splice(0, 60);
 
                     final.datasets[0].borderColor = "#4cd97b";
                     final.datasets[0].pointBackgroundColor = "#4cd97b";
@@ -205,46 +204,27 @@ export default {
                 }
                 case "Media deceduti": {
                     let tmp = 0;
-                    let dec_per_day = [];
 
-                    for (let i = 0; i < this.sample_reversed.length - 1; i++) {
-                        if (
-                            (i == 0 || i % 7 == 0) &&
-                            i + 6 < this.sample_reversed.length
-                        ) {
-                            final.labels.push(
-                                `${this.sample_reversed[i].data.substring(
-                                    8,
-                                    10
-                                )}/${this.sample_reversed[i].data.substring(
-                                    5,
-                                    7
-                                )}-${this.sample_reversed[i + 6].data.substring(
-                                    8,
-                                    10
-                                )}/${this.sample_reversed[i + 6].data.substring(
-                                    5,
-                                    7
-                                )}`
-                            );
+                    for (let i = 0; i < 91; i++) {
+                        for (let j = 0; j < 7; j++) {
+                            if (j == 6) {
+                                final.labels.push(
+                                    this.standarized_data_reversed[
+                                        i + j
+                                    ].data.substring(5, 10)
+                                );
+                            }
+                            tmp += this.standarized_data_reversed[i + j]
+                                .deceduti;
                         }
 
-                        dec_per_day.push(
-                            this.sample_reversed[i + 1].deceduti -
-                                this.sample_reversed[i].deceduti
-                        );
+                        final.datasets[0].data.push(Math.round(tmp / 7));
+                        tmp = 0;
                     }
 
-                    for (let i = 0; i < dec_per_day.length; i++) {
-                        if (i % 7 == 0) {
-                            final.datasets[0].data.push(Math.round(tmp / 7));
-                            tmp = 0;
-                        }
-                        tmp += dec_per_day[i];
-                    }
-
-                    final.datasets[0].data.push(Math.round(tmp / 7));
-                    final.datasets[0].data.shift();
+                    // reducing the amt of data displayed
+                    final.labels.splice(0, 60);
+                    final.datasets[0].data.splice(0, 60);
 
                     final.datasets[0].borderColor = "#ff5959";
                     final.datasets[0].pointBackgroundColor = "#ff5959";
@@ -267,20 +247,12 @@ export default {
 
             for (let i = 0; i < 7; i++) {
                 totPosPerDay_0.push(this.sample[i].nuovi_positivi);
-                if (i >= 1) {
-                    totDecPerDay_0.push(
-                        this.sample[i].deceduti - this.sample[i - 1].deceduti
-                    );
-                }
+                totDecPerDay_0.push(this.standarized_data[i].deceduti);
             }
 
             for (let i = 7; i < 14; i++) {
                 totPosPerDay_1.push(this.sample[i].nuovi_positivi);
-                if (i >= 1) {
-                    totDecPerDay_1.push(
-                        this.sample[i].deceduti - this.sample[i - 1].deceduti
-                    );
-                }
+                totDecPerDay_1.push(this.standarized_data[i].deceduti);
             }
 
             const media_pos_0 = totPosPerDay_0.reduce((a, b) => a + b, 0) / 7;
@@ -334,6 +306,17 @@ export default {
 
             this.sample_reversed = [...this.sample];
             this.sample_reversed.reverse();
+
+            for (let i = 0; i < this.sample.length - 1; i++) {
+                this.standarized_data.push({
+                    data: this.sample[i].data,
+                    deceduti:
+                        this.sample[i].deceduti - this.sample[i + 1].deceduti,
+                });
+            }
+
+            this.standarized_data_reversed = [...this.standarized_data];
+            this.standarized_data_reversed.reverse();
 
             this.init();
         } catch (err) {
