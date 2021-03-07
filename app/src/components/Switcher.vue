@@ -1,24 +1,12 @@
 <template>
     <div id="switcher">
-        <div
-            class="option"
-            @click="setActive(1)"
-            :class="{ activeOp: active1 }"
-        >
+        <div class="option" @click="setActive(1)" :class="{ activeOp: active1 }">
             <p>{{ op1 }}</p>
         </div>
-        <div
-            class="option"
-            @click="setActive(2)"
-            :class="{ activeOp: active2 }"
-        >
+        <div class="option" @click="setActive(2)" :class="{ activeOp: active2 }">
             <p>{{ op2 }}</p>
         </div>
-        <div
-            class="option"
-            @click="setActive(3)"
-            :class="{ activeOp: active3 }"
-        >
+        <div class="option" @click="setActive(3)" :class="{ activeOp: active3 }">
             <p>{{ op3 }}</p>
         </div>
     </div>

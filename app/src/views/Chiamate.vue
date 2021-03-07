@@ -1,7 +1,16 @@
 <template>
     <div id="chiamate">
-        <div class="placeholder">
+        <div class="banner">
             <h1>Chiamate al 118</h1>
+
+            <div id="switcher">
+                <div class="option" @click="setActive(1)" :class="{ activeOp: active1 }">
+                    <p>Lombardia</p>
+                </div>
+                <div class="option" @click="setActive(2)" :class="{ activeOp: active2 }">
+                    <p>Area Alpina</p>
+                </div>
+            </div>
         </div>
         <div class="chart-container">
             <LineChart v-if="loaded" :chartdata="chartdata" :options="options" :key="change" />
@@ -21,6 +30,9 @@ export default {
             options: undefined,
             loaded: false,
             change: 0,
+
+            active1: true,
+            active2: false,
         };
     },
     async created() {
@@ -43,7 +55,7 @@ export default {
             this.data.splice(0, 370);
             this.header = this.data[0];
 
-            this.plot();
+            this.plot(false);
             this.loaded = true;
         } catch (err) {
             console.error(err);
@@ -53,7 +65,10 @@ export default {
         LineChart,
     },
     methods: {
-        plot: function () {
+        // pass true for Area Alpina
+        plot: function (flag) {
+            this.change++;
+
             const final = {
                 labels: [],
                 datasets: [
@@ -99,7 +114,16 @@ export default {
 
             for (let i = 1; i < this.data.length; i++) {
                 final.labels.push(this.data[i][0]);
-                final.datasets[0].data.push(this.data[i][1]);
+                if (flag) {
+                    final.datasets[0].data.push(this.data[i][1]);
+                } else {
+                    final.datasets[0].data.push(
+                        parseInt(this.data[i][1]) +
+                            parseInt(this.data[i][2]) +
+                            parseInt(this.data[i][3]) +
+                            parseInt(this.data[i][4])
+                    );
+                }
             }
 
             final.datasets[0].borderColor = "#f1f1f1";
@@ -178,6 +202,17 @@ export default {
             }
             return table;
         },
+        setActive(op) {
+            if (op == 1 && this.active1 == false) {
+                this.active1 = true;
+                this.active2 = false;
+                this.plot(false);
+            } else if (op == 2 && this.active2 == false) {
+                this.active1 = false;
+                this.active2 = true;
+                this.plot(true);
+            }
+        },
     },
 };
 </script>
@@ -191,7 +226,7 @@ export default {
     width: 100%;
     height: 100vh;
 }
-.placeholder {
+.banner {
     width: 100%;
     height: 100px;
     margin: auto;
@@ -202,6 +237,44 @@ export default {
     color: white;
     font-size: 20px;
 }
+
+/* SWITCHER */
+#switcher {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    background: #6c65ac;
+    height: 60px;
+    border-radius: 40px;
+
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.option {
+    padding: 10px;
+    width: 45%;
+    border-radius: 40px;
+}
+
+.option p {
+    text-align: center;
+    color: #fff;
+}
+
+.activeOp {
+    background: #fff;
+}
+
+.activeOp p {
+    color: var(--main-color);
+}
+
+/* */
+
 .chart-container {
     height: 90%;
     width: 95%;
