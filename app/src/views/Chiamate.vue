@@ -2,6 +2,7 @@
     <div id="chiamate">
         <div class="banner">
             <h1>Chiamate al 118</h1>
+            <h2>Media 7g</h2>
 
             <div id="switcher">
                 <div class="option" @click="setActive(1)" :class="{ activeOp: active1 }">
@@ -11,9 +12,20 @@
                     <p>Area Alpina</p>
                 </div>
             </div>
+
+            <div class="data">
+                <div class="label">
+                    <p>{{ data[data.length-1][0] }}</p>
+                </div>
+                <div class="number">
+                    <p>{{ chartdata.datasets[0].data[chartdata.datasets[0].data.length-1]}}</p>
+                </div>
+            </div>
         </div>
         <div class="chart-container">
-            <LineChart v-if="loaded" :chartdata="chartdata" :options="options" :key="change" />
+            <div class="wrapper">
+                <LineChart v-if="loaded" :chartdata="chartdata" :options="options" :key="change" />
+            </div>
         </div>
     </div>
 </template>
@@ -90,7 +102,7 @@ export default {
                                 color: "rgba(0, 0, 0, 0)",
                             },
                             ticks: {
-                                fontColor: "f1f1f1",
+                                fontColor: "#000000",
                                 fontSize: 12,
                             },
                         },
@@ -101,7 +113,7 @@ export default {
                                 color: "rgba(0, 0, 0, 0)",
                             },
                             ticks: {
-                                fontColor: "f1f1f1",
+                                fontColor: "#000000",
                                 fontSize: 12,
                             },
                         },
@@ -126,8 +138,8 @@ export default {
                 }
             }
 
-            final.datasets[0].borderColor = "#f1f1f1";
-            final.datasets[0].pointBackgroundColor = "#f1f1f1";
+            final.datasets[0].borderColor = "#6c65ac";
+            final.datasets[0].pointBackgroundColor = "#6c65ac";
 
             this.chartdata = final;
             this.options = options;
@@ -228,14 +240,18 @@ export default {
 }
 .banner {
     width: 100%;
-    height: 100px;
+    height: 300px;
     margin: auto;
     margin-top: 50px;
-    margin-bottom: 100px;
 
     text-align: center;
     color: white;
     font-size: 20px;
+}
+
+.banner h2 {
+    font-weight: 100;
+    font-size: 25px;
 }
 
 /* SWITCHER */
@@ -263,6 +279,7 @@ export default {
 .option p {
     text-align: center;
     color: #fff;
+    font-size: 16px;
 }
 
 .activeOp {
@@ -276,10 +293,42 @@ export default {
 /* */
 
 .chart-container {
-    height: 90%;
-    width: 95%;
+    height: calc(100vh - 420px);
+    width: 100%;
     margin: auto;
-    margin-top: 20px;
-    background-color: var(--main-color);
+    margin-top: 70px;
+    background-color: #fff;
+    border-radius: 40px 40px 0 0;
+}
+
+.wrapper {
+    margin: auto;
+    margin-top: 40px;
+    width: 97%;
+    height: 100%;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+
+    text-align: center;
+
+    margin: auto;
+    margin-top: 40px;
+
+    width: 40%;
+    height: 100px;
+    border-radius: 18px;
+}
+
+.label {
+    font-weight: 200;
+}
+
+.number {
+    font-weight: 700;
+    font-size: 46px;
 }
 </style>
