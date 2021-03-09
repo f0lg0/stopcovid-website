@@ -68,7 +68,7 @@ export default {
     justify-content: space-around;
     align-items: center;
 
-    background: #6c65ac;
+    background: var(--main-red);
     height: 60px;
     border-radius: 40px;
 }
@@ -89,6 +89,6 @@ export default {
 }
 
 .activeOp p {
-    color: var(--main-color);
+    color: var(--main-red);
 }
 </style>

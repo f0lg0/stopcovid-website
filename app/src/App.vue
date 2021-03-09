@@ -6,6 +6,14 @@
 
 
 <script>
+export default {
+    created() {
+        this.$store.dispatch("checkMobile");
+    },
+    destroyed() {
+        window.removeEventListener("resize", () => {});
+    },
+};
 </script>
 
 <style>
@@ -18,19 +26,17 @@
 
 :root {
     --main-color: #473f97;
-}
-
-@media screen and (min-width: 600px) {
-    body {
-        max-width: 599px;
-        margin: auto;
-    }
+    --main-red: #713535;
 }
 
 #app {
     font-family: "Poppins", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+canvas {
+    height: 520px;
 }
 
 .abs-center {
