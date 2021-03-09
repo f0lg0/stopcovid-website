@@ -92,11 +92,12 @@
 
         <div class="board">
             <div class="switcher">
-                <Switcher op1="Italia" op2="Lombardia" op3="Brescia" />
+                <Switcher op1="Italia" op2="Lombardia" op3="Brescia" v-on:switched="switched($event)" />
             </div>
 
             <div class="data">
                 <ItaliaDesktop v-if="selected == 'Italia'" v-on:gotWeek="latestWeek = $event" />
+                <LombardiaDesktop v-if="selected == 'Lombardia'" />
             </div>
         </div>
     </div>
@@ -105,6 +106,7 @@
 <script>
 import Switcher from "../Switcher";
 import ItaliaDesktop from "./Italia";
+import LombardiaDesktop from "./Lombardia";
 
 export default {
     data() {
@@ -113,7 +115,7 @@ export default {
             selected: "Italia",
         };
     },
-    components: { Switcher, ItaliaDesktop },
+    components: { Switcher, ItaliaDesktop, LombardiaDesktop },
     methods: {
         switched(op) {
             if (op == 1 && this.selected != "Italia") {
