@@ -18,7 +18,10 @@
 
             <div class="card" @click="changeChart('Variazione percentuale')">
                 <p class="name">Variazione percentuale</p>
-                <p class="amt">{{ data.media_deceduti }}</p>
+                <p class="amt">
+                    <span v-if="data.vpp > 0">+</span>
+                    {{ data.vpp }}%
+                </p>
             </div>
         </div>
         <div class="graphs">
@@ -42,10 +45,10 @@ export default {
             options: null,
             loaded: false,
             data: {
-                media_deceduti: 69,
-                incidenza: 123,
-                media_positivi: 789,
-                vpp: 30,
+                media_deceduti: 0,
+                incidenza: 0,
+                media_positivi: 0,
+                vpp: 0,
             },
             rawData: undefined,
             sample: undefined,
