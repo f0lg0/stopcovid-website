@@ -98,6 +98,7 @@
             <div class="data">
                 <ItaliaDesktop v-if="selected == 'Italia'" v-on:gotWeek="latestWeek = $event" />
                 <LombardiaDesktop v-if="selected == 'Lombardia'" />
+                <BresciaDesktop v-if="selected == 'Brescia'" />
             </div>
         </div>
     </div>
@@ -107,6 +108,7 @@
 import Switcher from "../Switcher";
 import ItaliaDesktop from "./Italia";
 import LombardiaDesktop from "./Lombardia";
+import BresciaDesktop from "./Brescia";
 
 export default {
     data() {
@@ -115,7 +117,7 @@ export default {
             selected: "Italia",
         };
     },
-    components: { Switcher, ItaliaDesktop, LombardiaDesktop },
+    components: { Switcher, ItaliaDesktop, LombardiaDesktop, BresciaDesktop },
     methods: {
         switched(op) {
             if (op == 1 && this.selected != "Italia") {
@@ -132,11 +134,10 @@ export default {
 
 <style scoped>
 #home-desktop {
-    background-color: white;
+    height: 100vh;
 }
 .banner {
     height: 600px;
-    border: 1px solid black;
 
     display: flex;
     flex-direction: row;
@@ -206,6 +207,7 @@ export default {
 
 .switcher {
     width: 60%;
+    max-width: 600px;
     height: 100px;
     margin: auto;
 

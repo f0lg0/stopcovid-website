@@ -29,6 +29,10 @@ export default {
     --main-red: #713535;
 }
 
+body {
+    background-color: #fcfafd;
+}
+
 #app {
     font-family: "Poppins", sans-serif;
     -webkit-font-smoothing: antialiased;

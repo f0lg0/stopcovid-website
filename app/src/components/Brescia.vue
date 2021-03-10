@@ -251,7 +251,6 @@ export default {
 
             let tmp_buf = [];
 
-            // keeping only Lombardia
             json.forEach((r) => {
                 if (r.codice_provincia == 17) {
                     tmp_buf.push(r);
