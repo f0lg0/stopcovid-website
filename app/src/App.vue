@@ -1,17 +1,23 @@
 <template>
     <div id="app">
+        <Navbar />
         <router-view />
     </div>
 </template>
 
 
 <script>
+import Navbar from "./components/Navbar";
+
 export default {
     created() {
         this.$store.dispatch("checkMobile");
     },
     destroyed() {
         window.removeEventListener("resize", () => {});
+    },
+    components: {
+        Navbar,
     },
 };
 </script>
