@@ -112,6 +112,12 @@
                 <Switcher op1="Italia" op2="Lombardia" op3="Brescia" v-on:switched="switched($event)" />
             </div>
 
+            <h1 class="week">
+                <span>Settimana:</span>
+                <br />
+                {{ latestWeek }}
+            </h1>
+
             <div class="data">
                 <ItaliaDesktop v-if="selected == 'Italia'" v-on:gotWeek="latestWeek = $event" />
                 <LombardiaDesktop v-if="selected == 'Lombardia'" />
@@ -224,6 +230,17 @@ export default {
     margin: auto;
     height: 600px;
     margin-top: 50px;
+}
+
+.week {
+    color: var(--main-red);
+    text-align: center;
+    line-height: 70px;
+    margin-top: 40px;
+}
+
+.week span {
+    font-weight: 200;
 }
 
 .switcher {
