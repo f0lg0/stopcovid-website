@@ -1,5 +1,5 @@
 <template>
-    <div id="chiamate">
+    <div id="chiamate" v-if="loaded">
         <div class="banner">
             <h1>Chiamate al 118</h1>
             <h2>Media 7g</h2>
@@ -319,6 +319,12 @@ export default {
     margin-top: 230px;
     background-color: #fff;
     border-radius: 40px 40px 0 0;
+}
+
+@media screen and (max-width: 440px) {
+    .chart-container {
+        margin-top: 280px;
+    }
 }
 
 .wrapper {
