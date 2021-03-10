@@ -137,7 +137,7 @@ export default {
     height: 100vh;
 }
 .banner {
-    height: 600px;
+    height: 500px;
 
     display: flex;
     flex-direction: row;
@@ -148,7 +148,8 @@ export default {
 .slogan {
     width: 60%;
     background-color: var(--main-red);
-    padding: 130px;
+    padding: 100px;
+    padding-left: 130px;
     color: white;
 }
 
