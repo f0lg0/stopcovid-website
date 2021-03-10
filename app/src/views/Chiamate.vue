@@ -1,9 +1,5 @@
 <template>
     <div id="chiamate">
-        <p class="tmp">
-            Pagina in costruzione!
-            <br />Si consiglia la visione da cellulare
-        </p>
         <div class="banner">
             <h1>Chiamate al 118</h1>
             <h2>Media 7g</h2>
@@ -17,6 +13,17 @@
                 </div>
             </div>
 
+            <div class="spiegazione">
+                <div class="left">
+                    <h2>Lombardia</h2>
+                    <p>Tutta la regione Lombarda</p>
+                </div>
+                <div class="right">
+                    <h2>Area Alpina</h2>
+                    <p>Zona di Brescia, Bergamo e Sondrio</p>
+                </div>
+            </div>
+
             <div class="data">
                 <div class="label">
                     <p>{{ data[data.length-1][0] }}</p>
@@ -26,9 +33,16 @@
                 </div>
             </div>
         </div>
-        <div class="chart-container">
+        <div v-if="$store.getters.mobile" class="chart-container">
             <div class="wrapper">
                 <LineChart v-if="loaded" :chartdata="chartdata" :options="options" :key="change" />
+            </div>
+        </div>
+        <div v-else>
+            <div class="chart-desktop">
+                <div class="chart">
+                    <LineChart v-if="loaded" :chartdata="chartdata" :options="options" :key="change" />
+                </div>
             </div>
         </div>
     </div>
@@ -98,7 +112,7 @@ export default {
 
             const options = {
                 responsive: true,
-                maintainAspectRatio: true,
+                maintainAspectRatio: false,
                 scales: {
                     xAxes: [
                         {
@@ -234,20 +248,12 @@ export default {
 </script>
 
 <style scoped>
-.tmp {
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    margin-top: 150px;
-    font-weight: 200;
-}
 #chiamate {
     display: flex;
     flex-direction: column;
     justify-content: center;
     background: var(--main-red);
     width: 100%;
-    height: 100vh;
 }
 .banner {
     width: 100%;
@@ -310,7 +316,7 @@ export default {
     height: calc(100vh - 420px);
     width: 100%;
     margin: auto;
-    margin-top: 70px;
+    margin-top: 230px;
     background-color: #fff;
     border-radius: 40px 40px 0 0;
 }
@@ -344,5 +350,67 @@ export default {
 .number {
     font-weight: 700;
     font-size: 46px;
+}
+
+.chart-desktop {
+    background-color: white;
+    width: 80%;
+    max-width: 1000px;
+    height: 600px;
+    border-radius: 25px;
+    margin: auto;
+
+    margin-top: 250px;
+}
+
+.chart {
+    height: 100%;
+    width: 95%;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.spiegazione {
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+
+    display: flex;
+    flex-direction: row;
+
+    text-align: center;
+    color: white;
+}
+
+@media screen and (max-width: 760px) {
+    .spiegazione {
+        margin-top: 50px;
+    }
+}
+
+.left,
+.right {
+    width: 100%;
+    height: 100%;
+}
+
+.left {
+    margin-right: 30px;
+}
+
+.right {
+    margin-left: 30px;
+}
+
+.left h2,
+.right h2 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.left p,
+.right p {
+    font-size: 18px;
+    font-weight: 200;
 }
 </style>
