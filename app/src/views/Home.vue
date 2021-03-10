@@ -4,9 +4,9 @@
         <div id="mobile">
             <div class="banner flex-col-cent">
                 <div class="banner-container">
-                    <h1>Covid-19</h1>
+                    <h1>StopCovid</h1>
                     <h2>
-                        Settimana
+                        Settimana:
                         <span>{{ latestWeek }}</span>
                     </h2>
                     <div class="switcher-container">
@@ -65,7 +65,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: var(--main-color);
+    background: var(--main-red);
 }
 
 .updates_container {

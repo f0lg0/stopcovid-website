@@ -54,10 +54,6 @@
 </template>
 
 <script>
-/**
- * Known bug: probably related to "the #" router mode, everytime the users refreshes the page the path goes back to home (/)
- * so the current active item at refresh is always going to be the home one
- */
 export default {
     data() {
         return {
@@ -152,13 +148,14 @@ export default {
     flex-direction: row;
     width: 100%;
     padding: 10px;
+    padding-top: 40px;
 }
 
 .home_link {
     width: 100px;
     height: 60px;
     position: relative;
-    margin-left: 50px;
+    margin-left: 30px;
     margin-top: 10px;
     text-decoration: none;
 }

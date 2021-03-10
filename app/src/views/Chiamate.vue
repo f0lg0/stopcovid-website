@@ -234,7 +234,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: var(--main-color);
+    background: var(--main-red);
     width: 100%;
     height: 100vh;
 }
@@ -261,11 +261,14 @@ export default {
     justify-content: space-around;
     align-items: center;
 
-    background: #6c65ac;
+    background: var(--main-red);
     height: 60px;
+    border: 1px solid white;
     border-radius: 40px;
 
+    max-width: 600px;
     width: 80%;
+
     margin: auto;
     margin-top: 50px;
 }
@@ -287,7 +290,7 @@ export default {
 }
 
 .activeOp p {
-    color: var(--main-color);
+    color: var(--main-red);
 }
 
 /* */

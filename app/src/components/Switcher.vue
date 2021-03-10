@@ -70,6 +70,7 @@ export default {
 
     background: var(--main-red);
     height: 60px;
+    border: 1px solid white;
     border-radius: 40px;
 }
 

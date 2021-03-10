@@ -5,7 +5,9 @@
             <p class="title">Autore:</p>
             <p>Leonardo Folgoni</p>
             <p class="title">GitHub:</p>
-            <p><a href="http://github.com/f0lg0/stopcovid-website" target="_blank" rel="noopener noreferrer">Stop Covid Website</a></p>
+            <p>
+                <a href="http://github.com/f0lg0/stopcovid-website" target="_blank" rel="noopener noreferrer">Stop Covid Website</a>
+            </p>
 
             <p class="title">Descrizione:</p>
             <p>
@@ -19,12 +21,7 @@
             <h2>Dati utilizzati</h2>
             <p class="title">Fonte:</p>
             <p>
-                <a
-                    href="https://github.com/pcm-dpc/COVID-19"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >PCM-DPC</a
-                >
+                <a href="https://github.com/pcm-dpc/COVID-19" target="_blank" rel="noopener noreferrer">PCM-DPC</a>
             </p>
             <p class="title">Popolazione d'Italia:</p>
             <p>60234639</p>
@@ -44,7 +41,7 @@ export default {};
 
 <style scoped>
 #about {
-    background-color: var(--main-color);
+    background-color: var(--main-red);
     width: 100%;
     height: 120vh;
     color: white;

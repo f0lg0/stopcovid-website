@@ -39,6 +39,12 @@ body {
     background-color: #fcfafd;
 }
 
+@media screen and (max-width: 760px) {
+    body {
+        background-color: white;
+    }
+}
+
 #app {
     font-family: "Poppins", sans-serif;
     -webkit-font-smoothing: antialiased;
