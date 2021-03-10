@@ -1,5 +1,9 @@
 <template>
     <div id="chiamate">
+        <p class="tmp">
+            Pagina in costruzione!
+            <br />Si consiglia la visione da cellulare
+        </p>
         <div class="banner">
             <h1>Chiamate al 118</h1>
             <h2>Media 7g</h2>
@@ -138,8 +142,8 @@ export default {
                 }
             }
 
-            final.datasets[0].borderColor = "#6c65ac";
-            final.datasets[0].pointBackgroundColor = "#6c65ac";
+            final.datasets[0].borderColor = "#713535";
+            final.datasets[0].pointBackgroundColor = "#713535";
 
             this.chartdata = final;
             this.options = options;
@@ -230,6 +234,13 @@ export default {
 </script>
 
 <style scoped>
+.tmp {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 150px;
+    font-weight: 200;
+}
 #chiamate {
     display: flex;
     flex-direction: column;
