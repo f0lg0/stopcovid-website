@@ -10,7 +10,7 @@
 
                 <p>Seguici su:</p>
                 <div class="icons">
-                    <div class="instagram">
+                    <div class="instagram" @click="routeExt('https://www.instagram.com/stopcovidoff/')">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             class="icon icon-tabler icon-tabler-brand-instagram"
@@ -29,7 +29,7 @@
                             <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
                         </svg>
                     </div>
-                    <div class="twitter">
+                    <div class="twitter" @click="routeExt('https://twitter.com/StopCovidOff')">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             class="icon icon-tabler icon-tabler-brand-twitter"
@@ -48,7 +48,7 @@
                             />
                         </svg>
                     </div>
-                    <div class="facebook">
+                    <div class="facebook" @click="routeExt('https://www.facebook.com/StopCovidOff/')">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             class="icon icon-tabler icon-tabler-brand-facebook"
@@ -65,7 +65,7 @@
                             <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
                         </svg>
                     </div>
-                    <div class="youtube">
+                    <div class="youtube" @click="routeExt('https://www.youtube.com/channel/UCM37P5kaCk_gmHyDN7b-J7A?sub_confirmation=1')">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             class="icon icon-tabler icon-tabler-brand-youtube"
@@ -81,6 +81,23 @@
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <rect x="3" y="5" width="18" height="14" rx="4" />
                             <path d="M10 9l5 3l-5 3z" />
+                        </svg>
+                    </div>
+                    <div class="telegram" @click="routeExt('https://t.me/StopCovidOff')">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-brand-telegram"
+                            width="30"
+                            height="30"
+                            viewBox="0 0 24 24"
+                            stroke-width="1"
+                            stroke="#ffffff"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
                         </svg>
                     </div>
                 </div>
@@ -127,6 +144,9 @@ export default {
             } else if (op == 3 && this.selected != "Brescia") {
                 this.selected = "Brescia";
             }
+        },
+        routeExt(url) {
+            location.href = url;
         },
     },
 };
