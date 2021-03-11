@@ -367,6 +367,7 @@ export default {
     margin: auto;
 
     margin-top: 250px;
+    margin-bottom: 50px;
 }
 
 .chart {
