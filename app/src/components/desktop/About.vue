@@ -54,7 +54,7 @@ export default {};
 
     display: flex;
     flex-direction: row;
-    height: 130vh;
+    height: 100%;
 }
 
 .logo {
@@ -70,10 +70,10 @@ export default {};
 
 .content {
     width: calc(100% - 700px + 320px);
-    height: 100vh;
     margin-left: -70px;
 
     margin-top: 80px;
+    margin-bottom: 50px;
     color: white;
 }
 
