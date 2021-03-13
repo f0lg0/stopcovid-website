@@ -1,19 +1,14 @@
 <template>
-    <div id="italia-desktop">
+    <div id="lombardia-desktop">
         <div class="cards">
-            <div class="card" @click="changeChart('Media deceduti')">
-                <p class="name">Media deceduti</p>
-                <p class="amt">{{ data.media_deceduti }}</p>
+            <div class="card" @click="changeChart('Incidenza')">
+                <p class="name">Incidenza</p>
+                <p class="amt">{{ data.incidenza }}</p>
             </div>
 
             <div class="card" @click="changeChart('Media positivi')">
                 <p class="name">Media positivi</p>
                 <p class="amt">{{ data.media_positivi }}</p>
-            </div>
-
-            <div class="card" @click="changeChart('Incidenza')">
-                <p class="name">Incidenza</p>
-                <p class="amt">{{ data.incidenza }}</p>
             </div>
 
             <div class="card" @click="changeChart('Variazione percentuale')">
@@ -22,6 +17,11 @@
                     <span v-if="data.vpp > 0">+</span>
                     {{ data.vpp }}%
                 </p>
+            </div>
+
+            <div class="card" @click="changeChart('Media deceduti')">
+                <p class="name">Media deceduti</p>
+                <p class="amt">{{ data.media_deceduti }}</p>
             </div>
         </div>
         <div class="graphs">
@@ -57,7 +57,7 @@ export default {
             standarized_data_reversed: [],
             pop_lom: 10002615,
             change: 0,
-            active: "Media deceduti",
+            active: "Incidenza",
         };
     },
     async mounted() {
@@ -343,25 +343,32 @@ export default {
 </script>
 
 <style scoped>
-#italia-desktop {
+#lombardia-desktop {
     display: flex;
     flex-direction: row;
+
+    max-width: 1200px;
+    margin: auto;
 }
 
 .cards {
     width: 30%;
     height: 600px;
     margin-left: 40px;
+    max-width: 325px;
 }
 
 .card {
     width: 80%;
+    max-width: 275px;
+
     height: 120px;
     background-color: white;
     margin: auto;
     border-radius: 25px;
 
-    padding: 7%;
+    padding: 20px;
+
     color: var(--main-red);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 
@@ -384,13 +391,27 @@ export default {
     padding-top: 10px;
 }
 
+@media screen and (max-width: 1270px) {
+    .name {
+        font-size: 16px;
+    }
+
+    .amt {
+        font-size: 25px;
+    }
+}
+
 .graphs {
     width: 70%;
+    max-width: 810px;
+
     height: 710px;
 }
 
 .canva {
     width: 80%;
+    max-width: 650px;
+
     height: 90%;
 
     border-radius: 25px;

@@ -1,19 +1,14 @@
 <template>
     <div id="italia-desktop">
         <div class="cards">
-            <div class="card" @click="changeChart('Media deceduti')">
-                <p class="name">Media deceduti</p>
-                <p class="amt">{{ data.media_deceduti }}</p>
+            <div class="card" @click="changeChart('Incidenza')">
+                <p class="name">Incidenza</p>
+                <p class="amt">{{ data.incidenza }}</p>
             </div>
 
             <div class="card" @click="changeChart('Media positivi')">
                 <p class="name">Media positivi</p>
                 <p class="amt">{{ data.media_positivi }}</p>
-            </div>
-
-            <div class="card" @click="changeChart('Incidenza')">
-                <p class="name">Incidenza</p>
-                <p class="amt">{{ data.incidenza }}</p>
             </div>
 
             <div class="card" @click="changeChart('Variazione percentuale')">
@@ -22,6 +17,11 @@
                     <span v-if="data.vpp > 0">+</span>
                     {{ data.vpp }}%
                 </p>
+            </div>
+
+            <div class="card" @click="changeChart('Media deceduti')">
+                <p class="name">Media deceduti</p>
+                <p class="amt">{{ data.media_deceduti }}</p>
             </div>
         </div>
         <div class="graphs">
@@ -57,7 +57,7 @@ export default {
             standarized_data_reversed: [],
             pop_ita: 60234639,
             change: 0,
-            active: "Media deceduti",
+            active: "Incidenza",
         };
     },
     async mounted() {
@@ -336,16 +336,20 @@ export default {
 #italia-desktop {
     display: flex;
     flex-direction: row;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .cards {
     width: 30%;
+    max-width: 325px;
     height: 600px;
     margin-left: 80px;
 }
 
 .card {
     width: 80%;
+    max-width: 275px;
     height: 120px;
     background-color: white;
     margin: auto;
@@ -353,7 +357,7 @@ export default {
     border: 1px solid #e6e6e6;
     border-radius: 25px;
 
-    padding: 7%;
+    padding: 20px;
     color: var(--main-red);
 
     margin-bottom: 20px;
@@ -377,13 +381,25 @@ export default {
     padding-top: 10px;
 }
 
+@media screen and (max-width: 1270px) {
+    .name {
+        font-size: 16px;
+    }
+
+    .amt {
+        font-size: 25px;
+    }
+}
+
 .graphs {
     width: 70%;
+    max-width: 810px;
     height: 710px;
 }
 
 .canva {
     width: 80%;
+    max-width: 650px;
     height: 90%;
 
     border-radius: 25px;
