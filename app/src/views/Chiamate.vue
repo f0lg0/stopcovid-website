@@ -26,10 +26,10 @@
 
             <div class="data">
                 <div class="label">
-                    <p>{{ data[data.length-1][0] }}</p>
+                    <p>{{ data[data.length - 1][0] }}</p>
                 </div>
                 <div class="number">
-                    <p>{{ chartdata.datasets[0].data[chartdata.datasets[0].data.length-1]}}</p>
+                    <p>{{ chartdata.datasets[0].data[chartdata.datasets[0].data.length - 1] }}</p>
                 </div>
             </div>
         </div>
@@ -45,6 +45,10 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div v-else id="error">
+        <h1>Si è verificato un errore!</h1>
+        <p>La fonte per le chiamate al 118 non esiste più.</p>
     </div>
 </template>
 
@@ -67,9 +71,9 @@ export default {
     },
     async created() {
         try {
-            const res = await fetch(
-                "https://raw.githubusercontent.com/Paulsword/PilloleOttimismo/main/Chiamate118.csv"
-            );
+            const res = await fetch("https://raw.githubusercontent.com/Paulsword/PilloleOttimismo/main/Chiamate118.csv");
+            if (res.status === 404) throw new Error("404 not found");
+
             const text = await res.text();
 
             // parse
@@ -96,7 +100,7 @@ export default {
     },
     methods: {
         // pass true for Area Alpina
-        plot: function (flag) {
+        plot: function(flag) {
             this.change++;
 
             const final = {
@@ -147,12 +151,7 @@ export default {
                 if (flag) {
                     final.datasets[0].data.push(this.data[i][1]);
                 } else {
-                    final.datasets[0].data.push(
-                        parseInt(this.data[i][1]) +
-                            parseInt(this.data[i][2]) +
-                            parseInt(this.data[i][3]) +
-                            parseInt(this.data[i][4])
-                    );
+                    final.datasets[0].data.push(parseInt(this.data[i][1]) + parseInt(this.data[i][2]) + parseInt(this.data[i][3]) + parseInt(this.data[i][4]));
                 }
             }
 
@@ -162,10 +161,10 @@ export default {
             this.chartdata = final;
             this.options = options;
         },
-        parse: function (csv, reviver) {
+        parse: function(csv, reviver) {
             reviver =
                 reviver ||
-                function (r, c, v) {
+                function(r, c, v) {
                     return v;
                 };
             let chars = csv.split(""),
@@ -194,31 +193,15 @@ export default {
                         if ('"' === chars[c]) {
                             ++c;
                         }
-                        while (
-                            c < cc &&
-                            "\r" !== chars[c] &&
-                            "\n" !== chars[c] &&
-                            "," !== chars[c]
-                        ) {
+                        while (c < cc && "\r" !== chars[c] && "\n" !== chars[c] && "," !== chars[c]) {
                             ++c;
                         }
                     } else {
-                        while (
-                            c < cc &&
-                            "\r" !== chars[c] &&
-                            "\n" !== chars[c] &&
-                            "," !== chars[c]
-                        ) {
+                        while (c < cc && "\r" !== chars[c] && "\n" !== chars[c] && "," !== chars[c]) {
                             end = ++c;
                         }
                     }
-                    row.push(
-                        reviver(
-                            table.length - 1,
-                            row.length,
-                            chars.slice(start, end).join("")
-                        )
-                    );
+                    row.push(reviver(table.length - 1, row.length, chars.slice(start, end).join("")));
                     if ("," === chars[c]) {
                         ++c;
                     }
@@ -248,6 +231,27 @@ export default {
 </script>
 
 <style scoped>
+#error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--main-red);
+    width: 100%;
+    height: 95vh;
+
+    color: white;
+    padding: 20px;
+}
+
+#error h1 {
+    font-size: 50px;
+}
+
+#error p {
+    font-size: 30px;
+}
+
 #chiamate {
     display: flex;
     flex-direction: column;
